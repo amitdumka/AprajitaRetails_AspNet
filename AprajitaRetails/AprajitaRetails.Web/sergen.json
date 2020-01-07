@@ -1,0 +1,228 @@
+{
+  "RootNamespace": "AprajitaRetails",
+  "ServerTypings": {
+    "Assemblies": [],
+    "LocalTexts": true
+  },
+  "Connections": [
+    {
+      "Key": "AprajitaRetails",
+      "Tables": [
+        {
+          "Tablename": "dbo.AccountNumbers",
+          "Identifier": "AccountNumbers",
+          "Module": "Banking",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Attendances",
+          "Identifier": "Attendances",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.BankDeposits",
+          "Identifier": "BankDeposits",
+          "Module": "Banking",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Banks",
+          "Identifier": "Banks",
+          "Module": "Banking",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.BankWithdrawals",
+          "Identifier": "BankWithdrawals",
+          "Module": "Banking",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.CashInBanks",
+          "Identifier": "CashInBanks",
+          "Module": "Accounts",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.CashInHands",
+          "Identifier": "CashInHands",
+          "Module": "Accounts",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.CashPayments",
+          "Identifier": "CashPayments",
+          "Module": "Expenses",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.CashReceipts",
+          "Identifier": "CashReceipts",
+          "Module": "Receipts",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.ChequesLogs",
+          "Identifier": "ChequesLogs",
+          "Module": "Banking",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.CurrentSalaries",
+          "Identifier": "CurrentSalaries",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.DailySales",
+          "Identifier": "DailySales",
+          "Module": "Sales",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.DueRecoverds",
+          "Identifier": "DueRecoverds",
+          "Module": "Dues",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.DuesLists",
+          "Identifier": "DuesLists",
+          "Module": "Dues",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Employees",
+          "Identifier": "Employees",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.EndOfDays",
+          "Identifier": "EndOfDays",
+          "Module": "Process",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Expenses",
+          "Identifier": "Expenses",
+          "Module": "Expenses",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.MonthEnds",
+          "Identifier": "MonthEnds",
+          "Module": "Process",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Payments",
+          "Identifier": "Payments",
+          "Module": "Expenses",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.PaySlips",
+          "Identifier": "PaySlips",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.PettyCashExpenses",
+          "Identifier": "PettyCashExpenses",
+          "Module": "Expenses",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Receipts",
+          "Identifier": "Receipts",
+          "Module": "Receipts",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.SalaryPayments",
+          "Identifier": "SalaryPayments",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Salesmen",
+          "Identifier": "Salesmen",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.StaffAdvancePayments",
+          "Identifier": "StaffAdvancePayments",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.StaffAdvanceReceipts",
+          "Identifier": "StaffAdvanceReceipts",
+          "Module": "PayRoll",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.SuspenseAccounts",
+          "Identifier": "SuspenseAccounts",
+          "Module": "Accounts",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TailorAttendances",
+          "Identifier": "TailorAttendances",
+          "Module": "Tailors",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TailoringEmployees",
+          "Identifier": "TailoringEmployees",
+          "Module": "Tailors",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TailoringSalaryPayments",
+          "Identifier": "TailoringSalaryPayments",
+          "Module": "Tailors",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TailoringStaffAdvancePayments",
+          "Identifier": "TailoringStaffAdvancePayments",
+          "Module": "Tailors",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TailoringStaffAdvanceReceipts",
+          "Identifier": "TailoringStaffAdvanceReceipts",
+          "Module": "Tailors",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TalioringBookings",
+          "Identifier": "TalioringBookings",
+          "Module": "CustomTailoring",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TalioringDeliveries",
+          "Identifier": "TalioringDeliveries",
+          "Module": "CustomTailoring",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.TranscationModes",
+          "Identifier": "TranscationModes",
+          "Module": "Accounts",
+          "PermissionKey": "Administration:General"
+        }
+      ]
+    }
+  ],
+  "BaseRowClasses": [],
+  "RemoveForeignFields": [],
+  "CustomGenerate": {},
+  "CustomSettings": {}
+}
