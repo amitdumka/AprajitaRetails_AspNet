@@ -348,6 +348,15 @@ namespace MVC
             public const string LeftNavigation = "~/Views/Shared/LeftNavigation.cshtml";
         }
 
+        public static class Stores
+        {
+            public static class Stores_
+            {
+                public const string StoresIndex = "~/Modules/Stores/Stores/StoresIndex.cshtml";
+            }
+
+        }
+
         public static class Tailors
         {
             public static class TailorAttendances

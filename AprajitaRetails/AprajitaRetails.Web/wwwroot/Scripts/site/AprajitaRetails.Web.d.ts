@@ -2950,6 +2950,93 @@ declare namespace AprajitaRetails {
         };
     }
 }
+declare namespace AprajitaRetails.Stores {
+}
+declare namespace AprajitaRetails.Stores {
+    interface StoresForm {
+        StoreCode: Serenity.StringEditor;
+        StoreName: Serenity.StringEditor;
+        Address: Serenity.StringEditor;
+        City: Serenity.StringEditor;
+        PinCode: Serenity.StringEditor;
+        PhoneNo: Serenity.StringEditor;
+        StoreManagerName: Serenity.StringEditor;
+        StoreManagerPhoneNo: Serenity.StringEditor;
+        PanNo: Serenity.StringEditor;
+        Gstno: Serenity.StringEditor;
+        NoOfEmployees: Serenity.IntegerEditor;
+        OpeningDate: Serenity.DateEditor;
+        ClosingDate: Serenity.DateEditor;
+        Status: Serenity.BooleanEditor;
+    }
+    class StoresForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Stores {
+    interface StoresRow {
+        StoreId?: number;
+        StoreCode?: string;
+        StoreName?: string;
+        Address?: string;
+        City?: string;
+        PinCode?: string;
+        PhoneNo?: string;
+        StoreManagerName?: string;
+        StoreManagerPhoneNo?: string;
+        PanNo?: string;
+        Gstno?: string;
+        NoOfEmployees?: number;
+        OpeningDate?: string;
+        ClosingDate?: string;
+        Status?: boolean;
+    }
+    namespace StoresRow {
+        const idProperty = "StoreId";
+        const nameProperty = "StoreCode";
+        const localTextPrefix = "Stores.Stores";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            StoreId = "StoreId",
+            StoreCode = "StoreCode",
+            StoreName = "StoreName",
+            Address = "Address",
+            City = "City",
+            PinCode = "PinCode",
+            PhoneNo = "PhoneNo",
+            StoreManagerName = "StoreManagerName",
+            StoreManagerPhoneNo = "StoreManagerPhoneNo",
+            PanNo = "PanNo",
+            Gstno = "Gstno",
+            NoOfEmployees = "NoOfEmployees",
+            OpeningDate = "OpeningDate",
+            ClosingDate = "ClosingDate",
+            Status = "Status"
+        }
+    }
+}
+declare namespace AprajitaRetails.Stores {
+    namespace StoresService {
+        const baseUrl = "Stores/Stores";
+        function Create(request: Serenity.SaveRequest<StoresRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<StoresRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<StoresRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<StoresRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Stores/Stores/Create",
+            Update = "Stores/Stores/Update",
+            Delete = "Stores/Stores/Delete",
+            Retrieve = "Stores/Stores/Retrieve",
+            List = "Stores/Stores/List"
+        }
+    }
+}
 declare namespace AprajitaRetails.Tailors {
 }
 declare namespace AprajitaRetails.Tailors {
@@ -5126,6 +5213,30 @@ declare namespace AprajitaRetails.Sales {
     class DailySalesGrid extends Serenity.EntityGrid<DailySalesRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof DailySalesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Stores {
+    class StoresDialog extends Serenity.EntityDialog<StoresRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: StoresForm;
+    }
+}
+declare namespace AprajitaRetails.Stores {
+    class StoresGrid extends Serenity.EntityGrid<StoresRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof StoresDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;
