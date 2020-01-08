@@ -121,6 +121,116 @@ declare namespace AprajitaRetails.Accounts {
 declare namespace AprajitaRetails.Accounts {
 }
 declare namespace AprajitaRetails.Accounts {
+}
+declare namespace AprajitaRetails.Accounts {
+    interface PurchaseTaxTypesForm {
+        TaxName: Serenity.StringEditor;
+        TaxType: Serenity.IntegerEditor;
+        CompositeRate: Serenity.DecimalEditor;
+    }
+    class PurchaseTaxTypesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    interface PurchaseTaxTypesRow {
+        PurchaseTaxTypeId?: number;
+        TaxName?: string;
+        TaxType?: number;
+        CompositeRate?: number;
+    }
+    namespace PurchaseTaxTypesRow {
+        const idProperty = "PurchaseTaxTypeId";
+        const nameProperty = "TaxName";
+        const localTextPrefix = "Accounts.PurchaseTaxTypes";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            PurchaseTaxTypeId = "PurchaseTaxTypeId",
+            TaxName = "TaxName",
+            TaxType = "TaxType",
+            CompositeRate = "CompositeRate"
+        }
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    namespace PurchaseTaxTypesService {
+        const baseUrl = "Accounts/PurchaseTaxTypes";
+        function Create(request: Serenity.SaveRequest<PurchaseTaxTypesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<PurchaseTaxTypesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PurchaseTaxTypesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PurchaseTaxTypesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Accounts/PurchaseTaxTypes/Create",
+            Update = "Accounts/PurchaseTaxTypes/Update",
+            Delete = "Accounts/PurchaseTaxTypes/Delete",
+            Retrieve = "Accounts/PurchaseTaxTypes/Retrieve",
+            List = "Accounts/PurchaseTaxTypes/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+}
+declare namespace AprajitaRetails.Accounts {
+    interface SaleTaxTypesForm {
+        TaxName: Serenity.StringEditor;
+        TaxType: Serenity.IntegerEditor;
+        CompositeRate: Serenity.DecimalEditor;
+    }
+    class SaleTaxTypesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    interface SaleTaxTypesRow {
+        SaleTaxTypeId?: number;
+        TaxName?: string;
+        TaxType?: number;
+        CompositeRate?: number;
+    }
+    namespace SaleTaxTypesRow {
+        const idProperty = "SaleTaxTypeId";
+        const nameProperty = "TaxName";
+        const localTextPrefix = "Accounts.SaleTaxTypes";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SaleTaxTypeId = "SaleTaxTypeId",
+            TaxName = "TaxName",
+            TaxType = "TaxType",
+            CompositeRate = "CompositeRate"
+        }
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    namespace SaleTaxTypesService {
+        const baseUrl = "Accounts/SaleTaxTypes";
+        function Create(request: Serenity.SaveRequest<SaleTaxTypesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SaleTaxTypesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SaleTaxTypesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SaleTaxTypesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Accounts/SaleTaxTypes/Create",
+            Update = "Accounts/SaleTaxTypes/Update",
+            Delete = "Accounts/SaleTaxTypes/Delete",
+            Retrieve = "Accounts/SaleTaxTypes/Retrieve",
+            List = "Accounts/SaleTaxTypes/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+}
+declare namespace AprajitaRetails.Accounts {
     interface SuspenseAccountsForm {
         EntryDate: Serenity.DateEditor;
         ReferanceDetails: Serenity.StringEditor;
@@ -3232,6 +3342,54 @@ declare namespace AprajitaRetails.Accounts {
     class CashInHandsGrid extends Serenity.EntityGrid<CashInHandsRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof CashInHandsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    class PurchaseTaxTypesDialog extends Serenity.EntityDialog<PurchaseTaxTypesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: PurchaseTaxTypesForm;
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    class PurchaseTaxTypesGrid extends Serenity.EntityGrid<PurchaseTaxTypesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof PurchaseTaxTypesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    class SaleTaxTypesDialog extends Serenity.EntityDialog<SaleTaxTypesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: SaleTaxTypesForm;
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    class SaleTaxTypesGrid extends Serenity.EntityGrid<SaleTaxTypesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SaleTaxTypesDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;

@@ -16,6 +16,16 @@ namespace MVC
                 public const string CashInHandsIndex = "~/Modules/Accounts/CashInHands/CashInHandsIndex.cshtml";
             }
 
+            public static class PurchaseTaxTypes
+            {
+                public const string PurchaseTaxTypesIndex = "~/Modules/Accounts/PurchaseTaxTypes/PurchaseTaxTypesIndex.cshtml";
+            }
+
+            public static class SaleTaxTypes
+            {
+                public const string SaleTaxTypesIndex = "~/Modules/Accounts/SaleTaxTypes/SaleTaxTypesIndex.cshtml";
+            }
+
             public static class SuspenseAccounts
             {
                 public const string SuspenseAccountsIndex = "~/Modules/Accounts/SuspenseAccounts/SuspenseAccountsIndex.cshtml";

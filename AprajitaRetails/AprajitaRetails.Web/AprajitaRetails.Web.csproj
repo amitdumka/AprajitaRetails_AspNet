@@ -90,4 +90,10 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Serenity.CodeGenerator" Version="3.9.14" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Modules\Accounts\CashInBanks\CashInBanksIndex.cshtml" />
+    <None Include="Modules\Accounts\CashInHands\CashInHandsIndex.cshtml" />
+    <None Include="Modules\Accounts\SuspenseAccounts\SuspenseAccountsIndex.cshtml" />
+    <None Include="Modules\Accounts\TranscationModes\TranscationModesIndex.cshtml" />
+  </ItemGroup>
 </Project>
