@@ -335,6 +335,26 @@ namespace MVC
             {
                 public const string DailySalesIndex = "~/Modules/Sales/DailySales/DailySalesIndex.cshtml";
             }
+
+            public static class SaleInvoices
+            {
+                public const string SaleInvoicesIndex = "~/Modules/Sales/SaleInvoices/SaleInvoicesIndex.cshtml";
+            }
+
+            public static class SaleItems
+            {
+                public const string SaleItemsIndex = "~/Modules/Sales/SaleItems/SaleItemsIndex.cshtml";
+            }
+
+            public static class SalePaymentDetails
+            {
+                public const string SalePaymentDetailsIndex = "~/Modules/Sales/SalePaymentDetails/SalePaymentDetailsIndex.cshtml";
+            }
+
+            public static class Salesmen
+            {
+                public const string SalesmenIndex = "~/Modules/Sales/Salesmen/SalesmenIndex.cshtml";
+            }
         }
 
         public static class Shared

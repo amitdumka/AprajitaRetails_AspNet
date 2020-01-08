@@ -2940,6 +2940,335 @@ declare namespace AprajitaRetails.Sales {
         }
     }
 }
+declare namespace AprajitaRetails.Sales {
+}
+declare namespace AprajitaRetails.Sales {
+    interface SaleInvoicesForm {
+        CustomerId: Serenity.IntegerEditor;
+        OnDate: Serenity.DateEditor;
+        InvoiceNo: Serenity.StringEditor;
+        TotalItems: Serenity.IntegerEditor;
+        TotalQty: Serenity.DecimalEditor;
+        TotalBillAmount: Serenity.DecimalEditor;
+        TotalDiscountAmount: Serenity.DecimalEditor;
+        RoundOffAmount: Serenity.DecimalEditor;
+        TotalTaxAmount: Serenity.DecimalEditor;
+    }
+    class SaleInvoicesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    interface SaleInvoicesRow {
+        SaleInvoiceId?: number;
+        CustomerId?: number;
+        OnDate?: string;
+        InvoiceNo?: string;
+        TotalItems?: number;
+        TotalQty?: number;
+        TotalBillAmount?: number;
+        TotalDiscountAmount?: number;
+        RoundOffAmount?: number;
+        TotalTaxAmount?: number;
+    }
+    namespace SaleInvoicesRow {
+        const idProperty = "SaleInvoiceId";
+        const nameProperty = "InvoiceNo";
+        const localTextPrefix = "Sales.SaleInvoices";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SaleInvoiceId = "SaleInvoiceId",
+            CustomerId = "CustomerId",
+            OnDate = "OnDate",
+            InvoiceNo = "InvoiceNo",
+            TotalItems = "TotalItems",
+            TotalQty = "TotalQty",
+            TotalBillAmount = "TotalBillAmount",
+            TotalDiscountAmount = "TotalDiscountAmount",
+            RoundOffAmount = "RoundOffAmount",
+            TotalTaxAmount = "TotalTaxAmount"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    namespace SaleInvoicesService {
+        const baseUrl = "Sales/SaleInvoices";
+        function Create(request: Serenity.SaveRequest<SaleInvoicesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SaleInvoicesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SaleInvoicesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SaleInvoicesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Sales/SaleInvoices/Create",
+            Update = "Sales/SaleInvoices/Update",
+            Delete = "Sales/SaleInvoices/Delete",
+            Retrieve = "Sales/SaleInvoices/Retrieve",
+            List = "Sales/SaleInvoices/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+}
+declare namespace AprajitaRetails.Sales {
+    interface SaleItemsForm {
+        SaleInvoiceId: Serenity.IntegerEditor;
+        ProductItemId: Serenity.IntegerEditor;
+        BarCode: Serenity.StringEditor;
+        Qty: Serenity.DecimalEditor;
+        Units: Serenity.IntegerEditor;
+        Mrp: Serenity.DecimalEditor;
+        BasicAmount: Serenity.DecimalEditor;
+        Discount: Serenity.DecimalEditor;
+        TaxAmount: Serenity.DecimalEditor;
+        SaleTaxTypeId: Serenity.IntegerEditor;
+        BillAmount: Serenity.DecimalEditor;
+        SalesmanId: Serenity.IntegerEditor;
+    }
+    class SaleItemsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    interface SaleItemsRow {
+        SaleItemId?: number;
+        SaleInvoiceId?: number;
+        ProductItemId?: number;
+        BarCode?: string;
+        Qty?: number;
+        Units?: number;
+        Mrp?: number;
+        BasicAmount?: number;
+        Discount?: number;
+        TaxAmount?: number;
+        SaleTaxTypeId?: number;
+        BillAmount?: number;
+        SalesmanId?: number;
+        SaleInvoiceCustomerId?: number;
+        SaleInvoiceOnDate?: string;
+        SaleInvoiceInvoiceNo?: string;
+        SaleInvoiceTotalItems?: number;
+        SaleInvoiceTotalQty?: number;
+        SaleInvoiceTotalBillAmount?: number;
+        SaleInvoiceTotalDiscountAmount?: number;
+        SaleInvoiceRoundOffAmount?: number;
+        SaleInvoiceTotalTaxAmount?: number;
+        ProductItemBarcode?: string;
+        ProductItemBrandId?: number;
+        ProductItemStyleCode?: string;
+        ProductItemProductName?: string;
+        ProductItemItemDesc?: string;
+        ProductItemCategorys?: number;
+        ProductItemMrp?: number;
+        ProductItemTaxRate?: number;
+        ProductItemCost?: number;
+        ProductItemSize?: number;
+        ProductItemUnits?: number;
+        ProductItemMainCategoryCategoryId?: number;
+        ProductItemProductCategoryCategoryId?: number;
+        ProductItemProductTypeCategoryId?: number;
+        SaleTaxTypeTaxName?: string;
+        SaleTaxTypeTaxType?: number;
+        SaleTaxTypeCompositeRate?: number;
+        SalesmanSalesmanName?: string;
+    }
+    namespace SaleItemsRow {
+        const idProperty = "SaleItemId";
+        const nameProperty = "BarCode";
+        const localTextPrefix = "Sales.SaleItems";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SaleItemId = "SaleItemId",
+            SaleInvoiceId = "SaleInvoiceId",
+            ProductItemId = "ProductItemId",
+            BarCode = "BarCode",
+            Qty = "Qty",
+            Units = "Units",
+            Mrp = "Mrp",
+            BasicAmount = "BasicAmount",
+            Discount = "Discount",
+            TaxAmount = "TaxAmount",
+            SaleTaxTypeId = "SaleTaxTypeId",
+            BillAmount = "BillAmount",
+            SalesmanId = "SalesmanId",
+            SaleInvoiceCustomerId = "SaleInvoiceCustomerId",
+            SaleInvoiceOnDate = "SaleInvoiceOnDate",
+            SaleInvoiceInvoiceNo = "SaleInvoiceInvoiceNo",
+            SaleInvoiceTotalItems = "SaleInvoiceTotalItems",
+            SaleInvoiceTotalQty = "SaleInvoiceTotalQty",
+            SaleInvoiceTotalBillAmount = "SaleInvoiceTotalBillAmount",
+            SaleInvoiceTotalDiscountAmount = "SaleInvoiceTotalDiscountAmount",
+            SaleInvoiceRoundOffAmount = "SaleInvoiceRoundOffAmount",
+            SaleInvoiceTotalTaxAmount = "SaleInvoiceTotalTaxAmount",
+            ProductItemBarcode = "ProductItemBarcode",
+            ProductItemBrandId = "ProductItemBrandId",
+            ProductItemStyleCode = "ProductItemStyleCode",
+            ProductItemProductName = "ProductItemProductName",
+            ProductItemItemDesc = "ProductItemItemDesc",
+            ProductItemCategorys = "ProductItemCategorys",
+            ProductItemMrp = "ProductItemMrp",
+            ProductItemTaxRate = "ProductItemTaxRate",
+            ProductItemCost = "ProductItemCost",
+            ProductItemSize = "ProductItemSize",
+            ProductItemUnits = "ProductItemUnits",
+            ProductItemMainCategoryCategoryId = "ProductItemMainCategoryCategoryId",
+            ProductItemProductCategoryCategoryId = "ProductItemProductCategoryCategoryId",
+            ProductItemProductTypeCategoryId = "ProductItemProductTypeCategoryId",
+            SaleTaxTypeTaxName = "SaleTaxTypeTaxName",
+            SaleTaxTypeTaxType = "SaleTaxTypeTaxType",
+            SaleTaxTypeCompositeRate = "SaleTaxTypeCompositeRate",
+            SalesmanSalesmanName = "SalesmanSalesmanName"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    namespace SaleItemsService {
+        const baseUrl = "Sales/SaleItems";
+        function Create(request: Serenity.SaveRequest<SaleItemsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SaleItemsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SaleItemsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SaleItemsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Sales/SaleItems/Create",
+            Update = "Sales/SaleItems/Update",
+            Delete = "Sales/SaleItems/Delete",
+            Retrieve = "Sales/SaleItems/Retrieve",
+            List = "Sales/SaleItems/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+}
+declare namespace AprajitaRetails.Sales {
+    interface SalePaymentDetailsForm {
+        PayMode: Serenity.IntegerEditor;
+        CashAmount: Serenity.DecimalEditor;
+        CardAmount: Serenity.DecimalEditor;
+        MixAmount: Serenity.DecimalEditor;
+    }
+    class SalePaymentDetailsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    interface SalePaymentDetailsRow {
+        SalePaymentDetailId?: number;
+        PayMode?: number;
+        CashAmount?: number;
+        CardAmount?: number;
+        MixAmount?: number;
+        SalePaymentDetailCustomerId?: number;
+        SalePaymentDetailOnDate?: string;
+        SalePaymentDetailInvoiceNo?: string;
+        SalePaymentDetailTotalItems?: number;
+        SalePaymentDetailTotalQty?: number;
+        SalePaymentDetailTotalBillAmount?: number;
+        SalePaymentDetailTotalDiscountAmount?: number;
+        SalePaymentDetailRoundOffAmount?: number;
+        SalePaymentDetailTotalTaxAmount?: number;
+    }
+    namespace SalePaymentDetailsRow {
+        const idProperty = "SalePaymentDetailId";
+        const localTextPrefix = "Sales.SalePaymentDetails";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SalePaymentDetailId = "SalePaymentDetailId",
+            PayMode = "PayMode",
+            CashAmount = "CashAmount",
+            CardAmount = "CardAmount",
+            MixAmount = "MixAmount",
+            SalePaymentDetailCustomerId = "SalePaymentDetailCustomerId",
+            SalePaymentDetailOnDate = "SalePaymentDetailOnDate",
+            SalePaymentDetailInvoiceNo = "SalePaymentDetailInvoiceNo",
+            SalePaymentDetailTotalItems = "SalePaymentDetailTotalItems",
+            SalePaymentDetailTotalQty = "SalePaymentDetailTotalQty",
+            SalePaymentDetailTotalBillAmount = "SalePaymentDetailTotalBillAmount",
+            SalePaymentDetailTotalDiscountAmount = "SalePaymentDetailTotalDiscountAmount",
+            SalePaymentDetailRoundOffAmount = "SalePaymentDetailRoundOffAmount",
+            SalePaymentDetailTotalTaxAmount = "SalePaymentDetailTotalTaxAmount"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    namespace SalePaymentDetailsService {
+        const baseUrl = "Sales/SalePaymentDetails";
+        function Create(request: Serenity.SaveRequest<SalePaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SalePaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SalePaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SalePaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Sales/SalePaymentDetails/Create",
+            Update = "Sales/SalePaymentDetails/Update",
+            Delete = "Sales/SalePaymentDetails/Delete",
+            Retrieve = "Sales/SalePaymentDetails/Retrieve",
+            List = "Sales/SalePaymentDetails/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+}
+declare namespace AprajitaRetails.Sales {
+    interface SalesmenForm {
+        SalesmanName: Serenity.StringEditor;
+    }
+    class SalesmenForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    interface SalesmenRow {
+        SalesmanId?: number;
+        SalesmanName?: string;
+    }
+    namespace SalesmenRow {
+        const idProperty = "SalesmanId";
+        const nameProperty = "SalesmanName";
+        const localTextPrefix = "Sales.Salesmen";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SalesmanId = "SalesmanId",
+            SalesmanName = "SalesmanName"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    namespace SalesmenService {
+        const baseUrl = "Sales/Salesmen";
+        function Create(request: Serenity.SaveRequest<SalesmenRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SalesmenRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SalesmenRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SalesmenRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Sales/Salesmen/Create",
+            Update = "Sales/Salesmen/Update",
+            Delete = "Sales/Salesmen/Delete",
+            Retrieve = "Sales/Salesmen/Retrieve",
+            List = "Sales/Salesmen/List"
+        }
+    }
+}
 declare namespace AprajitaRetails {
     interface ScriptUserDefinition {
         Username?: string;
@@ -5213,6 +5542,101 @@ declare namespace AprajitaRetails.Sales {
     class DailySalesGrid extends Serenity.EntityGrid<DailySalesRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof DailySalesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SaleInvoicesDialog extends Serenity.EntityDialog<SaleInvoicesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: SaleInvoicesForm;
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SaleInvoicesGrid extends Serenity.EntityGrid<SaleInvoicesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SaleInvoicesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SaleItemsDialog extends Serenity.EntityDialog<SaleItemsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: SaleItemsForm;
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SaleItemsGrid extends Serenity.EntityGrid<SaleItemsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SaleItemsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SalePaymentDetailsDialog extends Serenity.EntityDialog<SalePaymentDetailsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: SalePaymentDetailsForm;
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SalePaymentDetailsGrid extends Serenity.EntityGrid<SalePaymentDetailsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SalePaymentDetailsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SalesmenDialog extends Serenity.EntityDialog<SalesmenRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: SalesmenForm;
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class SalesmenGrid extends Serenity.EntityGrid<SalesmenRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SalesmenDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;
