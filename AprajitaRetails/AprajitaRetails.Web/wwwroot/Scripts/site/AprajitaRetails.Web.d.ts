@@ -3652,6 +3652,8 @@ declare namespace AprajitaRetails.Sales {
 declare namespace AprajitaRetails.Sales {
 }
 declare namespace AprajitaRetails.Sales {
+}
+declare namespace AprajitaRetails.Sales {
     interface SaleInvoicesForm {
         CustomerId: Serenity.IntegerEditor;
         OnDate: Serenity.DateEditor;
@@ -5004,6 +5006,8 @@ declare namespace AprajitaRetails.Voyager {
             List = "Voyager/ImportSaleRegisters/List"
         }
     }
+}
+declare namespace AprajitaRetails.Voyager {
 }
 declare namespace AprajitaRetails.LanguageList {
     function getValue(): string[][];

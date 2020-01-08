@@ -3373,6 +3373,12 @@ var AprajitaRetails;
 (function (AprajitaRetails) {
     var Sales;
     (function (Sales) {
+    })(Sales = AprajitaRetails.Sales || (AprajitaRetails.Sales = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Sales;
+    (function (Sales) {
         var SaleInvoicesForm = /** @class */ (function (_super) {
             __extends(SaleInvoicesForm, _super);
             function SaleInvoicesForm(prefix) {
@@ -4579,6 +4585,12 @@ var AprajitaRetails;
                 };
             });
         })(ImportSaleRegistersService = Voyager.ImportSaleRegistersService || (Voyager.ImportSaleRegistersService = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
     })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
 })(AprajitaRetails || (AprajitaRetails = {}));
 var AprajitaRetails;
