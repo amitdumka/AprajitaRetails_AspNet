@@ -377,5 +377,53 @@ namespace MVC
 
         }
 
+        public static class Tally
+        {
+            public static class LedgerEntries
+            {
+                public const string LedgerEntriesIndex = "~/Modules/Tally/LedgerEntries/LedgerEntriesIndex.cshtml";
+            }
+
+            public static class LedgerMasters
+            {
+                public const string LedgerMastersIndex = "~/Modules/Tally/LedgerMasters/LedgerMastersIndex.cshtml";
+            }
+
+            public static class Parties
+            {
+                public const string PartiesIndex = "~/Modules/Tally/Parties/PartiesIndex.cshtml";
+            }
+
+        }
+
+        public static class Voyager
+        {
+            public static class CardPaymentDetails
+            {
+                public const string CardPaymentDetailsIndex = "~/Modules/Voyager/CardPaymentDetails/CardPaymentDetailsIndex.cshtml";
+            }
+
+            public static class ImportInWards
+            {
+                public const string ImportInWardsIndex = "~/Modules/Voyager/ImportInWards/ImportInWardsIndex.cshtml";
+            }
+
+            public static class ImportPurchases
+            {
+                public const string ImportPurchasesIndex = "~/Modules/Voyager/ImportPurchases/ImportPurchasesIndex.cshtml";
+            }
+
+            public static class ImportSaleItemWises
+            {
+                public const string ImportSaleItemWisesIndex = "~/Modules/Voyager/ImportSaleItemWises/ImportSaleItemWisesIndex.cshtml";
+            }
+
+            public static class ImportSaleRegisters
+            {
+                public const string ImportSaleRegistersIndex = "~/Modules/Voyager/ImportSaleRegisters/ImportSaleRegistersIndex.cshtml";
+            }
+
+        }
+
     }
 }

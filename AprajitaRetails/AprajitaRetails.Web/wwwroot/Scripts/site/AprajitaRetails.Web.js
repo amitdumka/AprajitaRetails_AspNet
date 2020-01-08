@@ -3097,10 +3097,592 @@ var AprajitaRetails;
 })(AprajitaRetails || (AprajitaRetails = {}));
 var AprajitaRetails;
 (function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerEntriesForm = /** @class */ (function (_super) {
+            __extends(LedgerEntriesForm, _super);
+            function LedgerEntriesForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!LedgerEntriesForm.init) {
+                    LedgerEntriesForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    var w3 = s.DecimalEditor;
+                    Q.initFormType(LedgerEntriesForm, [
+                        'PartyId', w0,
+                        'EntryDate', w1,
+                        'Particulars', w2,
+                        'AmountIn', w3,
+                        'AmountOut', w3,
+                        'Balance', w3
+                    ]);
+                }
+                return _this;
+            }
+            LedgerEntriesForm.formKey = 'Tally.LedgerEntries';
+            return LedgerEntriesForm;
+        }(Serenity.PrefixedContext));
+        Tally.LedgerEntriesForm = LedgerEntriesForm;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerEntriesRow;
+        (function (LedgerEntriesRow) {
+            LedgerEntriesRow.idProperty = 'LedgerEntryId';
+            LedgerEntriesRow.nameProperty = 'Particulars';
+            LedgerEntriesRow.localTextPrefix = 'Tally.LedgerEntries';
+            LedgerEntriesRow.deletePermission = 'Administration:General';
+            LedgerEntriesRow.insertPermission = 'Administration:General';
+            LedgerEntriesRow.readPermission = 'Administration:General';
+            LedgerEntriesRow.updatePermission = 'Administration:General';
+        })(LedgerEntriesRow = Tally.LedgerEntriesRow || (Tally.LedgerEntriesRow = {}));
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerEntriesService;
+        (function (LedgerEntriesService) {
+            LedgerEntriesService.baseUrl = 'Tally/LedgerEntries';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                LedgerEntriesService[x] = function (r, s, o) {
+                    return Q.serviceRequest(LedgerEntriesService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(LedgerEntriesService = Tally.LedgerEntriesService || (Tally.LedgerEntriesService = {}));
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerMastersForm = /** @class */ (function (_super) {
+            __extends(LedgerMastersForm, _super);
+            function LedgerMastersForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!LedgerMastersForm.init) {
+                    LedgerMastersForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.DateEditor;
+                    Q.initFormType(LedgerMastersForm, [
+                        'PartyId', w0,
+                        'CreatingDate', w1,
+                        'LedgerType', w0
+                    ]);
+                }
+                return _this;
+            }
+            LedgerMastersForm.formKey = 'Tally.LedgerMasters';
+            return LedgerMastersForm;
+        }(Serenity.PrefixedContext));
+        Tally.LedgerMastersForm = LedgerMastersForm;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerMastersRow;
+        (function (LedgerMastersRow) {
+            LedgerMastersRow.idProperty = 'LedgerMasterId';
+            LedgerMastersRow.localTextPrefix = 'Tally.LedgerMasters';
+            LedgerMastersRow.deletePermission = 'Administration:General';
+            LedgerMastersRow.insertPermission = 'Administration:General';
+            LedgerMastersRow.readPermission = 'Administration:General';
+            LedgerMastersRow.updatePermission = 'Administration:General';
+        })(LedgerMastersRow = Tally.LedgerMastersRow || (Tally.LedgerMastersRow = {}));
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerMastersService;
+        (function (LedgerMastersService) {
+            LedgerMastersService.baseUrl = 'Tally/LedgerMasters';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                LedgerMastersService[x] = function (r, s, o) {
+                    return Q.serviceRequest(LedgerMastersService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(LedgerMastersService = Tally.LedgerMastersService || (Tally.LedgerMastersService = {}));
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var PartiesForm = /** @class */ (function (_super) {
+            __extends(PartiesForm, _super);
+            function PartiesForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!PartiesForm.init) {
+                    PartiesForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.DecimalEditor;
+                    var w3 = s.IntegerEditor;
+                    Q.initFormType(PartiesForm, [
+                        'PartyName', w0,
+                        'OpenningDate', w1,
+                        'OpenningBalance', w2,
+                        'Address', w0,
+                        'PanNo', w0,
+                        'GstNo', w0,
+                        'LedgerType', w3
+                    ]);
+                }
+                return _this;
+            }
+            PartiesForm.formKey = 'Tally.Parties';
+            return PartiesForm;
+        }(Serenity.PrefixedContext));
+        Tally.PartiesForm = PartiesForm;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var PartiesRow;
+        (function (PartiesRow) {
+            PartiesRow.idProperty = 'PartyId';
+            PartiesRow.nameProperty = 'PartyName';
+            PartiesRow.localTextPrefix = 'Tally.Parties';
+            PartiesRow.deletePermission = 'Administration:General';
+            PartiesRow.insertPermission = 'Administration:General';
+            PartiesRow.readPermission = 'Administration:General';
+            PartiesRow.updatePermission = 'Administration:General';
+        })(PartiesRow = Tally.PartiesRow || (Tally.PartiesRow = {}));
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var PartiesService;
+        (function (PartiesService) {
+            PartiesService.baseUrl = 'Tally/Parties';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                PartiesService[x] = function (r, s, o) {
+                    return Q.serviceRequest(PartiesService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(PartiesService = Tally.PartiesService || (Tally.PartiesService = {}));
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
     var Texts;
     (function (Texts) {
-        AprajitaRetails['Texts'] = Q.proxyTexts(Texts, '', { Db: { Accounts: { CashInBanks: { CashIn: 1, CashInBankId: 1, CashOut: 1, CibDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, CashInHands: { CashIn: 1, CashInHandId: 1, CashOut: 1, CihDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, PurchaseTaxTypes: { CompositeRate: 1, PurchaseTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SaleTaxTypes: { CompositeRate: 1, SaleTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SuspenseAccounts: { ClearedDetails: 1, EntryDate: 1, InAmount: 1, IsCleared: 1, OutAmount: 1, ReferanceDetails: 1, ReviewBy: 1, SuspenseAccountId: 1 }, TranscationModes: { Transcation: 1, TranscationModeId: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Banking: { AccountNumbers: { Account: 1, AccountNumberId: 1, BankBankName: 1, BankId: 1 }, BankDeposits: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, BankDepositId: 1, DepoDate: 1, Details: 1, PayMode: 1, Remarks: 1 }, BankWithdrawals: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, ApprovedBy: 1, BankWithdrawalId: 1, ChequeNo: 1, DepoDate: 1, InNameOf: 1, SignedBy: 1 }, Banks: { BankId: 1, BankName: 1 }, ChequesLogs: { AccountNumber: 1, Amount: 1, BankName: 1, ChequesDate: 1, ChequesLogId: 1, ClearedDate: 1, DepositDate: 1, IsDepositedOnAprajitaRetails: 1, IsIssuedByAprajitaRetails: 1, IsPdc: 1, IssuedBy: 1, IssuedTo: 1, Remarks: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, CustomTailoring: { TalioringBookings: { BookingDate: 1, BookingSlipNo: 1, BundiPrice: 1, BundiQty: 1, CoatPrice: 1, CoatQty: 1, CustName: 1, DeliveryDate: 1, IsDelivered: 1, KurtaPrice: 1, KurtaQty: 1, Others: 1, OthersPrice: 1, PantPrice: 1, PantQty: 1, ShirtPrice: 1, ShirtQty: 1, TalioringBookingId: 1, TotalAmount: 1, TotalQty: 1, TryDate: 1 }, TalioringDeliveries: { Amount: 1, DeliveryDate: 1, InvNo: 1, Remarks: 1, TalioringBookingBookingDate: 1, TalioringBookingBookingSlipNo: 1, TalioringBookingBundiPrice: 1, TalioringBookingBundiQty: 1, TalioringBookingCoatPrice: 1, TalioringBookingCoatQty: 1, TalioringBookingCustName: 1, TalioringBookingDeliveryDate: 1, TalioringBookingId: 1, TalioringBookingIsDelivered: 1, TalioringBookingKurtaPrice: 1, TalioringBookingKurtaQty: 1, TalioringBookingOthers: 1, TalioringBookingOthersPrice: 1, TalioringBookingPantPrice: 1, TalioringBookingPantQty: 1, TalioringBookingShirtPrice: 1, TalioringBookingShirtQty: 1, TalioringBookingTotalAmount: 1, TalioringBookingTotalQty: 1, TalioringBookingTryDate: 1, TalioringDeliveryId: 1 } }, Dues: { DueRecoverds: { AmountPaid: 1, DueRecoverdId: 1, DuesListAmount: 1, DuesListDailySaleId: 1, DuesListId: 1, DuesListIsPartialRecovery: 1, DuesListIsRecovered: 1, DuesListRecoveryDate: 1, IsPartialPayment: 1, Modes: 1, PaidDate: 1, Remarks: 1 }, DuesLists: { Amount: 1, DailySaleAmount: 1, DailySaleCashAmount: 1, DailySaleId: 1, DailySaleInvNo: 1, DailySaleIsDue: 1, DailySaleIsManualBill: 1, DailySaleIsSaleReturn: 1, DailySaleIsTailoringBill: 1, DailySalePayMode: 1, DailySaleRemarks: 1, DailySaleSaleDate: 1, DailySaleSalesmanId: 1, DuesListId: 1, IsPartialRecovery: 1, IsRecovered: 1, RecoveryDate: 1 } }, Expenses: { CashPayments: { Amount: 1, CashPaymentId: 1, PaidTo: 1, PaymentDate: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Expenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, ExpenseId: 1, PaidTo: 1, Particulars: 1, PayMode: 1, PaymentDetails: 1, Remarks: 1 }, Payments: { Amount: 1, PayDate: 1, PayMode: 1, PaymentDetails: 1, PaymentId: 1, PaymentPartry: 1, PaymentSlipNo: 1, Remarks: 1 }, PettyCashExpenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, PaidTo: 1, Particulars: 1, PettyCashExpenseId: 1, Remarks: 1 } }, PayRoll: { Attendances: { AttDate: 1, AttendanceId: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, EntryTime: 1, Remarks: 1, Status: 1 }, CurrentSalaries: { BasicSalary: 1, CloseDate: 1, CurrentSalaryId: 1, EffectiveDate: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, IncentiveRate: 1, IncentiveTarget: 1, IsEffective: 1, IsSundayBillable: 1, LpRate: 1, SundaySalary: 1, WowBillRate: 1, WowBillTarget: 1 }, Employees: { EmployeeId: 1, IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1 }, PaySlips: { AdvanceDeducations: 1, BasicSalary: 1, CurrentSalaryBasicSalary: 1, CurrentSalaryCloseDate: 1, CurrentSalaryEffectiveDate: 1, CurrentSalaryEmployeeId: 1, CurrentSalaryId: 1, CurrentSalaryIncentiveRate: 1, CurrentSalaryIncentiveTarget: 1, CurrentSalaryIsEffective: 1, CurrentSalaryIsSundayBillable: 1, CurrentSalaryLpRate: 1, CurrentSalarySundaySalary: 1, CurrentSalaryWowBillRate: 1, CurrentSalaryWowBillTarget: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, GrossSalary: 1, LastPCsIncentive: 1, LastPcsAmount: 1, Month: 1, NoOfDaysPresent: 1, OnDate: 1, OtherDeductions: 1, OthersIncentive: 1, PaySlipId: 1, PfDeductions: 1, Remarks: 1, SaleIncentive: 1, StandardDeductions: 1, TdsDeductions: 1, TotalSale: 1, WowBillAmount: 1, WowBillIncentive: 1, Year: 1 }, SalaryPayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, SalaryPaymentId: 1 }, Salesmen: { SalesmanId: 1, SalesmanName: 1 }, StaffAdvancePayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, StaffAdvancePaymentId: 1 }, StaffAdvanceReceipts: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, ReceiptDate: 1, StaffAdvanceReceiptId: 1 } }, Process: { EndOfDays: { Access: 1, CashInHand: 1, EndOfDayId: 1, EodDate: 1, FmArrow: 1, Rwt: 1, Shirting: 1, Suiting: 1, Uspa: 1 }, MonthEnds: { EntryDate: 1, Month: 1, MonthEndId: 1, TotalAccess: 1, TotalAmountAccess: 1, TotalAmountFabric: 1, TotalAmountOthers: 1, TotalAmountRmz: 1, TotalBill: 1, TotalCashExpenses: 1, TotalDues: 1, TotalDuesOfMonth: 1, TotalDuesRecovered: 1, TotalExpenses: 1, TotalFabric: 1, TotalHomeExpenses: 1, TotalInward: 1, TotalInwardByAmitKumar: 1, TotalInwardOthers: 1, TotalOnBookExpenes: 1, TotalOtherExpenses: 1, TotalOtherHomeExpenses: 1, TotalOtherIncome: 1, TotalOthers: 1, TotalPayments: 1, TotalRecipts: 1, TotalRmz: 1, TotalSalary: 1, TotalSaleIncome: 1, TotalTailoringExpenses: 1, TotalTailoringIncome: 1, TotalTrimsAndOtherExpenses: 1, Year: 1 } }, Receipts: { CashReceipts: { Amount: 1, CashReceiptId: 1, InwardDate: 1, ReceiptFrom: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Receipts: { Amount: 1, PayMode: 1, ReceiptDetails: 1, ReceiptFrom: 1, ReceiptId: 1, RecieptDate: 1, RecieptSlipNo: 1, Remarks: 1 } }, Sales: { DailySales: { Amount: 1, CashAmount: 1, DailySaleId: 1, InvNo: 1, IsDue: 1, IsManualBill: 1, IsSaleReturn: 1, IsTailoringBill: 1, PayMode: 1, Remarks: 1, SaleDate: 1, SalesmanId: 1, SalesmanSalesmanName: 1 } }, Tailors: { TailorAttendances: { AttDate: 1, EntryTime: 1, Remarks: 1, Status: 1, TailorAttendanceId: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1 }, TailoringEmployees: { IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1, TailoringEmployeeId: 1 }, TailoringSalaryPayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringSalaryPaymentId: 1 }, TailoringStaffAdvancePayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvancePaymentId: 1 }, TailoringStaffAdvanceReceipts: { Amount: 1, Details: 1, PayMode: 1, ReceiptDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvanceReceiptId: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        AprajitaRetails['Texts'] = Q.proxyTexts(Texts, '', { Db: { Accounts: { CashInBanks: { CashIn: 1, CashInBankId: 1, CashOut: 1, CibDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, CashInHands: { CashIn: 1, CashInHandId: 1, CashOut: 1, CihDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, PurchaseTaxTypes: { CompositeRate: 1, PurchaseTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SaleTaxTypes: { CompositeRate: 1, SaleTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SuspenseAccounts: { ClearedDetails: 1, EntryDate: 1, InAmount: 1, IsCleared: 1, OutAmount: 1, ReferanceDetails: 1, ReviewBy: 1, SuspenseAccountId: 1 }, TranscationModes: { Transcation: 1, TranscationModeId: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Banking: { AccountNumbers: { Account: 1, AccountNumberId: 1, BankBankName: 1, BankId: 1 }, BankDeposits: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, BankDepositId: 1, DepoDate: 1, Details: 1, PayMode: 1, Remarks: 1 }, BankWithdrawals: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, ApprovedBy: 1, BankWithdrawalId: 1, ChequeNo: 1, DepoDate: 1, InNameOf: 1, SignedBy: 1 }, Banks: { BankId: 1, BankName: 1 }, ChequesLogs: { AccountNumber: 1, Amount: 1, BankName: 1, ChequesDate: 1, ChequesLogId: 1, ClearedDate: 1, DepositDate: 1, IsDepositedOnAprajitaRetails: 1, IsIssuedByAprajitaRetails: 1, IsPdc: 1, IssuedBy: 1, IssuedTo: 1, Remarks: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, CustomTailoring: { TalioringBookings: { BookingDate: 1, BookingSlipNo: 1, BundiPrice: 1, BundiQty: 1, CoatPrice: 1, CoatQty: 1, CustName: 1, DeliveryDate: 1, IsDelivered: 1, KurtaPrice: 1, KurtaQty: 1, Others: 1, OthersPrice: 1, PantPrice: 1, PantQty: 1, ShirtPrice: 1, ShirtQty: 1, TalioringBookingId: 1, TotalAmount: 1, TotalQty: 1, TryDate: 1 }, TalioringDeliveries: { Amount: 1, DeliveryDate: 1, InvNo: 1, Remarks: 1, TalioringBookingBookingDate: 1, TalioringBookingBookingSlipNo: 1, TalioringBookingBundiPrice: 1, TalioringBookingBundiQty: 1, TalioringBookingCoatPrice: 1, TalioringBookingCoatQty: 1, TalioringBookingCustName: 1, TalioringBookingDeliveryDate: 1, TalioringBookingId: 1, TalioringBookingIsDelivered: 1, TalioringBookingKurtaPrice: 1, TalioringBookingKurtaQty: 1, TalioringBookingOthers: 1, TalioringBookingOthersPrice: 1, TalioringBookingPantPrice: 1, TalioringBookingPantQty: 1, TalioringBookingShirtPrice: 1, TalioringBookingShirtQty: 1, TalioringBookingTotalAmount: 1, TalioringBookingTotalQty: 1, TalioringBookingTryDate: 1, TalioringDeliveryId: 1 } }, Dues: { DueRecoverds: { AmountPaid: 1, DueRecoverdId: 1, DuesListAmount: 1, DuesListDailySaleId: 1, DuesListId: 1, DuesListIsPartialRecovery: 1, DuesListIsRecovered: 1, DuesListRecoveryDate: 1, IsPartialPayment: 1, Modes: 1, PaidDate: 1, Remarks: 1 }, DuesLists: { Amount: 1, DailySaleAmount: 1, DailySaleCashAmount: 1, DailySaleId: 1, DailySaleInvNo: 1, DailySaleIsDue: 1, DailySaleIsManualBill: 1, DailySaleIsSaleReturn: 1, DailySaleIsTailoringBill: 1, DailySalePayMode: 1, DailySaleRemarks: 1, DailySaleSaleDate: 1, DailySaleSalesmanId: 1, DuesListId: 1, IsPartialRecovery: 1, IsRecovered: 1, RecoveryDate: 1 } }, Expenses: { CashPayments: { Amount: 1, CashPaymentId: 1, PaidTo: 1, PaymentDate: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Expenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, ExpenseId: 1, PaidTo: 1, Particulars: 1, PayMode: 1, PaymentDetails: 1, Remarks: 1 }, Payments: { Amount: 1, PayDate: 1, PayMode: 1, PaymentDetails: 1, PaymentId: 1, PaymentPartry: 1, PaymentSlipNo: 1, Remarks: 1 }, PettyCashExpenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, PaidTo: 1, Particulars: 1, PettyCashExpenseId: 1, Remarks: 1 } }, PayRoll: { Attendances: { AttDate: 1, AttendanceId: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, EntryTime: 1, Remarks: 1, Status: 1 }, CurrentSalaries: { BasicSalary: 1, CloseDate: 1, CurrentSalaryId: 1, EffectiveDate: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, IncentiveRate: 1, IncentiveTarget: 1, IsEffective: 1, IsSundayBillable: 1, LpRate: 1, SundaySalary: 1, WowBillRate: 1, WowBillTarget: 1 }, Employees: { EmployeeId: 1, IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1 }, PaySlips: { AdvanceDeducations: 1, BasicSalary: 1, CurrentSalaryBasicSalary: 1, CurrentSalaryCloseDate: 1, CurrentSalaryEffectiveDate: 1, CurrentSalaryEmployeeId: 1, CurrentSalaryId: 1, CurrentSalaryIncentiveRate: 1, CurrentSalaryIncentiveTarget: 1, CurrentSalaryIsEffective: 1, CurrentSalaryIsSundayBillable: 1, CurrentSalaryLpRate: 1, CurrentSalarySundaySalary: 1, CurrentSalaryWowBillRate: 1, CurrentSalaryWowBillTarget: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, GrossSalary: 1, LastPCsIncentive: 1, LastPcsAmount: 1, Month: 1, NoOfDaysPresent: 1, OnDate: 1, OtherDeductions: 1, OthersIncentive: 1, PaySlipId: 1, PfDeductions: 1, Remarks: 1, SaleIncentive: 1, StandardDeductions: 1, TdsDeductions: 1, TotalSale: 1, WowBillAmount: 1, WowBillIncentive: 1, Year: 1 }, SalaryPayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, SalaryPaymentId: 1 }, Salesmen: { SalesmanId: 1, SalesmanName: 1 }, StaffAdvancePayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, StaffAdvancePaymentId: 1 }, StaffAdvanceReceipts: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, ReceiptDate: 1, StaffAdvanceReceiptId: 1 } }, Process: { EndOfDays: { Access: 1, CashInHand: 1, EndOfDayId: 1, EodDate: 1, FmArrow: 1, Rwt: 1, Shirting: 1, Suiting: 1, Uspa: 1 }, MonthEnds: { EntryDate: 1, Month: 1, MonthEndId: 1, TotalAccess: 1, TotalAmountAccess: 1, TotalAmountFabric: 1, TotalAmountOthers: 1, TotalAmountRmz: 1, TotalBill: 1, TotalCashExpenses: 1, TotalDues: 1, TotalDuesOfMonth: 1, TotalDuesRecovered: 1, TotalExpenses: 1, TotalFabric: 1, TotalHomeExpenses: 1, TotalInward: 1, TotalInwardByAmitKumar: 1, TotalInwardOthers: 1, TotalOnBookExpenes: 1, TotalOtherExpenses: 1, TotalOtherHomeExpenses: 1, TotalOtherIncome: 1, TotalOthers: 1, TotalPayments: 1, TotalRecipts: 1, TotalRmz: 1, TotalSalary: 1, TotalSaleIncome: 1, TotalTailoringExpenses: 1, TotalTailoringIncome: 1, TotalTrimsAndOtherExpenses: 1, Year: 1 } }, Receipts: { CashReceipts: { Amount: 1, CashReceiptId: 1, InwardDate: 1, ReceiptFrom: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Receipts: { Amount: 1, PayMode: 1, ReceiptDetails: 1, ReceiptFrom: 1, ReceiptId: 1, RecieptDate: 1, RecieptSlipNo: 1, Remarks: 1 } }, Sales: { DailySales: { Amount: 1, CashAmount: 1, DailySaleId: 1, InvNo: 1, IsDue: 1, IsManualBill: 1, IsSaleReturn: 1, IsTailoringBill: 1, PayMode: 1, Remarks: 1, SaleDate: 1, SalesmanId: 1, SalesmanSalesmanName: 1 } }, Tailors: { TailorAttendances: { AttDate: 1, EntryTime: 1, Remarks: 1, Status: 1, TailorAttendanceId: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1 }, TailoringEmployees: { IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1, TailoringEmployeeId: 1 }, TailoringSalaryPayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringSalaryPaymentId: 1 }, TailoringStaffAdvancePayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvancePaymentId: 1 }, TailoringStaffAdvanceReceipts: { Amount: 1, Details: 1, PayMode: 1, ReceiptDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvanceReceiptId: 1 } }, Tally: { LedgerEntries: { AmountIn: 1, AmountOut: 1, Balance: 1, EntryDate: 1, LedgerEntryId: 1, Particulars: 1, PartyAddress: 1, PartyGstNo: 1, PartyId: 1, PartyLedgerType: 1, PartyOpenningBalance: 1, PartyOpenningDate: 1, PartyPanNo: 1, PartyPartyName: 1 }, LedgerMasters: { CreatingDate: 1, LedgerMasterId: 1, LedgerType: 1, PartyAddress: 1, PartyGstNo: 1, PartyId: 1, PartyLedgerType: 1, PartyOpenningBalance: 1, PartyOpenningDate: 1, PartyPanNo: 1, PartyPartyName: 1 }, Parties: { Address: 1, GstNo: 1, LedgerType: 1, OpenningBalance: 1, OpenningDate: 1, PanNo: 1, PartyId: 1, PartyName: 1 } }, Voyager: { CardPaymentDetails: { Amount: 1, AuthCode: 1, CardPaymentDetailCardAmount: 1, CardPaymentDetailCashAmount: 1, CardPaymentDetailId: 1, CardPaymentDetailMixAmount: 1, CardPaymentDetailPayMode: 1, CardType: 1, LastDigit: 1, SaleInvoiceId: 1 }, ImportInWards: { ImportDate: 1, ImportInWardId: 1, InWardDate: 1, InWardNo: 1, InvoiceDate: 1, InvoiceNo: 1, PartyName: 1, TotalCost: 1, TotalMrpValue: 1, TotalQty: 1 }, ImportPurchases: { Barcode: 1, Cost: 1, CostValue: 1, GrnDate: 1, GrnNo: 1, ImportPurchaseId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, IsDataConsumed: 1, IsLocal: 1, IsVatBill: 1, ItemDesc: 1, Mrp: 1, MrpValue: 1, ProductName: 1, Quantity: 1, StyleCode: 1, SupplierName: 1, TaxAmt: 1 }, ImportSaleItemWises: { Barcode: 1, BasicRate: 1, BillAmnt: 1, BrandName: 1, Cgst: 1, Discount: 1, HsnCode: 1, ImportSaleItemWiseId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, InvoiceType: 1, IsDataConsumed: 1, ItemDesc: 1, LineTotal: 1, Mrp: 1, PaymentType: 1, ProductName: 1, Quantity: 1, RoundOff: 1, Saleman: 1, Sgst: 1, StyleCode: 1, Tax: 1 }, ImportSaleRegisters: { BasicRate: 1, BillAmnt: 1, Discount: 1, ImportSaleRegisterId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, InvoiceType: 1, IsConsumed: 1, Mrp: 1, PaymentType: 1, Quantity: 1, RoundOff: 1, Tax: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = AprajitaRetails.Texts || (AprajitaRetails.Texts = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var CardPaymentDetailsForm = /** @class */ (function (_super) {
+            __extends(CardPaymentDetailsForm, _super);
+            function CardPaymentDetailsForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CardPaymentDetailsForm.init) {
+                    CardPaymentDetailsForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.DecimalEditor;
+                    Q.initFormType(CardPaymentDetailsForm, [
+                        'SaleInvoiceId', w0,
+                        'CardType', w0,
+                        'Amount', w1,
+                        'AuthCode', w0,
+                        'LastDigit', w0
+                    ]);
+                }
+                return _this;
+            }
+            CardPaymentDetailsForm.formKey = 'Voyager.CardPaymentDetails';
+            return CardPaymentDetailsForm;
+        }(Serenity.PrefixedContext));
+        Voyager.CardPaymentDetailsForm = CardPaymentDetailsForm;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var CardPaymentDetailsRow;
+        (function (CardPaymentDetailsRow) {
+            CardPaymentDetailsRow.idProperty = 'CardPaymentDetailId';
+            CardPaymentDetailsRow.localTextPrefix = 'Voyager.CardPaymentDetails';
+            CardPaymentDetailsRow.deletePermission = 'Administration:General';
+            CardPaymentDetailsRow.insertPermission = 'Administration:General';
+            CardPaymentDetailsRow.readPermission = 'Administration:General';
+            CardPaymentDetailsRow.updatePermission = 'Administration:General';
+        })(CardPaymentDetailsRow = Voyager.CardPaymentDetailsRow || (Voyager.CardPaymentDetailsRow = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var CardPaymentDetailsService;
+        (function (CardPaymentDetailsService) {
+            CardPaymentDetailsService.baseUrl = 'Voyager/CardPaymentDetails';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CardPaymentDetailsService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CardPaymentDetailsService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CardPaymentDetailsService = Voyager.CardPaymentDetailsService || (Voyager.CardPaymentDetailsService = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportInWardsForm = /** @class */ (function (_super) {
+            __extends(ImportInWardsForm, _super);
+            function ImportInWardsForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ImportInWardsForm.init) {
+                    ImportInWardsForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.DecimalEditor;
+                    Q.initFormType(ImportInWardsForm, [
+                        'InWardNo', w0,
+                        'InWardDate', w1,
+                        'InvoiceNo', w0,
+                        'InvoiceDate', w1,
+                        'PartyName', w0,
+                        'TotalQty', w2,
+                        'TotalMrpValue', w2,
+                        'TotalCost', w2,
+                        'ImportDate', w1
+                    ]);
+                }
+                return _this;
+            }
+            ImportInWardsForm.formKey = 'Voyager.ImportInWards';
+            return ImportInWardsForm;
+        }(Serenity.PrefixedContext));
+        Voyager.ImportInWardsForm = ImportInWardsForm;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportInWardsRow;
+        (function (ImportInWardsRow) {
+            ImportInWardsRow.idProperty = 'ImportInWardId';
+            ImportInWardsRow.nameProperty = 'InWardNo';
+            ImportInWardsRow.localTextPrefix = 'Voyager.ImportInWards';
+            ImportInWardsRow.deletePermission = 'Administration:General';
+            ImportInWardsRow.insertPermission = 'Administration:General';
+            ImportInWardsRow.readPermission = 'Administration:General';
+            ImportInWardsRow.updatePermission = 'Administration:General';
+        })(ImportInWardsRow = Voyager.ImportInWardsRow || (Voyager.ImportInWardsRow = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportInWardsService;
+        (function (ImportInWardsService) {
+            ImportInWardsService.baseUrl = 'Voyager/ImportInWards';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ImportInWardsService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ImportInWardsService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ImportInWardsService = Voyager.ImportInWardsService || (Voyager.ImportInWardsService = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportPurchasesForm = /** @class */ (function (_super) {
+            __extends(ImportPurchasesForm, _super);
+            function ImportPurchasesForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ImportPurchasesForm.init) {
+                    ImportPurchasesForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.DecimalEditor;
+                    var w3 = s.BooleanEditor;
+                    Q.initFormType(ImportPurchasesForm, [
+                        'GrnNo', w0,
+                        'GrnDate', w1,
+                        'InvoiceNo', w0,
+                        'InvoiceDate', w1,
+                        'SupplierName', w0,
+                        'Barcode', w0,
+                        'ProductName', w0,
+                        'StyleCode', w0,
+                        'ItemDesc', w0,
+                        'Quantity', w2,
+                        'Mrp', w2,
+                        'MrpValue', w2,
+                        'Cost', w2,
+                        'CostValue', w2,
+                        'TaxAmt', w2,
+                        'IsVatBill', w3,
+                        'IsLocal', w3,
+                        'IsDataConsumed', w3,
+                        'ImportTime', w1
+                    ]);
+                }
+                return _this;
+            }
+            ImportPurchasesForm.formKey = 'Voyager.ImportPurchases';
+            return ImportPurchasesForm;
+        }(Serenity.PrefixedContext));
+        Voyager.ImportPurchasesForm = ImportPurchasesForm;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportPurchasesRow;
+        (function (ImportPurchasesRow) {
+            ImportPurchasesRow.idProperty = 'ImportPurchaseId';
+            ImportPurchasesRow.nameProperty = 'GrnNo';
+            ImportPurchasesRow.localTextPrefix = 'Voyager.ImportPurchases';
+            ImportPurchasesRow.deletePermission = 'Administration:General';
+            ImportPurchasesRow.insertPermission = 'Administration:General';
+            ImportPurchasesRow.readPermission = 'Administration:General';
+            ImportPurchasesRow.updatePermission = 'Administration:General';
+        })(ImportPurchasesRow = Voyager.ImportPurchasesRow || (Voyager.ImportPurchasesRow = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportPurchasesService;
+        (function (ImportPurchasesService) {
+            ImportPurchasesService.baseUrl = 'Voyager/ImportPurchases';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ImportPurchasesService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ImportPurchasesService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ImportPurchasesService = Voyager.ImportPurchasesService || (Voyager.ImportPurchasesService = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleItemWisesForm = /** @class */ (function (_super) {
+            __extends(ImportSaleItemWisesForm, _super);
+            function ImportSaleItemWisesForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ImportSaleItemWisesForm.init) {
+                    ImportSaleItemWisesForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.DecimalEditor;
+                    var w3 = s.BooleanEditor;
+                    Q.initFormType(ImportSaleItemWisesForm, [
+                        'InvoiceDate', w0,
+                        'InvoiceNo', w1,
+                        'InvoiceType', w1,
+                        'BrandName', w1,
+                        'ProductName', w1,
+                        'ItemDesc', w1,
+                        'HsnCode', w1,
+                        'Barcode', w1,
+                        'StyleCode', w1,
+                        'Quantity', w2,
+                        'Mrp', w2,
+                        'Discount', w2,
+                        'BasicRate', w2,
+                        'Tax', w2,
+                        'Sgst', w2,
+                        'Cgst', w2,
+                        'LineTotal', w2,
+                        'RoundOff', w2,
+                        'BillAmnt', w2,
+                        'PaymentType', w1,
+                        'Saleman', w1,
+                        'IsDataConsumed', w3,
+                        'ImportTime', w0
+                    ]);
+                }
+                return _this;
+            }
+            ImportSaleItemWisesForm.formKey = 'Voyager.ImportSaleItemWises';
+            return ImportSaleItemWisesForm;
+        }(Serenity.PrefixedContext));
+        Voyager.ImportSaleItemWisesForm = ImportSaleItemWisesForm;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleItemWisesRow;
+        (function (ImportSaleItemWisesRow) {
+            ImportSaleItemWisesRow.idProperty = 'ImportSaleItemWiseId';
+            ImportSaleItemWisesRow.nameProperty = 'InvoiceNo';
+            ImportSaleItemWisesRow.localTextPrefix = 'Voyager.ImportSaleItemWises';
+            ImportSaleItemWisesRow.deletePermission = 'Administration:General';
+            ImportSaleItemWisesRow.insertPermission = 'Administration:General';
+            ImportSaleItemWisesRow.readPermission = 'Administration:General';
+            ImportSaleItemWisesRow.updatePermission = 'Administration:General';
+        })(ImportSaleItemWisesRow = Voyager.ImportSaleItemWisesRow || (Voyager.ImportSaleItemWisesRow = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleItemWisesService;
+        (function (ImportSaleItemWisesService) {
+            ImportSaleItemWisesService.baseUrl = 'Voyager/ImportSaleItemWises';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ImportSaleItemWisesService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ImportSaleItemWisesService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ImportSaleItemWisesService = Voyager.ImportSaleItemWisesService || (Voyager.ImportSaleItemWisesService = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleRegistersForm = /** @class */ (function (_super) {
+            __extends(ImportSaleRegistersForm, _super);
+            function ImportSaleRegistersForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ImportSaleRegistersForm.init) {
+                    ImportSaleRegistersForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.DecimalEditor;
+                    var w2 = s.BooleanEditor;
+                    var w3 = s.DateEditor;
+                    Q.initFormType(ImportSaleRegistersForm, [
+                        'InvoiceNo', w0,
+                        'InvoiceType', w0,
+                        'InvoiceDate', w0,
+                        'Quantity', w1,
+                        'Mrp', w1,
+                        'Discount', w1,
+                        'BasicRate', w1,
+                        'Tax', w1,
+                        'RoundOff', w1,
+                        'BillAmnt', w1,
+                        'PaymentType', w0,
+                        'IsConsumed', w2,
+                        'ImportTime', w3
+                    ]);
+                }
+                return _this;
+            }
+            ImportSaleRegistersForm.formKey = 'Voyager.ImportSaleRegisters';
+            return ImportSaleRegistersForm;
+        }(Serenity.PrefixedContext));
+        Voyager.ImportSaleRegistersForm = ImportSaleRegistersForm;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleRegistersRow;
+        (function (ImportSaleRegistersRow) {
+            ImportSaleRegistersRow.idProperty = 'ImportSaleRegisterId';
+            ImportSaleRegistersRow.nameProperty = 'InvoiceNo';
+            ImportSaleRegistersRow.localTextPrefix = 'Voyager.ImportSaleRegisters';
+            ImportSaleRegistersRow.deletePermission = 'Administration:General';
+            ImportSaleRegistersRow.insertPermission = 'Administration:General';
+            ImportSaleRegistersRow.readPermission = 'Administration:General';
+            ImportSaleRegistersRow.updatePermission = 'Administration:General';
+        })(ImportSaleRegistersRow = Voyager.ImportSaleRegistersRow || (Voyager.ImportSaleRegistersRow = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleRegistersService;
+        (function (ImportSaleRegistersService) {
+            ImportSaleRegistersService.baseUrl = 'Voyager/ImportSaleRegisters';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ImportSaleRegistersService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ImportSaleRegistersService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ImportSaleRegistersService = Voyager.ImportSaleRegistersService || (Voyager.ImportSaleRegistersService = {}));
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
 })(AprajitaRetails || (AprajitaRetails = {}));
 var AprajitaRetails;
 (function (AprajitaRetails) {
@@ -7106,6 +7688,404 @@ var AprajitaRetails;
         }(Serenity.EntityGrid));
         Tailors.TailoringStaffAdvanceReceiptsGrid = TailoringStaffAdvanceReceiptsGrid;
     })(Tailors = AprajitaRetails.Tailors || (AprajitaRetails.Tailors = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerEntriesDialog = /** @class */ (function (_super) {
+            __extends(LedgerEntriesDialog, _super);
+            function LedgerEntriesDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Tally.LedgerEntriesForm(_this.idPrefix);
+                return _this;
+            }
+            LedgerEntriesDialog.prototype.getFormKey = function () { return Tally.LedgerEntriesForm.formKey; };
+            LedgerEntriesDialog.prototype.getIdProperty = function () { return Tally.LedgerEntriesRow.idProperty; };
+            LedgerEntriesDialog.prototype.getLocalTextPrefix = function () { return Tally.LedgerEntriesRow.localTextPrefix; };
+            LedgerEntriesDialog.prototype.getNameProperty = function () { return Tally.LedgerEntriesRow.nameProperty; };
+            LedgerEntriesDialog.prototype.getService = function () { return Tally.LedgerEntriesService.baseUrl; };
+            LedgerEntriesDialog.prototype.getDeletePermission = function () { return Tally.LedgerEntriesRow.deletePermission; };
+            LedgerEntriesDialog.prototype.getInsertPermission = function () { return Tally.LedgerEntriesRow.insertPermission; };
+            LedgerEntriesDialog.prototype.getUpdatePermission = function () { return Tally.LedgerEntriesRow.updatePermission; };
+            LedgerEntriesDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LedgerEntriesDialog);
+            return LedgerEntriesDialog;
+        }(Serenity.EntityDialog));
+        Tally.LedgerEntriesDialog = LedgerEntriesDialog;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerEntriesGrid = /** @class */ (function (_super) {
+            __extends(LedgerEntriesGrid, _super);
+            function LedgerEntriesGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LedgerEntriesGrid.prototype.getColumnsKey = function () { return 'Tally.LedgerEntries'; };
+            LedgerEntriesGrid.prototype.getDialogType = function () { return Tally.LedgerEntriesDialog; };
+            LedgerEntriesGrid.prototype.getIdProperty = function () { return Tally.LedgerEntriesRow.idProperty; };
+            LedgerEntriesGrid.prototype.getInsertPermission = function () { return Tally.LedgerEntriesRow.insertPermission; };
+            LedgerEntriesGrid.prototype.getLocalTextPrefix = function () { return Tally.LedgerEntriesRow.localTextPrefix; };
+            LedgerEntriesGrid.prototype.getService = function () { return Tally.LedgerEntriesService.baseUrl; };
+            LedgerEntriesGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LedgerEntriesGrid);
+            return LedgerEntriesGrid;
+        }(Serenity.EntityGrid));
+        Tally.LedgerEntriesGrid = LedgerEntriesGrid;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerMastersDialog = /** @class */ (function (_super) {
+            __extends(LedgerMastersDialog, _super);
+            function LedgerMastersDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Tally.LedgerMastersForm(_this.idPrefix);
+                return _this;
+            }
+            LedgerMastersDialog.prototype.getFormKey = function () { return Tally.LedgerMastersForm.formKey; };
+            LedgerMastersDialog.prototype.getIdProperty = function () { return Tally.LedgerMastersRow.idProperty; };
+            LedgerMastersDialog.prototype.getLocalTextPrefix = function () { return Tally.LedgerMastersRow.localTextPrefix; };
+            LedgerMastersDialog.prototype.getService = function () { return Tally.LedgerMastersService.baseUrl; };
+            LedgerMastersDialog.prototype.getDeletePermission = function () { return Tally.LedgerMastersRow.deletePermission; };
+            LedgerMastersDialog.prototype.getInsertPermission = function () { return Tally.LedgerMastersRow.insertPermission; };
+            LedgerMastersDialog.prototype.getUpdatePermission = function () { return Tally.LedgerMastersRow.updatePermission; };
+            LedgerMastersDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LedgerMastersDialog);
+            return LedgerMastersDialog;
+        }(Serenity.EntityDialog));
+        Tally.LedgerMastersDialog = LedgerMastersDialog;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var LedgerMastersGrid = /** @class */ (function (_super) {
+            __extends(LedgerMastersGrid, _super);
+            function LedgerMastersGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LedgerMastersGrid.prototype.getColumnsKey = function () { return 'Tally.LedgerMasters'; };
+            LedgerMastersGrid.prototype.getDialogType = function () { return Tally.LedgerMastersDialog; };
+            LedgerMastersGrid.prototype.getIdProperty = function () { return Tally.LedgerMastersRow.idProperty; };
+            LedgerMastersGrid.prototype.getInsertPermission = function () { return Tally.LedgerMastersRow.insertPermission; };
+            LedgerMastersGrid.prototype.getLocalTextPrefix = function () { return Tally.LedgerMastersRow.localTextPrefix; };
+            LedgerMastersGrid.prototype.getService = function () { return Tally.LedgerMastersService.baseUrl; };
+            LedgerMastersGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LedgerMastersGrid);
+            return LedgerMastersGrid;
+        }(Serenity.EntityGrid));
+        Tally.LedgerMastersGrid = LedgerMastersGrid;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var PartiesDialog = /** @class */ (function (_super) {
+            __extends(PartiesDialog, _super);
+            function PartiesDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Tally.PartiesForm(_this.idPrefix);
+                return _this;
+            }
+            PartiesDialog.prototype.getFormKey = function () { return Tally.PartiesForm.formKey; };
+            PartiesDialog.prototype.getIdProperty = function () { return Tally.PartiesRow.idProperty; };
+            PartiesDialog.prototype.getLocalTextPrefix = function () { return Tally.PartiesRow.localTextPrefix; };
+            PartiesDialog.prototype.getNameProperty = function () { return Tally.PartiesRow.nameProperty; };
+            PartiesDialog.prototype.getService = function () { return Tally.PartiesService.baseUrl; };
+            PartiesDialog.prototype.getDeletePermission = function () { return Tally.PartiesRow.deletePermission; };
+            PartiesDialog.prototype.getInsertPermission = function () { return Tally.PartiesRow.insertPermission; };
+            PartiesDialog.prototype.getUpdatePermission = function () { return Tally.PartiesRow.updatePermission; };
+            PartiesDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], PartiesDialog);
+            return PartiesDialog;
+        }(Serenity.EntityDialog));
+        Tally.PartiesDialog = PartiesDialog;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Tally;
+    (function (Tally) {
+        var PartiesGrid = /** @class */ (function (_super) {
+            __extends(PartiesGrid, _super);
+            function PartiesGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            PartiesGrid.prototype.getColumnsKey = function () { return 'Tally.Parties'; };
+            PartiesGrid.prototype.getDialogType = function () { return Tally.PartiesDialog; };
+            PartiesGrid.prototype.getIdProperty = function () { return Tally.PartiesRow.idProperty; };
+            PartiesGrid.prototype.getInsertPermission = function () { return Tally.PartiesRow.insertPermission; };
+            PartiesGrid.prototype.getLocalTextPrefix = function () { return Tally.PartiesRow.localTextPrefix; };
+            PartiesGrid.prototype.getService = function () { return Tally.PartiesService.baseUrl; };
+            PartiesGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], PartiesGrid);
+            return PartiesGrid;
+        }(Serenity.EntityGrid));
+        Tally.PartiesGrid = PartiesGrid;
+    })(Tally = AprajitaRetails.Tally || (AprajitaRetails.Tally = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var CardPaymentDetailsDialog = /** @class */ (function (_super) {
+            __extends(CardPaymentDetailsDialog, _super);
+            function CardPaymentDetailsDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Voyager.CardPaymentDetailsForm(_this.idPrefix);
+                return _this;
+            }
+            CardPaymentDetailsDialog.prototype.getFormKey = function () { return Voyager.CardPaymentDetailsForm.formKey; };
+            CardPaymentDetailsDialog.prototype.getIdProperty = function () { return Voyager.CardPaymentDetailsRow.idProperty; };
+            CardPaymentDetailsDialog.prototype.getLocalTextPrefix = function () { return Voyager.CardPaymentDetailsRow.localTextPrefix; };
+            CardPaymentDetailsDialog.prototype.getService = function () { return Voyager.CardPaymentDetailsService.baseUrl; };
+            CardPaymentDetailsDialog.prototype.getDeletePermission = function () { return Voyager.CardPaymentDetailsRow.deletePermission; };
+            CardPaymentDetailsDialog.prototype.getInsertPermission = function () { return Voyager.CardPaymentDetailsRow.insertPermission; };
+            CardPaymentDetailsDialog.prototype.getUpdatePermission = function () { return Voyager.CardPaymentDetailsRow.updatePermission; };
+            CardPaymentDetailsDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CardPaymentDetailsDialog);
+            return CardPaymentDetailsDialog;
+        }(Serenity.EntityDialog));
+        Voyager.CardPaymentDetailsDialog = CardPaymentDetailsDialog;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var CardPaymentDetailsGrid = /** @class */ (function (_super) {
+            __extends(CardPaymentDetailsGrid, _super);
+            function CardPaymentDetailsGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CardPaymentDetailsGrid.prototype.getColumnsKey = function () { return 'Voyager.CardPaymentDetails'; };
+            CardPaymentDetailsGrid.prototype.getDialogType = function () { return Voyager.CardPaymentDetailsDialog; };
+            CardPaymentDetailsGrid.prototype.getIdProperty = function () { return Voyager.CardPaymentDetailsRow.idProperty; };
+            CardPaymentDetailsGrid.prototype.getInsertPermission = function () { return Voyager.CardPaymentDetailsRow.insertPermission; };
+            CardPaymentDetailsGrid.prototype.getLocalTextPrefix = function () { return Voyager.CardPaymentDetailsRow.localTextPrefix; };
+            CardPaymentDetailsGrid.prototype.getService = function () { return Voyager.CardPaymentDetailsService.baseUrl; };
+            CardPaymentDetailsGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CardPaymentDetailsGrid);
+            return CardPaymentDetailsGrid;
+        }(Serenity.EntityGrid));
+        Voyager.CardPaymentDetailsGrid = CardPaymentDetailsGrid;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportInWardsDialog = /** @class */ (function (_super) {
+            __extends(ImportInWardsDialog, _super);
+            function ImportInWardsDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Voyager.ImportInWardsForm(_this.idPrefix);
+                return _this;
+            }
+            ImportInWardsDialog.prototype.getFormKey = function () { return Voyager.ImportInWardsForm.formKey; };
+            ImportInWardsDialog.prototype.getIdProperty = function () { return Voyager.ImportInWardsRow.idProperty; };
+            ImportInWardsDialog.prototype.getLocalTextPrefix = function () { return Voyager.ImportInWardsRow.localTextPrefix; };
+            ImportInWardsDialog.prototype.getNameProperty = function () { return Voyager.ImportInWardsRow.nameProperty; };
+            ImportInWardsDialog.prototype.getService = function () { return Voyager.ImportInWardsService.baseUrl; };
+            ImportInWardsDialog.prototype.getDeletePermission = function () { return Voyager.ImportInWardsRow.deletePermission; };
+            ImportInWardsDialog.prototype.getInsertPermission = function () { return Voyager.ImportInWardsRow.insertPermission; };
+            ImportInWardsDialog.prototype.getUpdatePermission = function () { return Voyager.ImportInWardsRow.updatePermission; };
+            ImportInWardsDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportInWardsDialog);
+            return ImportInWardsDialog;
+        }(Serenity.EntityDialog));
+        Voyager.ImportInWardsDialog = ImportInWardsDialog;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportInWardsGrid = /** @class */ (function (_super) {
+            __extends(ImportInWardsGrid, _super);
+            function ImportInWardsGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ImportInWardsGrid.prototype.getColumnsKey = function () { return 'Voyager.ImportInWards'; };
+            ImportInWardsGrid.prototype.getDialogType = function () { return Voyager.ImportInWardsDialog; };
+            ImportInWardsGrid.prototype.getIdProperty = function () { return Voyager.ImportInWardsRow.idProperty; };
+            ImportInWardsGrid.prototype.getInsertPermission = function () { return Voyager.ImportInWardsRow.insertPermission; };
+            ImportInWardsGrid.prototype.getLocalTextPrefix = function () { return Voyager.ImportInWardsRow.localTextPrefix; };
+            ImportInWardsGrid.prototype.getService = function () { return Voyager.ImportInWardsService.baseUrl; };
+            ImportInWardsGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportInWardsGrid);
+            return ImportInWardsGrid;
+        }(Serenity.EntityGrid));
+        Voyager.ImportInWardsGrid = ImportInWardsGrid;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportPurchasesDialog = /** @class */ (function (_super) {
+            __extends(ImportPurchasesDialog, _super);
+            function ImportPurchasesDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Voyager.ImportPurchasesForm(_this.idPrefix);
+                return _this;
+            }
+            ImportPurchasesDialog.prototype.getFormKey = function () { return Voyager.ImportPurchasesForm.formKey; };
+            ImportPurchasesDialog.prototype.getIdProperty = function () { return Voyager.ImportPurchasesRow.idProperty; };
+            ImportPurchasesDialog.prototype.getLocalTextPrefix = function () { return Voyager.ImportPurchasesRow.localTextPrefix; };
+            ImportPurchasesDialog.prototype.getNameProperty = function () { return Voyager.ImportPurchasesRow.nameProperty; };
+            ImportPurchasesDialog.prototype.getService = function () { return Voyager.ImportPurchasesService.baseUrl; };
+            ImportPurchasesDialog.prototype.getDeletePermission = function () { return Voyager.ImportPurchasesRow.deletePermission; };
+            ImportPurchasesDialog.prototype.getInsertPermission = function () { return Voyager.ImportPurchasesRow.insertPermission; };
+            ImportPurchasesDialog.prototype.getUpdatePermission = function () { return Voyager.ImportPurchasesRow.updatePermission; };
+            ImportPurchasesDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportPurchasesDialog);
+            return ImportPurchasesDialog;
+        }(Serenity.EntityDialog));
+        Voyager.ImportPurchasesDialog = ImportPurchasesDialog;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportPurchasesGrid = /** @class */ (function (_super) {
+            __extends(ImportPurchasesGrid, _super);
+            function ImportPurchasesGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ImportPurchasesGrid.prototype.getColumnsKey = function () { return 'Voyager.ImportPurchases'; };
+            ImportPurchasesGrid.prototype.getDialogType = function () { return Voyager.ImportPurchasesDialog; };
+            ImportPurchasesGrid.prototype.getIdProperty = function () { return Voyager.ImportPurchasesRow.idProperty; };
+            ImportPurchasesGrid.prototype.getInsertPermission = function () { return Voyager.ImportPurchasesRow.insertPermission; };
+            ImportPurchasesGrid.prototype.getLocalTextPrefix = function () { return Voyager.ImportPurchasesRow.localTextPrefix; };
+            ImportPurchasesGrid.prototype.getService = function () { return Voyager.ImportPurchasesService.baseUrl; };
+            ImportPurchasesGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportPurchasesGrid);
+            return ImportPurchasesGrid;
+        }(Serenity.EntityGrid));
+        Voyager.ImportPurchasesGrid = ImportPurchasesGrid;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleItemWisesDialog = /** @class */ (function (_super) {
+            __extends(ImportSaleItemWisesDialog, _super);
+            function ImportSaleItemWisesDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Voyager.ImportSaleItemWisesForm(_this.idPrefix);
+                return _this;
+            }
+            ImportSaleItemWisesDialog.prototype.getFormKey = function () { return Voyager.ImportSaleItemWisesForm.formKey; };
+            ImportSaleItemWisesDialog.prototype.getIdProperty = function () { return Voyager.ImportSaleItemWisesRow.idProperty; };
+            ImportSaleItemWisesDialog.prototype.getLocalTextPrefix = function () { return Voyager.ImportSaleItemWisesRow.localTextPrefix; };
+            ImportSaleItemWisesDialog.prototype.getNameProperty = function () { return Voyager.ImportSaleItemWisesRow.nameProperty; };
+            ImportSaleItemWisesDialog.prototype.getService = function () { return Voyager.ImportSaleItemWisesService.baseUrl; };
+            ImportSaleItemWisesDialog.prototype.getDeletePermission = function () { return Voyager.ImportSaleItemWisesRow.deletePermission; };
+            ImportSaleItemWisesDialog.prototype.getInsertPermission = function () { return Voyager.ImportSaleItemWisesRow.insertPermission; };
+            ImportSaleItemWisesDialog.prototype.getUpdatePermission = function () { return Voyager.ImportSaleItemWisesRow.updatePermission; };
+            ImportSaleItemWisesDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportSaleItemWisesDialog);
+            return ImportSaleItemWisesDialog;
+        }(Serenity.EntityDialog));
+        Voyager.ImportSaleItemWisesDialog = ImportSaleItemWisesDialog;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleItemWisesGrid = /** @class */ (function (_super) {
+            __extends(ImportSaleItemWisesGrid, _super);
+            function ImportSaleItemWisesGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ImportSaleItemWisesGrid.prototype.getColumnsKey = function () { return 'Voyager.ImportSaleItemWises'; };
+            ImportSaleItemWisesGrid.prototype.getDialogType = function () { return Voyager.ImportSaleItemWisesDialog; };
+            ImportSaleItemWisesGrid.prototype.getIdProperty = function () { return Voyager.ImportSaleItemWisesRow.idProperty; };
+            ImportSaleItemWisesGrid.prototype.getInsertPermission = function () { return Voyager.ImportSaleItemWisesRow.insertPermission; };
+            ImportSaleItemWisesGrid.prototype.getLocalTextPrefix = function () { return Voyager.ImportSaleItemWisesRow.localTextPrefix; };
+            ImportSaleItemWisesGrid.prototype.getService = function () { return Voyager.ImportSaleItemWisesService.baseUrl; };
+            ImportSaleItemWisesGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportSaleItemWisesGrid);
+            return ImportSaleItemWisesGrid;
+        }(Serenity.EntityGrid));
+        Voyager.ImportSaleItemWisesGrid = ImportSaleItemWisesGrid;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleRegistersDialog = /** @class */ (function (_super) {
+            __extends(ImportSaleRegistersDialog, _super);
+            function ImportSaleRegistersDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Voyager.ImportSaleRegistersForm(_this.idPrefix);
+                return _this;
+            }
+            ImportSaleRegistersDialog.prototype.getFormKey = function () { return Voyager.ImportSaleRegistersForm.formKey; };
+            ImportSaleRegistersDialog.prototype.getIdProperty = function () { return Voyager.ImportSaleRegistersRow.idProperty; };
+            ImportSaleRegistersDialog.prototype.getLocalTextPrefix = function () { return Voyager.ImportSaleRegistersRow.localTextPrefix; };
+            ImportSaleRegistersDialog.prototype.getNameProperty = function () { return Voyager.ImportSaleRegistersRow.nameProperty; };
+            ImportSaleRegistersDialog.prototype.getService = function () { return Voyager.ImportSaleRegistersService.baseUrl; };
+            ImportSaleRegistersDialog.prototype.getDeletePermission = function () { return Voyager.ImportSaleRegistersRow.deletePermission; };
+            ImportSaleRegistersDialog.prototype.getInsertPermission = function () { return Voyager.ImportSaleRegistersRow.insertPermission; };
+            ImportSaleRegistersDialog.prototype.getUpdatePermission = function () { return Voyager.ImportSaleRegistersRow.updatePermission; };
+            ImportSaleRegistersDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportSaleRegistersDialog);
+            return ImportSaleRegistersDialog;
+        }(Serenity.EntityDialog));
+        Voyager.ImportSaleRegistersDialog = ImportSaleRegistersDialog;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Voyager;
+    (function (Voyager) {
+        var ImportSaleRegistersGrid = /** @class */ (function (_super) {
+            __extends(ImportSaleRegistersGrid, _super);
+            function ImportSaleRegistersGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ImportSaleRegistersGrid.prototype.getColumnsKey = function () { return 'Voyager.ImportSaleRegisters'; };
+            ImportSaleRegistersGrid.prototype.getDialogType = function () { return Voyager.ImportSaleRegistersDialog; };
+            ImportSaleRegistersGrid.prototype.getIdProperty = function () { return Voyager.ImportSaleRegistersRow.idProperty; };
+            ImportSaleRegistersGrid.prototype.getInsertPermission = function () { return Voyager.ImportSaleRegistersRow.insertPermission; };
+            ImportSaleRegistersGrid.prototype.getLocalTextPrefix = function () { return Voyager.ImportSaleRegistersRow.localTextPrefix; };
+            ImportSaleRegistersGrid.prototype.getService = function () { return Voyager.ImportSaleRegistersService.baseUrl; };
+            ImportSaleRegistersGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ImportSaleRegistersGrid);
+            return ImportSaleRegistersGrid;
+        }(Serenity.EntityGrid));
+        Voyager.ImportSaleRegistersGrid = ImportSaleRegistersGrid;
+    })(Voyager = AprajitaRetails.Voyager || (AprajitaRetails.Voyager = {}));
 })(AprajitaRetails || (AprajitaRetails = {}));
 var AprajitaRetails;
 (function (AprajitaRetails) {

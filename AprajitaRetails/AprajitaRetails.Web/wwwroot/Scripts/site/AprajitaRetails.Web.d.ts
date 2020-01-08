@@ -3296,7 +3296,656 @@ declare namespace AprajitaRetails.Tailors {
         }
     }
 }
+declare namespace AprajitaRetails.Tally {
+}
+declare namespace AprajitaRetails.Tally {
+    interface LedgerEntriesForm {
+        PartyId: Serenity.IntegerEditor;
+        EntryDate: Serenity.DateEditor;
+        Particulars: Serenity.StringEditor;
+        AmountIn: Serenity.DecimalEditor;
+        AmountOut: Serenity.DecimalEditor;
+        Balance: Serenity.DecimalEditor;
+    }
+    class LedgerEntriesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    interface LedgerEntriesRow {
+        LedgerEntryId?: number;
+        PartyId?: number;
+        EntryDate?: string;
+        Particulars?: string;
+        AmountIn?: number;
+        AmountOut?: number;
+        Balance?: number;
+        PartyPartyName?: string;
+        PartyOpenningDate?: string;
+        PartyOpenningBalance?: number;
+        PartyAddress?: string;
+        PartyPanNo?: string;
+        PartyGstNo?: string;
+        PartyLedgerType?: number;
+    }
+    namespace LedgerEntriesRow {
+        const idProperty = "LedgerEntryId";
+        const nameProperty = "Particulars";
+        const localTextPrefix = "Tally.LedgerEntries";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            LedgerEntryId = "LedgerEntryId",
+            PartyId = "PartyId",
+            EntryDate = "EntryDate",
+            Particulars = "Particulars",
+            AmountIn = "AmountIn",
+            AmountOut = "AmountOut",
+            Balance = "Balance",
+            PartyPartyName = "PartyPartyName",
+            PartyOpenningDate = "PartyOpenningDate",
+            PartyOpenningBalance = "PartyOpenningBalance",
+            PartyAddress = "PartyAddress",
+            PartyPanNo = "PartyPanNo",
+            PartyGstNo = "PartyGstNo",
+            PartyLedgerType = "PartyLedgerType"
+        }
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    namespace LedgerEntriesService {
+        const baseUrl = "Tally/LedgerEntries";
+        function Create(request: Serenity.SaveRequest<LedgerEntriesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LedgerEntriesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LedgerEntriesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LedgerEntriesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Tally/LedgerEntries/Create",
+            Update = "Tally/LedgerEntries/Update",
+            Delete = "Tally/LedgerEntries/Delete",
+            Retrieve = "Tally/LedgerEntries/Retrieve",
+            List = "Tally/LedgerEntries/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Tally {
+}
+declare namespace AprajitaRetails.Tally {
+    interface LedgerMastersForm {
+        PartyId: Serenity.IntegerEditor;
+        CreatingDate: Serenity.DateEditor;
+        LedgerType: Serenity.IntegerEditor;
+    }
+    class LedgerMastersForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    interface LedgerMastersRow {
+        LedgerMasterId?: number;
+        PartyId?: number;
+        CreatingDate?: string;
+        LedgerType?: number;
+        PartyPartyName?: string;
+        PartyOpenningDate?: string;
+        PartyOpenningBalance?: number;
+        PartyAddress?: string;
+        PartyPanNo?: string;
+        PartyGstNo?: string;
+        PartyLedgerType?: number;
+    }
+    namespace LedgerMastersRow {
+        const idProperty = "LedgerMasterId";
+        const localTextPrefix = "Tally.LedgerMasters";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            LedgerMasterId = "LedgerMasterId",
+            PartyId = "PartyId",
+            CreatingDate = "CreatingDate",
+            LedgerType = "LedgerType",
+            PartyPartyName = "PartyPartyName",
+            PartyOpenningDate = "PartyOpenningDate",
+            PartyOpenningBalance = "PartyOpenningBalance",
+            PartyAddress = "PartyAddress",
+            PartyPanNo = "PartyPanNo",
+            PartyGstNo = "PartyGstNo",
+            PartyLedgerType = "PartyLedgerType"
+        }
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    namespace LedgerMastersService {
+        const baseUrl = "Tally/LedgerMasters";
+        function Create(request: Serenity.SaveRequest<LedgerMastersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LedgerMastersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LedgerMastersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LedgerMastersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Tally/LedgerMasters/Create",
+            Update = "Tally/LedgerMasters/Update",
+            Delete = "Tally/LedgerMasters/Delete",
+            Retrieve = "Tally/LedgerMasters/Retrieve",
+            List = "Tally/LedgerMasters/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Tally {
+}
+declare namespace AprajitaRetails.Tally {
+    interface PartiesForm {
+        PartyName: Serenity.StringEditor;
+        OpenningDate: Serenity.DateEditor;
+        OpenningBalance: Serenity.DecimalEditor;
+        Address: Serenity.StringEditor;
+        PanNo: Serenity.StringEditor;
+        GstNo: Serenity.StringEditor;
+        LedgerType: Serenity.IntegerEditor;
+    }
+    class PartiesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    interface PartiesRow {
+        PartyId?: number;
+        PartyName?: string;
+        OpenningDate?: string;
+        OpenningBalance?: number;
+        Address?: string;
+        PanNo?: string;
+        GstNo?: string;
+        LedgerType?: number;
+    }
+    namespace PartiesRow {
+        const idProperty = "PartyId";
+        const nameProperty = "PartyName";
+        const localTextPrefix = "Tally.Parties";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            PartyId = "PartyId",
+            PartyName = "PartyName",
+            OpenningDate = "OpenningDate",
+            OpenningBalance = "OpenningBalance",
+            Address = "Address",
+            PanNo = "PanNo",
+            GstNo = "GstNo",
+            LedgerType = "LedgerType"
+        }
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    namespace PartiesService {
+        const baseUrl = "Tally/Parties";
+        function Create(request: Serenity.SaveRequest<PartiesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<PartiesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PartiesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PartiesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Tally/Parties/Create",
+            Update = "Tally/Parties/Update",
+            Delete = "Tally/Parties/Delete",
+            Retrieve = "Tally/Parties/Retrieve",
+            List = "Tally/Parties/List"
+        }
+    }
+}
 declare namespace AprajitaRetails.Texts {
+}
+declare namespace AprajitaRetails.Voyager {
+}
+declare namespace AprajitaRetails.Voyager {
+    interface CardPaymentDetailsForm {
+        SaleInvoiceId: Serenity.IntegerEditor;
+        CardType: Serenity.IntegerEditor;
+        Amount: Serenity.DecimalEditor;
+        AuthCode: Serenity.IntegerEditor;
+        LastDigit: Serenity.IntegerEditor;
+    }
+    class CardPaymentDetailsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    interface CardPaymentDetailsRow {
+        CardPaymentDetailId?: number;
+        SaleInvoiceId?: number;
+        CardType?: number;
+        Amount?: number;
+        AuthCode?: number;
+        LastDigit?: number;
+        CardPaymentDetailPayMode?: number;
+        CardPaymentDetailCashAmount?: number;
+        CardPaymentDetailCardAmount?: number;
+        CardPaymentDetailMixAmount?: number;
+    }
+    namespace CardPaymentDetailsRow {
+        const idProperty = "CardPaymentDetailId";
+        const localTextPrefix = "Voyager.CardPaymentDetails";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            CardPaymentDetailId = "CardPaymentDetailId",
+            SaleInvoiceId = "SaleInvoiceId",
+            CardType = "CardType",
+            Amount = "Amount",
+            AuthCode = "AuthCode",
+            LastDigit = "LastDigit",
+            CardPaymentDetailPayMode = "CardPaymentDetailPayMode",
+            CardPaymentDetailCashAmount = "CardPaymentDetailCashAmount",
+            CardPaymentDetailCardAmount = "CardPaymentDetailCardAmount",
+            CardPaymentDetailMixAmount = "CardPaymentDetailMixAmount"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    namespace CardPaymentDetailsService {
+        const baseUrl = "Voyager/CardPaymentDetails";
+        function Create(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CardPaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CardPaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Voyager/CardPaymentDetails/Create",
+            Update = "Voyager/CardPaymentDetails/Update",
+            Delete = "Voyager/CardPaymentDetails/Delete",
+            Retrieve = "Voyager/CardPaymentDetails/Retrieve",
+            List = "Voyager/CardPaymentDetails/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportInWardsForm {
+        InWardNo: Serenity.StringEditor;
+        InWardDate: Serenity.DateEditor;
+        InvoiceNo: Serenity.StringEditor;
+        InvoiceDate: Serenity.DateEditor;
+        PartyName: Serenity.StringEditor;
+        TotalQty: Serenity.DecimalEditor;
+        TotalMrpValue: Serenity.DecimalEditor;
+        TotalCost: Serenity.DecimalEditor;
+        ImportDate: Serenity.DateEditor;
+    }
+    class ImportInWardsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportInWardsRow {
+        ImportInWardId?: number;
+        InWardNo?: string;
+        InWardDate?: string;
+        InvoiceNo?: string;
+        InvoiceDate?: string;
+        PartyName?: string;
+        TotalQty?: number;
+        TotalMrpValue?: number;
+        TotalCost?: number;
+        ImportDate?: string;
+    }
+    namespace ImportInWardsRow {
+        const idProperty = "ImportInWardId";
+        const nameProperty = "InWardNo";
+        const localTextPrefix = "Voyager.ImportInWards";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            ImportInWardId = "ImportInWardId",
+            InWardNo = "InWardNo",
+            InWardDate = "InWardDate",
+            InvoiceNo = "InvoiceNo",
+            InvoiceDate = "InvoiceDate",
+            PartyName = "PartyName",
+            TotalQty = "TotalQty",
+            TotalMrpValue = "TotalMrpValue",
+            TotalCost = "TotalCost",
+            ImportDate = "ImportDate"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    namespace ImportInWardsService {
+        const baseUrl = "Voyager/ImportInWards";
+        function Create(request: Serenity.SaveRequest<ImportInWardsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ImportInWardsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ImportInWardsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ImportInWardsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Voyager/ImportInWards/Create",
+            Update = "Voyager/ImportInWards/Update",
+            Delete = "Voyager/ImportInWards/Delete",
+            Retrieve = "Voyager/ImportInWards/Retrieve",
+            List = "Voyager/ImportInWards/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportPurchasesForm {
+        GrnNo: Serenity.StringEditor;
+        GrnDate: Serenity.DateEditor;
+        InvoiceNo: Serenity.StringEditor;
+        InvoiceDate: Serenity.DateEditor;
+        SupplierName: Serenity.StringEditor;
+        Barcode: Serenity.StringEditor;
+        ProductName: Serenity.StringEditor;
+        StyleCode: Serenity.StringEditor;
+        ItemDesc: Serenity.StringEditor;
+        Quantity: Serenity.DecimalEditor;
+        Mrp: Serenity.DecimalEditor;
+        MrpValue: Serenity.DecimalEditor;
+        Cost: Serenity.DecimalEditor;
+        CostValue: Serenity.DecimalEditor;
+        TaxAmt: Serenity.DecimalEditor;
+        IsVatBill: Serenity.BooleanEditor;
+        IsLocal: Serenity.BooleanEditor;
+        IsDataConsumed: Serenity.BooleanEditor;
+        ImportTime: Serenity.DateEditor;
+    }
+    class ImportPurchasesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportPurchasesRow {
+        ImportPurchaseId?: number;
+        GrnNo?: string;
+        GrnDate?: string;
+        InvoiceNo?: string;
+        InvoiceDate?: string;
+        SupplierName?: string;
+        Barcode?: string;
+        ProductName?: string;
+        StyleCode?: string;
+        ItemDesc?: string;
+        Quantity?: number;
+        Mrp?: number;
+        MrpValue?: number;
+        Cost?: number;
+        CostValue?: number;
+        TaxAmt?: number;
+        IsVatBill?: boolean;
+        IsLocal?: boolean;
+        IsDataConsumed?: boolean;
+        ImportTime?: string;
+    }
+    namespace ImportPurchasesRow {
+        const idProperty = "ImportPurchaseId";
+        const nameProperty = "GrnNo";
+        const localTextPrefix = "Voyager.ImportPurchases";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            ImportPurchaseId = "ImportPurchaseId",
+            GrnNo = "GrnNo",
+            GrnDate = "GrnDate",
+            InvoiceNo = "InvoiceNo",
+            InvoiceDate = "InvoiceDate",
+            SupplierName = "SupplierName",
+            Barcode = "Barcode",
+            ProductName = "ProductName",
+            StyleCode = "StyleCode",
+            ItemDesc = "ItemDesc",
+            Quantity = "Quantity",
+            Mrp = "Mrp",
+            MrpValue = "MrpValue",
+            Cost = "Cost",
+            CostValue = "CostValue",
+            TaxAmt = "TaxAmt",
+            IsVatBill = "IsVatBill",
+            IsLocal = "IsLocal",
+            IsDataConsumed = "IsDataConsumed",
+            ImportTime = "ImportTime"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    namespace ImportPurchasesService {
+        const baseUrl = "Voyager/ImportPurchases";
+        function Create(request: Serenity.SaveRequest<ImportPurchasesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ImportPurchasesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ImportPurchasesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ImportPurchasesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Voyager/ImportPurchases/Create",
+            Update = "Voyager/ImportPurchases/Update",
+            Delete = "Voyager/ImportPurchases/Delete",
+            Retrieve = "Voyager/ImportPurchases/Retrieve",
+            List = "Voyager/ImportPurchases/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportSaleItemWisesForm {
+        InvoiceDate: Serenity.DateEditor;
+        InvoiceNo: Serenity.StringEditor;
+        InvoiceType: Serenity.StringEditor;
+        BrandName: Serenity.StringEditor;
+        ProductName: Serenity.StringEditor;
+        ItemDesc: Serenity.StringEditor;
+        HsnCode: Serenity.StringEditor;
+        Barcode: Serenity.StringEditor;
+        StyleCode: Serenity.StringEditor;
+        Quantity: Serenity.DecimalEditor;
+        Mrp: Serenity.DecimalEditor;
+        Discount: Serenity.DecimalEditor;
+        BasicRate: Serenity.DecimalEditor;
+        Tax: Serenity.DecimalEditor;
+        Sgst: Serenity.DecimalEditor;
+        Cgst: Serenity.DecimalEditor;
+        LineTotal: Serenity.DecimalEditor;
+        RoundOff: Serenity.DecimalEditor;
+        BillAmnt: Serenity.DecimalEditor;
+        PaymentType: Serenity.StringEditor;
+        Saleman: Serenity.StringEditor;
+        IsDataConsumed: Serenity.BooleanEditor;
+        ImportTime: Serenity.DateEditor;
+    }
+    class ImportSaleItemWisesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportSaleItemWisesRow {
+        ImportSaleItemWiseId?: number;
+        InvoiceDate?: string;
+        InvoiceNo?: string;
+        InvoiceType?: string;
+        BrandName?: string;
+        ProductName?: string;
+        ItemDesc?: string;
+        HsnCode?: string;
+        Barcode?: string;
+        StyleCode?: string;
+        Quantity?: number;
+        Mrp?: number;
+        Discount?: number;
+        BasicRate?: number;
+        Tax?: number;
+        Sgst?: number;
+        Cgst?: number;
+        LineTotal?: number;
+        RoundOff?: number;
+        BillAmnt?: number;
+        PaymentType?: string;
+        Saleman?: string;
+        IsDataConsumed?: boolean;
+        ImportTime?: string;
+    }
+    namespace ImportSaleItemWisesRow {
+        const idProperty = "ImportSaleItemWiseId";
+        const nameProperty = "InvoiceNo";
+        const localTextPrefix = "Voyager.ImportSaleItemWises";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            ImportSaleItemWiseId = "ImportSaleItemWiseId",
+            InvoiceDate = "InvoiceDate",
+            InvoiceNo = "InvoiceNo",
+            InvoiceType = "InvoiceType",
+            BrandName = "BrandName",
+            ProductName = "ProductName",
+            ItemDesc = "ItemDesc",
+            HsnCode = "HsnCode",
+            Barcode = "Barcode",
+            StyleCode = "StyleCode",
+            Quantity = "Quantity",
+            Mrp = "Mrp",
+            Discount = "Discount",
+            BasicRate = "BasicRate",
+            Tax = "Tax",
+            Sgst = "Sgst",
+            Cgst = "Cgst",
+            LineTotal = "LineTotal",
+            RoundOff = "RoundOff",
+            BillAmnt = "BillAmnt",
+            PaymentType = "PaymentType",
+            Saleman = "Saleman",
+            IsDataConsumed = "IsDataConsumed",
+            ImportTime = "ImportTime"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    namespace ImportSaleItemWisesService {
+        const baseUrl = "Voyager/ImportSaleItemWises";
+        function Create(request: Serenity.SaveRequest<ImportSaleItemWisesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ImportSaleItemWisesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ImportSaleItemWisesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ImportSaleItemWisesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Voyager/ImportSaleItemWises/Create",
+            Update = "Voyager/ImportSaleItemWises/Update",
+            Delete = "Voyager/ImportSaleItemWises/Delete",
+            Retrieve = "Voyager/ImportSaleItemWises/Retrieve",
+            List = "Voyager/ImportSaleItemWises/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportSaleRegistersForm {
+        InvoiceNo: Serenity.StringEditor;
+        InvoiceType: Serenity.StringEditor;
+        InvoiceDate: Serenity.StringEditor;
+        Quantity: Serenity.DecimalEditor;
+        Mrp: Serenity.DecimalEditor;
+        Discount: Serenity.DecimalEditor;
+        BasicRate: Serenity.DecimalEditor;
+        Tax: Serenity.DecimalEditor;
+        RoundOff: Serenity.DecimalEditor;
+        BillAmnt: Serenity.DecimalEditor;
+        PaymentType: Serenity.StringEditor;
+        IsConsumed: Serenity.BooleanEditor;
+        ImportTime: Serenity.DateEditor;
+    }
+    class ImportSaleRegistersForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    interface ImportSaleRegistersRow {
+        ImportSaleRegisterId?: number;
+        InvoiceNo?: string;
+        InvoiceType?: string;
+        InvoiceDate?: string;
+        Quantity?: number;
+        Mrp?: number;
+        Discount?: number;
+        BasicRate?: number;
+        Tax?: number;
+        RoundOff?: number;
+        BillAmnt?: number;
+        PaymentType?: string;
+        IsConsumed?: boolean;
+        ImportTime?: string;
+    }
+    namespace ImportSaleRegistersRow {
+        const idProperty = "ImportSaleRegisterId";
+        const nameProperty = "InvoiceNo";
+        const localTextPrefix = "Voyager.ImportSaleRegisters";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            ImportSaleRegisterId = "ImportSaleRegisterId",
+            InvoiceNo = "InvoiceNo",
+            InvoiceType = "InvoiceType",
+            InvoiceDate = "InvoiceDate",
+            Quantity = "Quantity",
+            Mrp = "Mrp",
+            Discount = "Discount",
+            BasicRate = "BasicRate",
+            Tax = "Tax",
+            RoundOff = "RoundOff",
+            BillAmnt = "BillAmnt",
+            PaymentType = "PaymentType",
+            IsConsumed = "IsConsumed",
+            ImportTime = "ImportTime"
+        }
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    namespace ImportSaleRegistersService {
+        const baseUrl = "Voyager/ImportSaleRegisters";
+        function Create(request: Serenity.SaveRequest<ImportSaleRegistersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ImportSaleRegistersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ImportSaleRegistersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ImportSaleRegistersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Voyager/ImportSaleRegisters/Create",
+            Update = "Voyager/ImportSaleRegisters/Update",
+            Delete = "Voyager/ImportSaleRegisters/Delete",
+            Retrieve = "Voyager/ImportSaleRegisters/Retrieve",
+            List = "Voyager/ImportSaleRegisters/List"
+        }
+    }
 }
 declare namespace AprajitaRetails.LanguageList {
     function getValue(): string[][];
@@ -4597,6 +5246,196 @@ declare namespace AprajitaRetails.Tailors {
     class TailoringStaffAdvanceReceiptsGrid extends Serenity.EntityGrid<TailoringStaffAdvanceReceiptsRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof TailoringStaffAdvanceReceiptsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    class LedgerEntriesDialog extends Serenity.EntityDialog<LedgerEntriesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: LedgerEntriesForm;
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    class LedgerEntriesGrid extends Serenity.EntityGrid<LedgerEntriesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LedgerEntriesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    class LedgerMastersDialog extends Serenity.EntityDialog<LedgerMastersRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: LedgerMastersForm;
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    class LedgerMastersGrid extends Serenity.EntityGrid<LedgerMastersRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LedgerMastersDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    class PartiesDialog extends Serenity.EntityDialog<PartiesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: PartiesForm;
+    }
+}
+declare namespace AprajitaRetails.Tally {
+    class PartiesGrid extends Serenity.EntityGrid<PartiesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof PartiesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class CardPaymentDetailsDialog extends Serenity.EntityDialog<CardPaymentDetailsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: CardPaymentDetailsForm;
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class CardPaymentDetailsGrid extends Serenity.EntityGrid<CardPaymentDetailsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CardPaymentDetailsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportInWardsDialog extends Serenity.EntityDialog<ImportInWardsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: ImportInWardsForm;
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportInWardsGrid extends Serenity.EntityGrid<ImportInWardsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ImportInWardsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportPurchasesDialog extends Serenity.EntityDialog<ImportPurchasesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: ImportPurchasesForm;
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportPurchasesGrid extends Serenity.EntityGrid<ImportPurchasesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ImportPurchasesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportSaleItemWisesDialog extends Serenity.EntityDialog<ImportSaleItemWisesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: ImportSaleItemWisesForm;
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportSaleItemWisesGrid extends Serenity.EntityGrid<ImportSaleItemWisesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ImportSaleItemWisesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportSaleRegistersDialog extends Serenity.EntityDialog<ImportSaleRegistersRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: ImportSaleRegistersForm;
+    }
+}
+declare namespace AprajitaRetails.Voyager {
+    class ImportSaleRegistersGrid extends Serenity.EntityGrid<ImportSaleRegistersRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ImportSaleRegistersDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;
