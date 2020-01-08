@@ -1,5 +1,5 @@
 ﻿
-namespace AprajitaRetails.Voyager.Entities
+namespace AprajitaRetails.Accounts.Entities
 {
     using Serenity;
     using Serenity.ComponentModel;
@@ -9,7 +9,7 @@ namespace AprajitaRetails.Voyager.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("Voyager"), Module("Voyager"), TableName("[dbo].[CardPaymentDetails]")]
+    [ConnectionKey("Voyager"), Module("Accounts"), TableName("[dbo].[CardPaymentDetails]")]
     [DisplayName("Card Payment Details"), InstanceName("Card Payment Details")]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]

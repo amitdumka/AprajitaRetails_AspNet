@@ -1,4 +1,4 @@
-﻿namespace AprajitaRetails.Voyager {
+﻿namespace AprajitaRetails.Accounts {
     export interface CardPaymentDetailsRow {
         CardPaymentDetailId?: number;
         SaleInvoiceId?: number;
@@ -14,7 +14,7 @@
 
     export namespace CardPaymentDetailsRow {
         export const idProperty = 'CardPaymentDetailId';
-        export const localTextPrefix = 'Voyager.CardPaymentDetails';
+        export const localTextPrefix = 'Accounts.CardPaymentDetails';
         export const deletePermission = 'Administration:General';
         export const insertPermission = 'Administration:General';
         export const readPermission = 'Administration:General';

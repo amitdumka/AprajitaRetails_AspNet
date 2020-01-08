@@ -8200,10 +8200,22 @@ section.content > .s-DataGrid {
 .s-Accounts-SuspenseAccountsDialog .caption {
   width: 150px;
 }
+.s-Accounts-CardPaymentDetailsDialog > .size {
+  width: 650px;
+}
+.s-Accounts-CardPaymentDetailsDialog .caption {
+  width: 150px;
+}
 .s-Sales-DailySalesDialog > .size {
   width: 650px;
 }
 .s-Sales-DailySalesDialog .caption {
+  width: 150px;
+}
+.s-Sales-CustomersDialog > .size {
+  width: 650px;
+}
+.s-Sales-CustomersDialog .caption {
   width: 150px;
 }
 .s-Tailors-TailoringEmployeesDialog > .size {

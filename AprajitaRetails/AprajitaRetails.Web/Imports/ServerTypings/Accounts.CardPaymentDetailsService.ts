@@ -1,6 +1,6 @@
-﻿namespace AprajitaRetails.Voyager {
+﻿namespace AprajitaRetails.Accounts {
     export namespace CardPaymentDetailsService {
-        export const baseUrl = 'Voyager/CardPaymentDetails';
+        export const baseUrl = 'Accounts/CardPaymentDetails';
 
         export declare function Create(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         export declare function Update(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
@@ -9,11 +9,11 @@
         export declare function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CardPaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
 
         export declare const enum Methods {
-            Create = "Voyager/CardPaymentDetails/Create",
-            Update = "Voyager/CardPaymentDetails/Update",
-            Delete = "Voyager/CardPaymentDetails/Delete",
-            Retrieve = "Voyager/CardPaymentDetails/Retrieve",
-            List = "Voyager/CardPaymentDetails/List"
+            Create = "Accounts/CardPaymentDetails/Create",
+            Update = "Accounts/CardPaymentDetails/Update",
+            Delete = "Accounts/CardPaymentDetails/Delete",
+            Retrieve = "Accounts/CardPaymentDetails/Retrieve",
+            List = "Accounts/CardPaymentDetails/List"
         }
 
         [

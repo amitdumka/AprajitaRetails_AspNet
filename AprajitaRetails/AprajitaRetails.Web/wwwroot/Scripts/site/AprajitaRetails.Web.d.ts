@@ -3,6 +3,73 @@
 declare namespace AprajitaRetails.Accounts {
 }
 declare namespace AprajitaRetails.Accounts {
+    interface CardPaymentDetailsForm {
+        SaleInvoiceId: Serenity.IntegerEditor;
+        CardType: Serenity.IntegerEditor;
+        Amount: Serenity.DecimalEditor;
+        AuthCode: Serenity.IntegerEditor;
+        LastDigit: Serenity.IntegerEditor;
+    }
+    class CardPaymentDetailsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    interface CardPaymentDetailsRow {
+        CardPaymentDetailId?: number;
+        SaleInvoiceId?: number;
+        CardType?: number;
+        Amount?: number;
+        AuthCode?: number;
+        LastDigit?: number;
+        CardPaymentDetailPayMode?: number;
+        CardPaymentDetailCashAmount?: number;
+        CardPaymentDetailCardAmount?: number;
+        CardPaymentDetailMixAmount?: number;
+    }
+    namespace CardPaymentDetailsRow {
+        const idProperty = "CardPaymentDetailId";
+        const localTextPrefix = "Accounts.CardPaymentDetails";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            CardPaymentDetailId = "CardPaymentDetailId",
+            SaleInvoiceId = "SaleInvoiceId",
+            CardType = "CardType",
+            Amount = "Amount",
+            AuthCode = "AuthCode",
+            LastDigit = "LastDigit",
+            CardPaymentDetailPayMode = "CardPaymentDetailPayMode",
+            CardPaymentDetailCashAmount = "CardPaymentDetailCashAmount",
+            CardPaymentDetailCardAmount = "CardPaymentDetailCardAmount",
+            CardPaymentDetailMixAmount = "CardPaymentDetailMixAmount"
+        }
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    namespace CardPaymentDetailsService {
+        const baseUrl = "Accounts/CardPaymentDetails";
+        function Create(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CardPaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CardPaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Accounts/CardPaymentDetails/Create",
+            Update = "Accounts/CardPaymentDetails/Update",
+            Delete = "Accounts/CardPaymentDetails/Delete",
+            Retrieve = "Accounts/CardPaymentDetails/Retrieve",
+            List = "Accounts/CardPaymentDetails/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+}
+declare namespace AprajitaRetails.Accounts {
     interface CashInBanksForm {
         CibDate: Serenity.DateEditor;
         OpenningBalance: Serenity.DecimalEditor;
@@ -3430,6 +3497,81 @@ declare namespace AprajitaRetails.Receipts {
 declare namespace AprajitaRetails.Sales {
 }
 declare namespace AprajitaRetails.Sales {
+    interface CustomersForm {
+        FirstName: Serenity.StringEditor;
+        LastName: Serenity.StringEditor;
+        Age: Serenity.IntegerEditor;
+        DateOfBirth: Serenity.DateEditor;
+        City: Serenity.StringEditor;
+        MobileNo: Serenity.StringEditor;
+        Gender: Serenity.IntegerEditor;
+        NoOfBills: Serenity.IntegerEditor;
+        TotalAmount: Serenity.DecimalEditor;
+        CreatedDate: Serenity.DateEditor;
+    }
+    class CustomersForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    interface CustomersRow {
+        CustomerId?: number;
+        FirstName?: string;
+        LastName?: string;
+        Age?: number;
+        DateOfBirth?: string;
+        City?: string;
+        MobileNo?: string;
+        Gender?: number;
+        NoOfBills?: number;
+        TotalAmount?: number;
+        CreatedDate?: string;
+    }
+    namespace CustomersRow {
+        const idProperty = "CustomerId";
+        const nameProperty = "FirstName";
+        const localTextPrefix = "Sales.Customers";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            CustomerId = "CustomerId",
+            FirstName = "FirstName",
+            LastName = "LastName",
+            Age = "Age",
+            DateOfBirth = "DateOfBirth",
+            City = "City",
+            MobileNo = "MobileNo",
+            Gender = "Gender",
+            NoOfBills = "NoOfBills",
+            TotalAmount = "TotalAmount",
+            CreatedDate = "CreatedDate"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    namespace CustomersService {
+        const baseUrl = "Sales/Customers";
+        function Create(request: Serenity.SaveRequest<CustomersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CustomersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CustomersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CustomersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Sales/Customers/Create",
+            Update = "Sales/Customers/Update",
+            Delete = "Sales/Customers/Delete",
+            Retrieve = "Sales/Customers/Retrieve",
+            List = "Sales/Customers/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Sales {
+}
+declare namespace AprajitaRetails.Sales {
     interface DailySalesForm {
         SaleDate: Serenity.DateEditor;
         InvNo: Serenity.StringEditor;
@@ -4494,73 +4636,6 @@ declare namespace AprajitaRetails.Texts {
 declare namespace AprajitaRetails.Voyager {
 }
 declare namespace AprajitaRetails.Voyager {
-    interface CardPaymentDetailsForm {
-        SaleInvoiceId: Serenity.IntegerEditor;
-        CardType: Serenity.IntegerEditor;
-        Amount: Serenity.DecimalEditor;
-        AuthCode: Serenity.IntegerEditor;
-        LastDigit: Serenity.IntegerEditor;
-    }
-    class CardPaymentDetailsForm extends Serenity.PrefixedContext {
-        static formKey: string;
-        private static init;
-        constructor(prefix: string);
-    }
-}
-declare namespace AprajitaRetails.Voyager {
-    interface CardPaymentDetailsRow {
-        CardPaymentDetailId?: number;
-        SaleInvoiceId?: number;
-        CardType?: number;
-        Amount?: number;
-        AuthCode?: number;
-        LastDigit?: number;
-        CardPaymentDetailPayMode?: number;
-        CardPaymentDetailCashAmount?: number;
-        CardPaymentDetailCardAmount?: number;
-        CardPaymentDetailMixAmount?: number;
-    }
-    namespace CardPaymentDetailsRow {
-        const idProperty = "CardPaymentDetailId";
-        const localTextPrefix = "Voyager.CardPaymentDetails";
-        const deletePermission = "Administration:General";
-        const insertPermission = "Administration:General";
-        const readPermission = "Administration:General";
-        const updatePermission = "Administration:General";
-        const enum Fields {
-            CardPaymentDetailId = "CardPaymentDetailId",
-            SaleInvoiceId = "SaleInvoiceId",
-            CardType = "CardType",
-            Amount = "Amount",
-            AuthCode = "AuthCode",
-            LastDigit = "LastDigit",
-            CardPaymentDetailPayMode = "CardPaymentDetailPayMode",
-            CardPaymentDetailCashAmount = "CardPaymentDetailCashAmount",
-            CardPaymentDetailCardAmount = "CardPaymentDetailCardAmount",
-            CardPaymentDetailMixAmount = "CardPaymentDetailMixAmount"
-        }
-    }
-}
-declare namespace AprajitaRetails.Voyager {
-    namespace CardPaymentDetailsService {
-        const baseUrl = "Voyager/CardPaymentDetails";
-        function Create(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<CardPaymentDetailsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CardPaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CardPaymentDetailsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
-        const enum Methods {
-            Create = "Voyager/CardPaymentDetails/Create",
-            Update = "Voyager/CardPaymentDetails/Update",
-            Delete = "Voyager/CardPaymentDetails/Delete",
-            Retrieve = "Voyager/CardPaymentDetails/Retrieve",
-            List = "Voyager/CardPaymentDetails/List"
-        }
-    }
-}
-declare namespace AprajitaRetails.Voyager {
-}
-declare namespace AprajitaRetails.Voyager {
     interface ImportInWardsForm {
         InWardNo: Serenity.StringEditor;
         InWardDate: Serenity.DateEditor;
@@ -4934,6 +5009,29 @@ declare namespace AprajitaRetails.LanguageList {
     function getValue(): string[][];
 }
 declare namespace AprajitaRetails.ScriptInitialization {
+}
+declare namespace AprajitaRetails.Accounts {
+    class CardPaymentDetailsDialog extends Serenity.EntityDialog<CardPaymentDetailsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: CardPaymentDetailsForm;
+    }
+}
+declare namespace AprajitaRetails.Accounts {
+    class CardPaymentDetailsGrid extends Serenity.EntityGrid<CardPaymentDetailsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CardPaymentDetailsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
 }
 declare namespace AprajitaRetails.Accounts {
     class CashInBanksDialog extends Serenity.EntityDialog<CashInBanksRow, any> {
@@ -6260,6 +6358,30 @@ declare namespace AprajitaRetails.Receipts {
     }
 }
 declare namespace AprajitaRetails.Sales {
+    class CustomersDialog extends Serenity.EntityDialog<CustomersRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: CustomersForm;
+    }
+}
+declare namespace AprajitaRetails.Sales {
+    class CustomersGrid extends Serenity.EntityGrid<CustomersRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CustomersDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Sales {
     class DailySalesDialog extends Serenity.EntityDialog<DailySalesRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -6586,29 +6708,6 @@ declare namespace AprajitaRetails.Tally {
     class PartiesGrid extends Serenity.EntityGrid<PartiesRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof PartiesDialog;
-        protected getIdProperty(): string;
-        protected getInsertPermission(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace AprajitaRetails.Voyager {
-    class CardPaymentDetailsDialog extends Serenity.EntityDialog<CardPaymentDetailsRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        protected getDeletePermission(): string;
-        protected getInsertPermission(): string;
-        protected getUpdatePermission(): string;
-        protected form: CardPaymentDetailsForm;
-    }
-}
-declare namespace AprajitaRetails.Voyager {
-    class CardPaymentDetailsGrid extends Serenity.EntityGrid<CardPaymentDetailsRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CardPaymentDetailsDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;

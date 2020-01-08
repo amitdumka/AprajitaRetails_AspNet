@@ -1,14 +1,14 @@
 ﻿
-namespace AprajitaRetails.Voyager.Repositories
+namespace AprajitaRetails.Sales.Repositories
 {
     using Serenity;
     using Serenity.Data;
     using Serenity.Services;
     using System;
     using System.Data;
-    using MyRow = Entities.CardPaymentDetailsRow;
+    using MyRow = Entities.CustomersRow;
 
-    public class CardPaymentDetailsRepository
+    public class CustomersRepository
     {
         private static MyRow.RowFields fld { get { return MyRow.Fields; } }
 

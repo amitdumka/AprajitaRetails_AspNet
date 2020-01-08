@@ -1,4 +1,4 @@
-﻿namespace AprajitaRetails.Voyager {
+﻿namespace AprajitaRetails.Accounts {
     export interface CardPaymentDetailsForm {
         SaleInvoiceId: Serenity.IntegerEditor;
         CardType: Serenity.IntegerEditor;
@@ -8,7 +8,7 @@
     }
 
     export class CardPaymentDetailsForm extends Serenity.PrefixedContext {
-        static formKey = 'Voyager.CardPaymentDetails';
+        static formKey = 'Accounts.CardPaymentDetails';
         private static init: boolean;
 
         constructor(prefix: string) {

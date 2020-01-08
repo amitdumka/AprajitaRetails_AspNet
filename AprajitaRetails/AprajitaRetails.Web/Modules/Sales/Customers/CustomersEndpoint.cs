@@ -1,17 +1,17 @@
 ﻿
-namespace AprajitaRetails.Voyager.Endpoints
+namespace AprajitaRetails.Sales.Endpoints
 {
     using Serenity;
     using Serenity.Data;
     using Serenity.Services;
     using System.Data;
     using Microsoft.AspNetCore.Mvc;
-    using MyRepository = Repositories.CardPaymentDetailsRepository;
-    using MyRow = Entities.CardPaymentDetailsRow;
+    using MyRepository = Repositories.CustomersRepository;
+    using MyRow = Entities.CustomersRow;
 
-    [Route("Services/Voyager/CardPaymentDetails/[action]")]
+    [Route("Services/Sales/Customers/[action]")]
     [ConnectionKey(typeof(MyRow)), ServiceAuthorize(typeof(MyRow))]
-    public class CardPaymentDetailsController : ServiceEndpoint
+    public class CustomersController : ServiceEndpoint
     {
         [HttpPost, AuthorizeCreate(typeof(MyRow))]
         public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)

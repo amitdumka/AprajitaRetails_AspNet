@@ -219,6 +219,23 @@
           "PermissionKey": "Administration:General"
         }
       ]
+    },
+    {
+      "Key": "Voyager",
+      "Tables": [
+        {
+          "Tablename": "dbo.CardPaymentDetails",
+          "Identifier": "CardPaymentDetails",
+          "Module": "Accounts",
+          "PermissionKey": "Administration:General"
+        },
+        {
+          "Tablename": "dbo.Customers",
+          "Identifier": "Customers",
+          "Module": "Sales",
+          "PermissionKey": "Administration:General"
+        }
+      ]
     }
   ],
   "BaseRowClasses": [],

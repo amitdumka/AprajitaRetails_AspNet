@@ -1,5 +1,5 @@
 ﻿
-namespace AprajitaRetails.Voyager.Pages
+namespace AprajitaRetails.Accounts.Pages
 {
     using Serenity;
     using Serenity.Web;
@@ -8,10 +8,10 @@ namespace AprajitaRetails.Voyager.Pages
     [PageAuthorize(typeof(Entities.CardPaymentDetailsRow))]
     public class CardPaymentDetailsController : Controller
     {
-        [Route("Voyager/CardPaymentDetails")]
+        [Route("Accounts/CardPaymentDetails")]
         public ActionResult Index()
         {
-            return View("~/Modules/Voyager/CardPaymentDetails/CardPaymentDetailsIndex.cshtml");
+            return View("~/Modules/Accounts/CardPaymentDetails/CardPaymentDetailsIndex.cshtml");
         }
     }
 }

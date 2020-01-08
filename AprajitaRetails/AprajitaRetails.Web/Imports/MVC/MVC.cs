@@ -6,6 +6,11 @@ namespace MVC
     {
         public static class Accounts
         {
+            public static class CardPaymentDetails
+            {
+                public const string CardPaymentDetailsIndex = "~/Modules/Accounts/CardPaymentDetails/CardPaymentDetailsIndex.cshtml";
+            }
+
             public static class CashInBanks
             {
                 public const string CashInBanksIndex = "~/Modules/Accounts/CashInBanks/CashInBanksIndex.cshtml";
@@ -374,6 +379,11 @@ namespace MVC
 
         public static class Sales
         {
+            public static class Customers
+            {
+                public const string CustomersIndex = "~/Modules/Sales/Customers/CustomersIndex.cshtml";
+            }
+
             public static class DailySales
             {
                 public const string DailySalesIndex = "~/Modules/Sales/DailySales/DailySalesIndex.cshtml";
@@ -470,11 +480,6 @@ namespace MVC
 
         public static class Voyager
         {
-            public static class CardPaymentDetails
-            {
-                public const string CardPaymentDetailsIndex = "~/Modules/Voyager/CardPaymentDetails/CardPaymentDetailsIndex.cshtml";
-            }
-
             public static class ImportInWards
             {
                 public const string ImportInWardsIndex = "~/Modules/Voyager/ImportInWards/ImportInWardsIndex.cshtml";

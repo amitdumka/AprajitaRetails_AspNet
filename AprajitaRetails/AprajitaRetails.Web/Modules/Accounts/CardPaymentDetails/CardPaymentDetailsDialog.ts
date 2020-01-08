@@ -1,5 +1,5 @@
 ﻿
-namespace AprajitaRetails.Voyager {
+namespace AprajitaRetails.Accounts {
 
     @Serenity.Decorators.registerClass()
     export class CardPaymentDetailsDialog extends Serenity.EntityDialog<CardPaymentDetailsRow, any> {

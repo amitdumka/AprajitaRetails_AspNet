@@ -1,5 +1,5 @@
 ﻿
-namespace AprajitaRetails.Voyager.Forms
+namespace AprajitaRetails.Accounts.Columns
 {
     using Serenity;
     using Serenity.ComponentModel;
@@ -9,10 +9,12 @@ namespace AprajitaRetails.Voyager.Forms
     using System.Collections.Generic;
     using System.IO;
 
-    [FormScript("Voyager.CardPaymentDetails")]
+    [ColumnsScript("Accounts.CardPaymentDetails")]
     [BasedOnRow(typeof(Entities.CardPaymentDetailsRow), CheckNames = true)]
-    public class CardPaymentDetailsForm
+    public class CardPaymentDetailsColumns
     {
+        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+        public Int32 CardPaymentDetailId { get; set; }
         public Int32 SaleInvoiceId { get; set; }
         public Int32 CardType { get; set; }
         public Decimal Amount { get; set; }

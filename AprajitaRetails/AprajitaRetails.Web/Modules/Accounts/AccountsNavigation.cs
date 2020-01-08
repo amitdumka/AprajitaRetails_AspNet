@@ -8,3 +8,4 @@ using MyPages = AprajitaRetails.Accounts.Pages;
 [assembly: NavigationLink(int.MaxValue, "Accounts/Suspense Accounts", typeof(MyPages.SuspenseAccountsController), icon: null)]
 [assembly: NavigationLink(int.MaxValue, "Accounts/Purchase Tax Types", typeof(MyPages.PurchaseTaxTypesController), icon: null)]
 [assembly: NavigationLink(int.MaxValue, "Accounts/Sale Tax Types", typeof(MyPages.SaleTaxTypesController), icon: null)]
+[assembly: NavigationLink(int.MaxValue, "Accounts/Card Payment Details", typeof(MyPages.CardPaymentDetailsController), icon: null)]
