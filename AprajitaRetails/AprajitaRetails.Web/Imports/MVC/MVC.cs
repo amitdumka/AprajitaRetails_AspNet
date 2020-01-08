@@ -315,6 +315,20 @@ namespace MVC
 
         }
 
+        public static class Purchases
+        {
+            public static class ProductPurchases
+            {
+                public const string ProductPurchasesIndex = "~/Modules/Purchases/ProductPurchases/ProductPurchasesIndex.cshtml";
+            }
+
+            public static class PurchaseItems
+            {
+                public const string PurchaseItemsIndex = "~/Modules/Purchases/PurchaseItems/PurchaseItemsIndex.cshtml";
+            }
+
+        }
+
         public static class Receipts
         {
             public static class CashReceipts

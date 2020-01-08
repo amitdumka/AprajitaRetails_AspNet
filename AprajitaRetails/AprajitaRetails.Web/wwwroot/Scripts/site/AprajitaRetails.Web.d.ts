@@ -2732,6 +2732,221 @@ declare namespace AprajitaRetails.Process {
         }
     }
 }
+declare namespace AprajitaRetails.Purchases {
+}
+declare namespace AprajitaRetails.Purchases {
+    interface ProductPurchasesForm {
+        InWardNo: Serenity.StringEditor;
+        InWardDate: Serenity.DateEditor;
+        PurchaseDate: Serenity.DateEditor;
+        InvoiceNo: Serenity.StringEditor;
+        TotalQty: Serenity.DecimalEditor;
+        TotalBasicAmount: Serenity.DecimalEditor;
+        ShippingCost: Serenity.DecimalEditor;
+        TotalTax: Serenity.DecimalEditor;
+        TotalAmount: Serenity.DecimalEditor;
+        Remarks: Serenity.StringEditor;
+        SupplierId: Serenity.IntegerEditor;
+        IsPaid: Serenity.BooleanEditor;
+    }
+    class ProductPurchasesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    interface ProductPurchasesRow {
+        ProductPurchaseId?: number;
+        InWardNo?: string;
+        InWardDate?: string;
+        PurchaseDate?: string;
+        InvoiceNo?: string;
+        TotalQty?: number;
+        TotalBasicAmount?: number;
+        ShippingCost?: number;
+        TotalTax?: number;
+        TotalAmount?: number;
+        Remarks?: string;
+        SupplierId?: number;
+        IsPaid?: boolean;
+        SupplierSuppilerName?: string;
+        SupplierWarehouse?: string;
+    }
+    namespace ProductPurchasesRow {
+        const idProperty = "ProductPurchaseId";
+        const nameProperty = "InWardNo";
+        const localTextPrefix = "Purchases.ProductPurchases";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            ProductPurchaseId = "ProductPurchaseId",
+            InWardNo = "InWardNo",
+            InWardDate = "InWardDate",
+            PurchaseDate = "PurchaseDate",
+            InvoiceNo = "InvoiceNo",
+            TotalQty = "TotalQty",
+            TotalBasicAmount = "TotalBasicAmount",
+            ShippingCost = "ShippingCost",
+            TotalTax = "TotalTax",
+            TotalAmount = "TotalAmount",
+            Remarks = "Remarks",
+            SupplierId = "SupplierId",
+            IsPaid = "IsPaid",
+            SupplierSuppilerName = "SupplierSuppilerName",
+            SupplierWarehouse = "SupplierWarehouse"
+        }
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    namespace ProductPurchasesService {
+        const baseUrl = "Purchases/ProductPurchases";
+        function Create(request: Serenity.SaveRequest<ProductPurchasesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ProductPurchasesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ProductPurchasesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ProductPurchasesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Purchases/ProductPurchases/Create",
+            Update = "Purchases/ProductPurchases/Update",
+            Delete = "Purchases/ProductPurchases/Delete",
+            Retrieve = "Purchases/ProductPurchases/Retrieve",
+            List = "Purchases/ProductPurchases/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+}
+declare namespace AprajitaRetails.Purchases {
+    interface PurchaseItemsForm {
+        ProductPurchaseId: Serenity.IntegerEditor;
+        ProductItemId: Serenity.IntegerEditor;
+        Barcode: Serenity.StringEditor;
+        Qty: Serenity.DecimalEditor;
+        Unit: Serenity.IntegerEditor;
+        Cost: Serenity.DecimalEditor;
+        TaxAmout: Serenity.DecimalEditor;
+        PurchaseTaxTypeId: Serenity.IntegerEditor;
+        CostValue: Serenity.DecimalEditor;
+    }
+    class PurchaseItemsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    interface PurchaseItemsRow {
+        PurchaseItemId?: number;
+        ProductPurchaseId?: number;
+        ProductItemId?: number;
+        Barcode?: string;
+        Qty?: number;
+        Unit?: number;
+        Cost?: number;
+        TaxAmout?: number;
+        PurchaseTaxTypeId?: number;
+        CostValue?: number;
+        ProductPurchaseInWardNo?: string;
+        ProductPurchaseInWardDate?: string;
+        ProductPurchasePurchaseDate?: string;
+        ProductPurchaseInvoiceNo?: string;
+        ProductPurchaseTotalQty?: number;
+        ProductPurchaseTotalBasicAmount?: number;
+        ProductPurchaseShippingCost?: number;
+        ProductPurchaseTotalTax?: number;
+        ProductPurchaseTotalAmount?: number;
+        ProductPurchaseRemarks?: string;
+        ProductPurchaseSupplierId?: number;
+        ProductPurchaseIsPaid?: boolean;
+        ProductItemBarcode?: string;
+        ProductItemBrandId?: number;
+        ProductItemStyleCode?: string;
+        ProductItemProductName?: string;
+        ProductItemItemDesc?: string;
+        ProductItemCategorys?: number;
+        ProductItemMrp?: number;
+        ProductItemTaxRate?: number;
+        ProductItemCost?: number;
+        ProductItemSize?: number;
+        ProductItemUnits?: number;
+        ProductItemMainCategoryCategoryId?: number;
+        ProductItemProductCategoryCategoryId?: number;
+        ProductItemProductTypeCategoryId?: number;
+        PurchaseTaxTypeTaxName?: string;
+        PurchaseTaxTypeTaxType?: number;
+        PurchaseTaxTypeCompositeRate?: number;
+    }
+    namespace PurchaseItemsRow {
+        const idProperty = "PurchaseItemId";
+        const nameProperty = "Barcode";
+        const localTextPrefix = "Purchases.PurchaseItems";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            PurchaseItemId = "PurchaseItemId",
+            ProductPurchaseId = "ProductPurchaseId",
+            ProductItemId = "ProductItemId",
+            Barcode = "Barcode",
+            Qty = "Qty",
+            Unit = "Unit",
+            Cost = "Cost",
+            TaxAmout = "TaxAmout",
+            PurchaseTaxTypeId = "PurchaseTaxTypeId",
+            CostValue = "CostValue",
+            ProductPurchaseInWardNo = "ProductPurchaseInWardNo",
+            ProductPurchaseInWardDate = "ProductPurchaseInWardDate",
+            ProductPurchasePurchaseDate = "ProductPurchasePurchaseDate",
+            ProductPurchaseInvoiceNo = "ProductPurchaseInvoiceNo",
+            ProductPurchaseTotalQty = "ProductPurchaseTotalQty",
+            ProductPurchaseTotalBasicAmount = "ProductPurchaseTotalBasicAmount",
+            ProductPurchaseShippingCost = "ProductPurchaseShippingCost",
+            ProductPurchaseTotalTax = "ProductPurchaseTotalTax",
+            ProductPurchaseTotalAmount = "ProductPurchaseTotalAmount",
+            ProductPurchaseRemarks = "ProductPurchaseRemarks",
+            ProductPurchaseSupplierId = "ProductPurchaseSupplierId",
+            ProductPurchaseIsPaid = "ProductPurchaseIsPaid",
+            ProductItemBarcode = "ProductItemBarcode",
+            ProductItemBrandId = "ProductItemBrandId",
+            ProductItemStyleCode = "ProductItemStyleCode",
+            ProductItemProductName = "ProductItemProductName",
+            ProductItemItemDesc = "ProductItemItemDesc",
+            ProductItemCategorys = "ProductItemCategorys",
+            ProductItemMrp = "ProductItemMrp",
+            ProductItemTaxRate = "ProductItemTaxRate",
+            ProductItemCost = "ProductItemCost",
+            ProductItemSize = "ProductItemSize",
+            ProductItemUnits = "ProductItemUnits",
+            ProductItemMainCategoryCategoryId = "ProductItemMainCategoryCategoryId",
+            ProductItemProductCategoryCategoryId = "ProductItemProductCategoryCategoryId",
+            ProductItemProductTypeCategoryId = "ProductItemProductTypeCategoryId",
+            PurchaseTaxTypeTaxName = "PurchaseTaxTypeTaxName",
+            PurchaseTaxTypeTaxType = "PurchaseTaxTypeTaxType",
+            PurchaseTaxTypeCompositeRate = "PurchaseTaxTypeCompositeRate"
+        }
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    namespace PurchaseItemsService {
+        const baseUrl = "Purchases/PurchaseItems";
+        function Create(request: Serenity.SaveRequest<PurchaseItemsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<PurchaseItemsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PurchaseItemsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PurchaseItemsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Purchases/PurchaseItems/Create",
+            Update = "Purchases/PurchaseItems/Update",
+            Delete = "Purchases/PurchaseItems/Delete",
+            Retrieve = "Purchases/PurchaseItems/Retrieve",
+            List = "Purchases/PurchaseItems/List"
+        }
+    }
+}
 declare namespace AprajitaRetails.Receipts {
 }
 declare namespace AprajitaRetails.Receipts {
@@ -5470,6 +5685,54 @@ declare namespace AprajitaRetails.Process {
     class MonthEndsGrid extends Serenity.EntityGrid<MonthEndsRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof MonthEndsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    class ProductPurchasesDialog extends Serenity.EntityDialog<ProductPurchasesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: ProductPurchasesForm;
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    class ProductPurchasesGrid extends Serenity.EntityGrid<ProductPurchasesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ProductPurchasesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    class PurchaseItemsDialog extends Serenity.EntityDialog<PurchaseItemsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: PurchaseItemsForm;
+    }
+}
+declare namespace AprajitaRetails.Purchases {
+    class PurchaseItemsGrid extends Serenity.EntityGrid<PurchaseItemsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof PurchaseItemsDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;
