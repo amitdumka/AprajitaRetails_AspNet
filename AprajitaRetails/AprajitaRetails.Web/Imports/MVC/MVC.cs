@@ -315,6 +315,35 @@ namespace MVC
 
         }
 
+        public static class Product
+        {
+            public static class Brands
+            {
+                public const string BrandsIndex = "~/Modules/Product/Brands/BrandsIndex.cshtml";
+            }
+
+            public static class Categories
+            {
+                public const string CategoriesIndex = "~/Modules/Product/Categories/CategoriesIndex.cshtml";
+            }
+
+            public static class ProductItems
+            {
+                public const string ProductItemsIndex = "~/Modules/Product/ProductItems/ProductItemsIndex.cshtml";
+            }
+
+            public static class Stocks
+            {
+                public const string StocksIndex = "~/Modules/Product/Stocks/StocksIndex.cshtml";
+            }
+
+            public static class Suppliers
+            {
+                public const string SuppliersIndex = "~/Modules/Product/Suppliers/SuppliersIndex.cshtml";
+            }
+
+        }
+
         public static class Purchases
         {
             public static class ProductPurchases

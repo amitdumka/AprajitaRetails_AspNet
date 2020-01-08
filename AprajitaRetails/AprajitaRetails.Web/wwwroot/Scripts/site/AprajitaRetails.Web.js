@@ -2544,6 +2544,335 @@ var AprajitaRetails;
 })(AprajitaRetails || (AprajitaRetails = {}));
 var AprajitaRetails;
 (function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var BrandsForm = /** @class */ (function (_super) {
+            __extends(BrandsForm, _super);
+            function BrandsForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!BrandsForm.init) {
+                    BrandsForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    Q.initFormType(BrandsForm, [
+                        'BrandName', w0,
+                        'BCode', w0
+                    ]);
+                }
+                return _this;
+            }
+            BrandsForm.formKey = 'Product.Brands';
+            return BrandsForm;
+        }(Serenity.PrefixedContext));
+        Product.BrandsForm = BrandsForm;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var BrandsRow;
+        (function (BrandsRow) {
+            BrandsRow.idProperty = 'BrandId';
+            BrandsRow.nameProperty = 'BrandName';
+            BrandsRow.localTextPrefix = 'Product.Brands';
+            BrandsRow.deletePermission = 'Administration:General';
+            BrandsRow.insertPermission = 'Administration:General';
+            BrandsRow.readPermission = 'Administration:General';
+            BrandsRow.updatePermission = 'Administration:General';
+        })(BrandsRow = Product.BrandsRow || (Product.BrandsRow = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var BrandsService;
+        (function (BrandsService) {
+            BrandsService.baseUrl = 'Product/Brands';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                BrandsService[x] = function (r, s, o) {
+                    return Q.serviceRequest(BrandsService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(BrandsService = Product.BrandsService || (Product.BrandsService = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var CategoriesForm = /** @class */ (function (_super) {
+            __extends(CategoriesForm, _super);
+            function CategoriesForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CategoriesForm.init) {
+                    CategoriesForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.BooleanEditor;
+                    Q.initFormType(CategoriesForm, [
+                        'CategoryName', w0,
+                        'IsPrimaryCategory', w1,
+                        'IsSecondaryCategory', w1
+                    ]);
+                }
+                return _this;
+            }
+            CategoriesForm.formKey = 'Product.Categories';
+            return CategoriesForm;
+        }(Serenity.PrefixedContext));
+        Product.CategoriesForm = CategoriesForm;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var CategoriesRow;
+        (function (CategoriesRow) {
+            CategoriesRow.idProperty = 'CategoryId';
+            CategoriesRow.nameProperty = 'CategoryName';
+            CategoriesRow.localTextPrefix = 'Product.Categories';
+            CategoriesRow.deletePermission = 'Administration:General';
+            CategoriesRow.insertPermission = 'Administration:General';
+            CategoriesRow.readPermission = 'Administration:General';
+            CategoriesRow.updatePermission = 'Administration:General';
+        })(CategoriesRow = Product.CategoriesRow || (Product.CategoriesRow = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var CategoriesService;
+        (function (CategoriesService) {
+            CategoriesService.baseUrl = 'Product/Categories';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CategoriesService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CategoriesService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CategoriesService = Product.CategoriesService || (Product.CategoriesService = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var ProductItemsForm = /** @class */ (function (_super) {
+            __extends(ProductItemsForm, _super);
+            function ProductItemsForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ProductItemsForm.init) {
+                    ProductItemsForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.IntegerEditor;
+                    var w2 = s.DecimalEditor;
+                    Q.initFormType(ProductItemsForm, [
+                        'Barcode', w0,
+                        'BrandId', w1,
+                        'StyleCode', w0,
+                        'ProductName', w0,
+                        'ItemDesc', w0,
+                        'Categorys', w1,
+                        'Mrp', w2,
+                        'TaxRate', w2,
+                        'Cost', w2,
+                        'Size', w1,
+                        'Units', w1,
+                        'MainCategoryCategoryId', w1,
+                        'ProductCategoryCategoryId', w1,
+                        'ProductTypeCategoryId', w1
+                    ]);
+                }
+                return _this;
+            }
+            ProductItemsForm.formKey = 'Product.ProductItems';
+            return ProductItemsForm;
+        }(Serenity.PrefixedContext));
+        Product.ProductItemsForm = ProductItemsForm;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var ProductItemsRow;
+        (function (ProductItemsRow) {
+            ProductItemsRow.idProperty = 'ProductItemId';
+            ProductItemsRow.nameProperty = 'Barcode';
+            ProductItemsRow.localTextPrefix = 'Product.ProductItems';
+            ProductItemsRow.deletePermission = 'Administration:General';
+            ProductItemsRow.insertPermission = 'Administration:General';
+            ProductItemsRow.readPermission = 'Administration:General';
+            ProductItemsRow.updatePermission = 'Administration:General';
+        })(ProductItemsRow = Product.ProductItemsRow || (Product.ProductItemsRow = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var ProductItemsService;
+        (function (ProductItemsService) {
+            ProductItemsService.baseUrl = 'Product/ProductItems';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ProductItemsService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ProductItemsService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ProductItemsService = Product.ProductItemsService || (Product.ProductItemsService = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var StocksForm = /** @class */ (function (_super) {
+            __extends(StocksForm, _super);
+            function StocksForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!StocksForm.init) {
+                    StocksForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.DecimalEditor;
+                    Q.initFormType(StocksForm, [
+                        'ProductItemId', w0,
+                        'Quantity', w1,
+                        'SaleQty', w1,
+                        'PurchaseQty', w1,
+                        'Units', w0
+                    ]);
+                }
+                return _this;
+            }
+            StocksForm.formKey = 'Product.Stocks';
+            return StocksForm;
+        }(Serenity.PrefixedContext));
+        Product.StocksForm = StocksForm;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var StocksRow;
+        (function (StocksRow) {
+            StocksRow.idProperty = 'StockId';
+            StocksRow.localTextPrefix = 'Product.Stocks';
+            StocksRow.deletePermission = 'Administration:General';
+            StocksRow.insertPermission = 'Administration:General';
+            StocksRow.readPermission = 'Administration:General';
+            StocksRow.updatePermission = 'Administration:General';
+        })(StocksRow = Product.StocksRow || (Product.StocksRow = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var StocksService;
+        (function (StocksService) {
+            StocksService.baseUrl = 'Product/Stocks';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                StocksService[x] = function (r, s, o) {
+                    return Q.serviceRequest(StocksService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(StocksService = Product.StocksService || (Product.StocksService = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var SuppliersForm = /** @class */ (function (_super) {
+            __extends(SuppliersForm, _super);
+            function SuppliersForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SuppliersForm.init) {
+                    SuppliersForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    Q.initFormType(SuppliersForm, [
+                        'SuppilerName', w0,
+                        'Warehouse', w0
+                    ]);
+                }
+                return _this;
+            }
+            SuppliersForm.formKey = 'Product.Suppliers';
+            return SuppliersForm;
+        }(Serenity.PrefixedContext));
+        Product.SuppliersForm = SuppliersForm;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var SuppliersRow;
+        (function (SuppliersRow) {
+            SuppliersRow.idProperty = 'SupplierId';
+            SuppliersRow.nameProperty = 'SuppilerName';
+            SuppliersRow.localTextPrefix = 'Product.Suppliers';
+            SuppliersRow.deletePermission = 'Administration:General';
+            SuppliersRow.insertPermission = 'Administration:General';
+            SuppliersRow.readPermission = 'Administration:General';
+            SuppliersRow.updatePermission = 'Administration:General';
+        })(SuppliersRow = Product.SuppliersRow || (Product.SuppliersRow = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var SuppliersService;
+        (function (SuppliersService) {
+            SuppliersService.baseUrl = 'Product/Suppliers';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SuppliersService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SuppliersService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SuppliersService = Product.SuppliersService || (Product.SuppliersService = {}));
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
     var Purchases;
     (function (Purchases) {
         var ProductPurchasesForm = /** @class */ (function (_super) {
@@ -3796,7 +4125,7 @@ var AprajitaRetails;
 (function (AprajitaRetails) {
     var Texts;
     (function (Texts) {
-        AprajitaRetails['Texts'] = Q.proxyTexts(Texts, '', { Db: { Accounts: { CashInBanks: { CashIn: 1, CashInBankId: 1, CashOut: 1, CibDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, CashInHands: { CashIn: 1, CashInHandId: 1, CashOut: 1, CihDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, PurchaseTaxTypes: { CompositeRate: 1, PurchaseTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SaleTaxTypes: { CompositeRate: 1, SaleTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SuspenseAccounts: { ClearedDetails: 1, EntryDate: 1, InAmount: 1, IsCleared: 1, OutAmount: 1, ReferanceDetails: 1, ReviewBy: 1, SuspenseAccountId: 1 }, TranscationModes: { Transcation: 1, TranscationModeId: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Banking: { AccountNumbers: { Account: 1, AccountNumberId: 1, BankBankName: 1, BankId: 1 }, BankDeposits: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, BankDepositId: 1, DepoDate: 1, Details: 1, PayMode: 1, Remarks: 1 }, BankWithdrawals: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, ApprovedBy: 1, BankWithdrawalId: 1, ChequeNo: 1, DepoDate: 1, InNameOf: 1, SignedBy: 1 }, Banks: { BankId: 1, BankName: 1 }, ChequesLogs: { AccountNumber: 1, Amount: 1, BankName: 1, ChequesDate: 1, ChequesLogId: 1, ClearedDate: 1, DepositDate: 1, IsDepositedOnAprajitaRetails: 1, IsIssuedByAprajitaRetails: 1, IsPdc: 1, IssuedBy: 1, IssuedTo: 1, Remarks: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, CustomTailoring: { TalioringBookings: { BookingDate: 1, BookingSlipNo: 1, BundiPrice: 1, BundiQty: 1, CoatPrice: 1, CoatQty: 1, CustName: 1, DeliveryDate: 1, IsDelivered: 1, KurtaPrice: 1, KurtaQty: 1, Others: 1, OthersPrice: 1, PantPrice: 1, PantQty: 1, ShirtPrice: 1, ShirtQty: 1, TalioringBookingId: 1, TotalAmount: 1, TotalQty: 1, TryDate: 1 }, TalioringDeliveries: { Amount: 1, DeliveryDate: 1, InvNo: 1, Remarks: 1, TalioringBookingBookingDate: 1, TalioringBookingBookingSlipNo: 1, TalioringBookingBundiPrice: 1, TalioringBookingBundiQty: 1, TalioringBookingCoatPrice: 1, TalioringBookingCoatQty: 1, TalioringBookingCustName: 1, TalioringBookingDeliveryDate: 1, TalioringBookingId: 1, TalioringBookingIsDelivered: 1, TalioringBookingKurtaPrice: 1, TalioringBookingKurtaQty: 1, TalioringBookingOthers: 1, TalioringBookingOthersPrice: 1, TalioringBookingPantPrice: 1, TalioringBookingPantQty: 1, TalioringBookingShirtPrice: 1, TalioringBookingShirtQty: 1, TalioringBookingTotalAmount: 1, TalioringBookingTotalQty: 1, TalioringBookingTryDate: 1, TalioringDeliveryId: 1 } }, Dues: { DueRecoverds: { AmountPaid: 1, DueRecoverdId: 1, DuesListAmount: 1, DuesListDailySaleId: 1, DuesListId: 1, DuesListIsPartialRecovery: 1, DuesListIsRecovered: 1, DuesListRecoveryDate: 1, IsPartialPayment: 1, Modes: 1, PaidDate: 1, Remarks: 1 }, DuesLists: { Amount: 1, DailySaleAmount: 1, DailySaleCashAmount: 1, DailySaleId: 1, DailySaleInvNo: 1, DailySaleIsDue: 1, DailySaleIsManualBill: 1, DailySaleIsSaleReturn: 1, DailySaleIsTailoringBill: 1, DailySalePayMode: 1, DailySaleRemarks: 1, DailySaleSaleDate: 1, DailySaleSalesmanId: 1, DuesListId: 1, IsPartialRecovery: 1, IsRecovered: 1, RecoveryDate: 1 } }, Expenses: { CashPayments: { Amount: 1, CashPaymentId: 1, PaidTo: 1, PaymentDate: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Expenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, ExpenseId: 1, PaidTo: 1, Particulars: 1, PayMode: 1, PaymentDetails: 1, Remarks: 1 }, Payments: { Amount: 1, PayDate: 1, PayMode: 1, PaymentDetails: 1, PaymentId: 1, PaymentPartry: 1, PaymentSlipNo: 1, Remarks: 1 }, PettyCashExpenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, PaidTo: 1, Particulars: 1, PettyCashExpenseId: 1, Remarks: 1 } }, PayRoll: { Attendances: { AttDate: 1, AttendanceId: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, EntryTime: 1, Remarks: 1, Status: 1 }, CurrentSalaries: { BasicSalary: 1, CloseDate: 1, CurrentSalaryId: 1, EffectiveDate: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, IncentiveRate: 1, IncentiveTarget: 1, IsEffective: 1, IsSundayBillable: 1, LpRate: 1, SundaySalary: 1, WowBillRate: 1, WowBillTarget: 1 }, Employees: { EmployeeId: 1, IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1 }, PaySlips: { AdvanceDeducations: 1, BasicSalary: 1, CurrentSalaryBasicSalary: 1, CurrentSalaryCloseDate: 1, CurrentSalaryEffectiveDate: 1, CurrentSalaryEmployeeId: 1, CurrentSalaryId: 1, CurrentSalaryIncentiveRate: 1, CurrentSalaryIncentiveTarget: 1, CurrentSalaryIsEffective: 1, CurrentSalaryIsSundayBillable: 1, CurrentSalaryLpRate: 1, CurrentSalarySundaySalary: 1, CurrentSalaryWowBillRate: 1, CurrentSalaryWowBillTarget: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, GrossSalary: 1, LastPCsIncentive: 1, LastPcsAmount: 1, Month: 1, NoOfDaysPresent: 1, OnDate: 1, OtherDeductions: 1, OthersIncentive: 1, PaySlipId: 1, PfDeductions: 1, Remarks: 1, SaleIncentive: 1, StandardDeductions: 1, TdsDeductions: 1, TotalSale: 1, WowBillAmount: 1, WowBillIncentive: 1, Year: 1 }, SalaryPayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, SalaryPaymentId: 1 }, Salesmen: { SalesmanId: 1, SalesmanName: 1 }, StaffAdvancePayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, StaffAdvancePaymentId: 1 }, StaffAdvanceReceipts: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, ReceiptDate: 1, StaffAdvanceReceiptId: 1 } }, Process: { EndOfDays: { Access: 1, CashInHand: 1, EndOfDayId: 1, EodDate: 1, FmArrow: 1, Rwt: 1, Shirting: 1, Suiting: 1, Uspa: 1 }, MonthEnds: { EntryDate: 1, Month: 1, MonthEndId: 1, TotalAccess: 1, TotalAmountAccess: 1, TotalAmountFabric: 1, TotalAmountOthers: 1, TotalAmountRmz: 1, TotalBill: 1, TotalCashExpenses: 1, TotalDues: 1, TotalDuesOfMonth: 1, TotalDuesRecovered: 1, TotalExpenses: 1, TotalFabric: 1, TotalHomeExpenses: 1, TotalInward: 1, TotalInwardByAmitKumar: 1, TotalInwardOthers: 1, TotalOnBookExpenes: 1, TotalOtherExpenses: 1, TotalOtherHomeExpenses: 1, TotalOtherIncome: 1, TotalOthers: 1, TotalPayments: 1, TotalRecipts: 1, TotalRmz: 1, TotalSalary: 1, TotalSaleIncome: 1, TotalTailoringExpenses: 1, TotalTailoringIncome: 1, TotalTrimsAndOtherExpenses: 1, Year: 1 } }, Purchases: { ProductPurchases: { InWardDate: 1, InWardNo: 1, InvoiceNo: 1, IsPaid: 1, ProductPurchaseId: 1, PurchaseDate: 1, Remarks: 1, ShippingCost: 1, SupplierId: 1, SupplierSuppilerName: 1, SupplierWarehouse: 1, TotalAmount: 1, TotalBasicAmount: 1, TotalQty: 1, TotalTax: 1 }, PurchaseItems: { Barcode: 1, Cost: 1, CostValue: 1, ProductItemBarcode: 1, ProductItemBrandId: 1, ProductItemCategorys: 1, ProductItemCost: 1, ProductItemId: 1, ProductItemItemDesc: 1, ProductItemMainCategoryCategoryId: 1, ProductItemMrp: 1, ProductItemProductCategoryCategoryId: 1, ProductItemProductName: 1, ProductItemProductTypeCategoryId: 1, ProductItemSize: 1, ProductItemStyleCode: 1, ProductItemTaxRate: 1, ProductItemUnits: 1, ProductPurchaseId: 1, ProductPurchaseInWardDate: 1, ProductPurchaseInWardNo: 1, ProductPurchaseInvoiceNo: 1, ProductPurchaseIsPaid: 1, ProductPurchasePurchaseDate: 1, ProductPurchaseRemarks: 1, ProductPurchaseShippingCost: 1, ProductPurchaseSupplierId: 1, ProductPurchaseTotalAmount: 1, ProductPurchaseTotalBasicAmount: 1, ProductPurchaseTotalQty: 1, ProductPurchaseTotalTax: 1, PurchaseItemId: 1, PurchaseTaxTypeCompositeRate: 1, PurchaseTaxTypeId: 1, PurchaseTaxTypeTaxName: 1, PurchaseTaxTypeTaxType: 1, Qty: 1, TaxAmout: 1, Unit: 1 } }, Receipts: { CashReceipts: { Amount: 1, CashReceiptId: 1, InwardDate: 1, ReceiptFrom: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Receipts: { Amount: 1, PayMode: 1, ReceiptDetails: 1, ReceiptFrom: 1, ReceiptId: 1, RecieptDate: 1, RecieptSlipNo: 1, Remarks: 1 } }, Sales: { DailySales: { Amount: 1, CashAmount: 1, DailySaleId: 1, InvNo: 1, IsDue: 1, IsManualBill: 1, IsSaleReturn: 1, IsTailoringBill: 1, PayMode: 1, Remarks: 1, SaleDate: 1, SalesmanId: 1, SalesmanSalesmanName: 1 }, SaleInvoices: { CustomerId: 1, InvoiceNo: 1, OnDate: 1, RoundOffAmount: 1, SaleInvoiceId: 1, TotalBillAmount: 1, TotalDiscountAmount: 1, TotalItems: 1, TotalQty: 1, TotalTaxAmount: 1 }, SaleItems: { BarCode: 1, BasicAmount: 1, BillAmount: 1, Discount: 1, Mrp: 1, ProductItemBarcode: 1, ProductItemBrandId: 1, ProductItemCategorys: 1, ProductItemCost: 1, ProductItemId: 1, ProductItemItemDesc: 1, ProductItemMainCategoryCategoryId: 1, ProductItemMrp: 1, ProductItemProductCategoryCategoryId: 1, ProductItemProductName: 1, ProductItemProductTypeCategoryId: 1, ProductItemSize: 1, ProductItemStyleCode: 1, ProductItemTaxRate: 1, ProductItemUnits: 1, Qty: 1, SaleInvoiceCustomerId: 1, SaleInvoiceId: 1, SaleInvoiceInvoiceNo: 1, SaleInvoiceOnDate: 1, SaleInvoiceRoundOffAmount: 1, SaleInvoiceTotalBillAmount: 1, SaleInvoiceTotalDiscountAmount: 1, SaleInvoiceTotalItems: 1, SaleInvoiceTotalQty: 1, SaleInvoiceTotalTaxAmount: 1, SaleItemId: 1, SaleTaxTypeCompositeRate: 1, SaleTaxTypeId: 1, SaleTaxTypeTaxName: 1, SaleTaxTypeTaxType: 1, SalesmanId: 1, SalesmanSalesmanName: 1, TaxAmount: 1, Units: 1 }, SalePaymentDetails: { CardAmount: 1, CashAmount: 1, MixAmount: 1, PayMode: 1, SalePaymentDetailCustomerId: 1, SalePaymentDetailId: 1, SalePaymentDetailInvoiceNo: 1, SalePaymentDetailOnDate: 1, SalePaymentDetailRoundOffAmount: 1, SalePaymentDetailTotalBillAmount: 1, SalePaymentDetailTotalDiscountAmount: 1, SalePaymentDetailTotalItems: 1, SalePaymentDetailTotalQty: 1, SalePaymentDetailTotalTaxAmount: 1 }, Salesmen: { SalesmanId: 1, SalesmanName: 1 } }, Stores: { Stores: { Address: 1, City: 1, ClosingDate: 1, Gstno: 1, NoOfEmployees: 1, OpeningDate: 1, PanNo: 1, PhoneNo: 1, PinCode: 1, Status: 1, StoreCode: 1, StoreId: 1, StoreManagerName: 1, StoreManagerPhoneNo: 1, StoreName: 1 } }, Tailors: { TailorAttendances: { AttDate: 1, EntryTime: 1, Remarks: 1, Status: 1, TailorAttendanceId: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1 }, TailoringEmployees: { IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1, TailoringEmployeeId: 1 }, TailoringSalaryPayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringSalaryPaymentId: 1 }, TailoringStaffAdvancePayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvancePaymentId: 1 }, TailoringStaffAdvanceReceipts: { Amount: 1, Details: 1, PayMode: 1, ReceiptDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvanceReceiptId: 1 } }, Tally: { LedgerEntries: { AmountIn: 1, AmountOut: 1, Balance: 1, EntryDate: 1, LedgerEntryId: 1, Particulars: 1, PartyAddress: 1, PartyGstNo: 1, PartyId: 1, PartyLedgerType: 1, PartyOpenningBalance: 1, PartyOpenningDate: 1, PartyPanNo: 1, PartyPartyName: 1 }, LedgerMasters: { CreatingDate: 1, LedgerMasterId: 1, LedgerType: 1, PartyAddress: 1, PartyGstNo: 1, PartyId: 1, PartyLedgerType: 1, PartyOpenningBalance: 1, PartyOpenningDate: 1, PartyPanNo: 1, PartyPartyName: 1 }, Parties: { Address: 1, GstNo: 1, LedgerType: 1, OpenningBalance: 1, OpenningDate: 1, PanNo: 1, PartyId: 1, PartyName: 1 } }, Voyager: { CardPaymentDetails: { Amount: 1, AuthCode: 1, CardPaymentDetailCardAmount: 1, CardPaymentDetailCashAmount: 1, CardPaymentDetailId: 1, CardPaymentDetailMixAmount: 1, CardPaymentDetailPayMode: 1, CardType: 1, LastDigit: 1, SaleInvoiceId: 1 }, ImportInWards: { ImportDate: 1, ImportInWardId: 1, InWardDate: 1, InWardNo: 1, InvoiceDate: 1, InvoiceNo: 1, PartyName: 1, TotalCost: 1, TotalMrpValue: 1, TotalQty: 1 }, ImportPurchases: { Barcode: 1, Cost: 1, CostValue: 1, GrnDate: 1, GrnNo: 1, ImportPurchaseId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, IsDataConsumed: 1, IsLocal: 1, IsVatBill: 1, ItemDesc: 1, Mrp: 1, MrpValue: 1, ProductName: 1, Quantity: 1, StyleCode: 1, SupplierName: 1, TaxAmt: 1 }, ImportSaleItemWises: { Barcode: 1, BasicRate: 1, BillAmnt: 1, BrandName: 1, Cgst: 1, Discount: 1, HsnCode: 1, ImportSaleItemWiseId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, InvoiceType: 1, IsDataConsumed: 1, ItemDesc: 1, LineTotal: 1, Mrp: 1, PaymentType: 1, ProductName: 1, Quantity: 1, RoundOff: 1, Saleman: 1, Sgst: 1, StyleCode: 1, Tax: 1 }, ImportSaleRegisters: { BasicRate: 1, BillAmnt: 1, Discount: 1, ImportSaleRegisterId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, InvoiceType: 1, IsConsumed: 1, Mrp: 1, PaymentType: 1, Quantity: 1, RoundOff: 1, Tax: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
+        AprajitaRetails['Texts'] = Q.proxyTexts(Texts, '', { Db: { Accounts: { CashInBanks: { CashIn: 1, CashInBankId: 1, CashOut: 1, CibDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, CashInHands: { CashIn: 1, CashInHandId: 1, CashOut: 1, CihDate: 1, ClosingBalance: 1, OpenningBalance: 1 }, PurchaseTaxTypes: { CompositeRate: 1, PurchaseTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SaleTaxTypes: { CompositeRate: 1, SaleTaxTypeId: 1, TaxName: 1, TaxType: 1 }, SuspenseAccounts: { ClearedDetails: 1, EntryDate: 1, InAmount: 1, IsCleared: 1, OutAmount: 1, ReferanceDetails: 1, ReviewBy: 1, SuspenseAccountId: 1 }, TranscationModes: { Transcation: 1, TranscationModeId: 1 } }, Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Banking: { AccountNumbers: { Account: 1, AccountNumberId: 1, BankBankName: 1, BankId: 1 }, BankDeposits: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, BankDepositId: 1, DepoDate: 1, Details: 1, PayMode: 1, Remarks: 1 }, BankWithdrawals: { AccountNumberAccount: 1, AccountNumberBankId: 1, AccountNumberId: 1, Amount: 1, ApprovedBy: 1, BankWithdrawalId: 1, ChequeNo: 1, DepoDate: 1, InNameOf: 1, SignedBy: 1 }, Banks: { BankId: 1, BankName: 1 }, ChequesLogs: { AccountNumber: 1, Amount: 1, BankName: 1, ChequesDate: 1, ChequesLogId: 1, ClearedDate: 1, DepositDate: 1, IsDepositedOnAprajitaRetails: 1, IsIssuedByAprajitaRetails: 1, IsPdc: 1, IssuedBy: 1, IssuedTo: 1, Remarks: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, CustomTailoring: { TalioringBookings: { BookingDate: 1, BookingSlipNo: 1, BundiPrice: 1, BundiQty: 1, CoatPrice: 1, CoatQty: 1, CustName: 1, DeliveryDate: 1, IsDelivered: 1, KurtaPrice: 1, KurtaQty: 1, Others: 1, OthersPrice: 1, PantPrice: 1, PantQty: 1, ShirtPrice: 1, ShirtQty: 1, TalioringBookingId: 1, TotalAmount: 1, TotalQty: 1, TryDate: 1 }, TalioringDeliveries: { Amount: 1, DeliveryDate: 1, InvNo: 1, Remarks: 1, TalioringBookingBookingDate: 1, TalioringBookingBookingSlipNo: 1, TalioringBookingBundiPrice: 1, TalioringBookingBundiQty: 1, TalioringBookingCoatPrice: 1, TalioringBookingCoatQty: 1, TalioringBookingCustName: 1, TalioringBookingDeliveryDate: 1, TalioringBookingId: 1, TalioringBookingIsDelivered: 1, TalioringBookingKurtaPrice: 1, TalioringBookingKurtaQty: 1, TalioringBookingOthers: 1, TalioringBookingOthersPrice: 1, TalioringBookingPantPrice: 1, TalioringBookingPantQty: 1, TalioringBookingShirtPrice: 1, TalioringBookingShirtQty: 1, TalioringBookingTotalAmount: 1, TalioringBookingTotalQty: 1, TalioringBookingTryDate: 1, TalioringDeliveryId: 1 } }, Dues: { DueRecoverds: { AmountPaid: 1, DueRecoverdId: 1, DuesListAmount: 1, DuesListDailySaleId: 1, DuesListId: 1, DuesListIsPartialRecovery: 1, DuesListIsRecovered: 1, DuesListRecoveryDate: 1, IsPartialPayment: 1, Modes: 1, PaidDate: 1, Remarks: 1 }, DuesLists: { Amount: 1, DailySaleAmount: 1, DailySaleCashAmount: 1, DailySaleId: 1, DailySaleInvNo: 1, DailySaleIsDue: 1, DailySaleIsManualBill: 1, DailySaleIsSaleReturn: 1, DailySaleIsTailoringBill: 1, DailySalePayMode: 1, DailySaleRemarks: 1, DailySaleSaleDate: 1, DailySaleSalesmanId: 1, DuesListId: 1, IsPartialRecovery: 1, IsRecovered: 1, RecoveryDate: 1 } }, Expenses: { CashPayments: { Amount: 1, CashPaymentId: 1, PaidTo: 1, PaymentDate: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Expenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, ExpenseId: 1, PaidTo: 1, Particulars: 1, PayMode: 1, PaymentDetails: 1, Remarks: 1 }, Payments: { Amount: 1, PayDate: 1, PayMode: 1, PaymentDetails: 1, PaymentId: 1, PaymentPartry: 1, PaymentSlipNo: 1, Remarks: 1 }, PettyCashExpenses: { Amount: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, ExpDate: 1, PaidTo: 1, Particulars: 1, PettyCashExpenseId: 1, Remarks: 1 } }, PayRoll: { Attendances: { AttDate: 1, AttendanceId: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, EntryTime: 1, Remarks: 1, Status: 1 }, CurrentSalaries: { BasicSalary: 1, CloseDate: 1, CurrentSalaryId: 1, EffectiveDate: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, IncentiveRate: 1, IncentiveTarget: 1, IsEffective: 1, IsSundayBillable: 1, LpRate: 1, SundaySalary: 1, WowBillRate: 1, WowBillTarget: 1 }, Employees: { EmployeeId: 1, IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1 }, PaySlips: { AdvanceDeducations: 1, BasicSalary: 1, CurrentSalaryBasicSalary: 1, CurrentSalaryCloseDate: 1, CurrentSalaryEffectiveDate: 1, CurrentSalaryEmployeeId: 1, CurrentSalaryId: 1, CurrentSalaryIncentiveRate: 1, CurrentSalaryIncentiveTarget: 1, CurrentSalaryIsEffective: 1, CurrentSalaryIsSundayBillable: 1, CurrentSalaryLpRate: 1, CurrentSalarySundaySalary: 1, CurrentSalaryWowBillRate: 1, CurrentSalaryWowBillTarget: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, GrossSalary: 1, LastPCsIncentive: 1, LastPcsAmount: 1, Month: 1, NoOfDaysPresent: 1, OnDate: 1, OtherDeductions: 1, OthersIncentive: 1, PaySlipId: 1, PfDeductions: 1, Remarks: 1, SaleIncentive: 1, StandardDeductions: 1, TdsDeductions: 1, TotalSale: 1, WowBillAmount: 1, WowBillIncentive: 1, Year: 1 }, SalaryPayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, SalaryPaymentId: 1 }, Salesmen: { SalesmanId: 1, SalesmanName: 1 }, StaffAdvancePayments: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, PaymentDate: 1, StaffAdvancePaymentId: 1 }, StaffAdvanceReceipts: { Amount: 1, Details: 1, EmployeeId: 1, EmployeeIsWorking: 1, EmployeeJoiningDate: 1, EmployeeLeavingDate: 1, EmployeeMobileNo: 1, EmployeeStaffName: 1, PayMode: 1, ReceiptDate: 1, StaffAdvanceReceiptId: 1 } }, Process: { EndOfDays: { Access: 1, CashInHand: 1, EndOfDayId: 1, EodDate: 1, FmArrow: 1, Rwt: 1, Shirting: 1, Suiting: 1, Uspa: 1 }, MonthEnds: { EntryDate: 1, Month: 1, MonthEndId: 1, TotalAccess: 1, TotalAmountAccess: 1, TotalAmountFabric: 1, TotalAmountOthers: 1, TotalAmountRmz: 1, TotalBill: 1, TotalCashExpenses: 1, TotalDues: 1, TotalDuesOfMonth: 1, TotalDuesRecovered: 1, TotalExpenses: 1, TotalFabric: 1, TotalHomeExpenses: 1, TotalInward: 1, TotalInwardByAmitKumar: 1, TotalInwardOthers: 1, TotalOnBookExpenes: 1, TotalOtherExpenses: 1, TotalOtherHomeExpenses: 1, TotalOtherIncome: 1, TotalOthers: 1, TotalPayments: 1, TotalRecipts: 1, TotalRmz: 1, TotalSalary: 1, TotalSaleIncome: 1, TotalTailoringExpenses: 1, TotalTailoringIncome: 1, TotalTrimsAndOtherExpenses: 1, Year: 1 } }, Product: { Brands: { BCode: 1, BrandId: 1, BrandName: 1 }, Categories: { CategoryId: 1, CategoryName: 1, IsPrimaryCategory: 1, IsSecondaryCategory: 1 }, ProductItems: { Barcode: 1, BrandBCode: 1, BrandBrandName: 1, BrandId: 1, Categorys: 1, Cost: 1, ItemDesc: 1, MainCategoryCategoryCategoryName: 1, MainCategoryCategoryId: 1, MainCategoryCategoryIsPrimaryCategory: 1, MainCategoryCategoryIsSecondaryCategory: 1, Mrp: 1, ProductCategoryCategoryCategoryName: 1, ProductCategoryCategoryId: 1, ProductCategoryCategoryIsPrimaryCategory: 1, ProductCategoryCategoryIsSecondaryCategory: 1, ProductItemId: 1, ProductName: 1, ProductTypeCategoryCategoryName: 1, ProductTypeCategoryId: 1, ProductTypeCategoryIsPrimaryCategory: 1, ProductTypeCategoryIsSecondaryCategory: 1, Size: 1, StyleCode: 1, TaxRate: 1, Units: 1 }, Stocks: { ProductItemBarcode: 1, ProductItemBrandId: 1, ProductItemCategorys: 1, ProductItemCost: 1, ProductItemId: 1, ProductItemItemDesc: 1, ProductItemMainCategoryCategoryId: 1, ProductItemMrp: 1, ProductItemProductCategoryCategoryId: 1, ProductItemProductName: 1, ProductItemProductTypeCategoryId: 1, ProductItemSize: 1, ProductItemStyleCode: 1, ProductItemTaxRate: 1, ProductItemUnits: 1, PurchaseQty: 1, Quantity: 1, SaleQty: 1, StockId: 1, Units: 1 }, Suppliers: { SuppilerName: 1, SupplierId: 1, Warehouse: 1 } }, Purchases: { ProductPurchases: { InWardDate: 1, InWardNo: 1, InvoiceNo: 1, IsPaid: 1, ProductPurchaseId: 1, PurchaseDate: 1, Remarks: 1, ShippingCost: 1, SupplierId: 1, SupplierSuppilerName: 1, SupplierWarehouse: 1, TotalAmount: 1, TotalBasicAmount: 1, TotalQty: 1, TotalTax: 1 }, PurchaseItems: { Barcode: 1, Cost: 1, CostValue: 1, ProductItemBarcode: 1, ProductItemBrandId: 1, ProductItemCategorys: 1, ProductItemCost: 1, ProductItemId: 1, ProductItemItemDesc: 1, ProductItemMainCategoryCategoryId: 1, ProductItemMrp: 1, ProductItemProductCategoryCategoryId: 1, ProductItemProductName: 1, ProductItemProductTypeCategoryId: 1, ProductItemSize: 1, ProductItemStyleCode: 1, ProductItemTaxRate: 1, ProductItemUnits: 1, ProductPurchaseId: 1, ProductPurchaseInWardDate: 1, ProductPurchaseInWardNo: 1, ProductPurchaseInvoiceNo: 1, ProductPurchaseIsPaid: 1, ProductPurchasePurchaseDate: 1, ProductPurchaseRemarks: 1, ProductPurchaseShippingCost: 1, ProductPurchaseSupplierId: 1, ProductPurchaseTotalAmount: 1, ProductPurchaseTotalBasicAmount: 1, ProductPurchaseTotalQty: 1, ProductPurchaseTotalTax: 1, PurchaseItemId: 1, PurchaseTaxTypeCompositeRate: 1, PurchaseTaxTypeId: 1, PurchaseTaxTypeTaxName: 1, PurchaseTaxTypeTaxType: 1, Qty: 1, TaxAmout: 1, Unit: 1 } }, Receipts: { CashReceipts: { Amount: 1, CashReceiptId: 1, InwardDate: 1, ReceiptFrom: 1, SlipNo: 1, TranscationModeId: 1, TranscationModeTranscation: 1 }, Receipts: { Amount: 1, PayMode: 1, ReceiptDetails: 1, ReceiptFrom: 1, ReceiptId: 1, RecieptDate: 1, RecieptSlipNo: 1, Remarks: 1 } }, Sales: { DailySales: { Amount: 1, CashAmount: 1, DailySaleId: 1, InvNo: 1, IsDue: 1, IsManualBill: 1, IsSaleReturn: 1, IsTailoringBill: 1, PayMode: 1, Remarks: 1, SaleDate: 1, SalesmanId: 1, SalesmanSalesmanName: 1 }, SaleInvoices: { CustomerId: 1, InvoiceNo: 1, OnDate: 1, RoundOffAmount: 1, SaleInvoiceId: 1, TotalBillAmount: 1, TotalDiscountAmount: 1, TotalItems: 1, TotalQty: 1, TotalTaxAmount: 1 }, SaleItems: { BarCode: 1, BasicAmount: 1, BillAmount: 1, Discount: 1, Mrp: 1, ProductItemBarcode: 1, ProductItemBrandId: 1, ProductItemCategorys: 1, ProductItemCost: 1, ProductItemId: 1, ProductItemItemDesc: 1, ProductItemMainCategoryCategoryId: 1, ProductItemMrp: 1, ProductItemProductCategoryCategoryId: 1, ProductItemProductName: 1, ProductItemProductTypeCategoryId: 1, ProductItemSize: 1, ProductItemStyleCode: 1, ProductItemTaxRate: 1, ProductItemUnits: 1, Qty: 1, SaleInvoiceCustomerId: 1, SaleInvoiceId: 1, SaleInvoiceInvoiceNo: 1, SaleInvoiceOnDate: 1, SaleInvoiceRoundOffAmount: 1, SaleInvoiceTotalBillAmount: 1, SaleInvoiceTotalDiscountAmount: 1, SaleInvoiceTotalItems: 1, SaleInvoiceTotalQty: 1, SaleInvoiceTotalTaxAmount: 1, SaleItemId: 1, SaleTaxTypeCompositeRate: 1, SaleTaxTypeId: 1, SaleTaxTypeTaxName: 1, SaleTaxTypeTaxType: 1, SalesmanId: 1, SalesmanSalesmanName: 1, TaxAmount: 1, Units: 1 }, SalePaymentDetails: { CardAmount: 1, CashAmount: 1, MixAmount: 1, PayMode: 1, SalePaymentDetailCustomerId: 1, SalePaymentDetailId: 1, SalePaymentDetailInvoiceNo: 1, SalePaymentDetailOnDate: 1, SalePaymentDetailRoundOffAmount: 1, SalePaymentDetailTotalBillAmount: 1, SalePaymentDetailTotalDiscountAmount: 1, SalePaymentDetailTotalItems: 1, SalePaymentDetailTotalQty: 1, SalePaymentDetailTotalTaxAmount: 1 }, Salesmen: { SalesmanId: 1, SalesmanName: 1 } }, Stores: { Stores: { Address: 1, City: 1, ClosingDate: 1, Gstno: 1, NoOfEmployees: 1, OpeningDate: 1, PanNo: 1, PhoneNo: 1, PinCode: 1, Status: 1, StoreCode: 1, StoreId: 1, StoreManagerName: 1, StoreManagerPhoneNo: 1, StoreName: 1 } }, Tailors: { TailorAttendances: { AttDate: 1, EntryTime: 1, Remarks: 1, Status: 1, TailorAttendanceId: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1 }, TailoringEmployees: { IsWorking: 1, JoiningDate: 1, LeavingDate: 1, MobileNo: 1, StaffName: 1, TailoringEmployeeId: 1 }, TailoringSalaryPayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, SalaryComponet: 1, SalaryMonth: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringSalaryPaymentId: 1 }, TailoringStaffAdvancePayments: { Amount: 1, Details: 1, PayMode: 1, PaymentDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvancePaymentId: 1 }, TailoringStaffAdvanceReceipts: { Amount: 1, Details: 1, PayMode: 1, ReceiptDate: 1, TailoringEmployeeId: 1, TailoringEmployeeIsWorking: 1, TailoringEmployeeJoiningDate: 1, TailoringEmployeeLeavingDate: 1, TailoringEmployeeMobileNo: 1, TailoringEmployeeStaffName: 1, TailoringStaffAdvanceReceiptId: 1 } }, Tally: { LedgerEntries: { AmountIn: 1, AmountOut: 1, Balance: 1, EntryDate: 1, LedgerEntryId: 1, Particulars: 1, PartyAddress: 1, PartyGstNo: 1, PartyId: 1, PartyLedgerType: 1, PartyOpenningBalance: 1, PartyOpenningDate: 1, PartyPanNo: 1, PartyPartyName: 1 }, LedgerMasters: { CreatingDate: 1, LedgerMasterId: 1, LedgerType: 1, PartyAddress: 1, PartyGstNo: 1, PartyId: 1, PartyLedgerType: 1, PartyOpenningBalance: 1, PartyOpenningDate: 1, PartyPanNo: 1, PartyPartyName: 1 }, Parties: { Address: 1, GstNo: 1, LedgerType: 1, OpenningBalance: 1, OpenningDate: 1, PanNo: 1, PartyId: 1, PartyName: 1 } }, Voyager: { CardPaymentDetails: { Amount: 1, AuthCode: 1, CardPaymentDetailCardAmount: 1, CardPaymentDetailCashAmount: 1, CardPaymentDetailId: 1, CardPaymentDetailMixAmount: 1, CardPaymentDetailPayMode: 1, CardType: 1, LastDigit: 1, SaleInvoiceId: 1 }, ImportInWards: { ImportDate: 1, ImportInWardId: 1, InWardDate: 1, InWardNo: 1, InvoiceDate: 1, InvoiceNo: 1, PartyName: 1, TotalCost: 1, TotalMrpValue: 1, TotalQty: 1 }, ImportPurchases: { Barcode: 1, Cost: 1, CostValue: 1, GrnDate: 1, GrnNo: 1, ImportPurchaseId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, IsDataConsumed: 1, IsLocal: 1, IsVatBill: 1, ItemDesc: 1, Mrp: 1, MrpValue: 1, ProductName: 1, Quantity: 1, StyleCode: 1, SupplierName: 1, TaxAmt: 1 }, ImportSaleItemWises: { Barcode: 1, BasicRate: 1, BillAmnt: 1, BrandName: 1, Cgst: 1, Discount: 1, HsnCode: 1, ImportSaleItemWiseId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, InvoiceType: 1, IsDataConsumed: 1, ItemDesc: 1, LineTotal: 1, Mrp: 1, PaymentType: 1, ProductName: 1, Quantity: 1, RoundOff: 1, Saleman: 1, Sgst: 1, StyleCode: 1, Tax: 1 }, ImportSaleRegisters: { BasicRate: 1, BillAmnt: 1, Discount: 1, ImportSaleRegisterId: 1, ImportTime: 1, InvoiceDate: 1, InvoiceNo: 1, InvoiceType: 1, IsConsumed: 1, Mrp: 1, PaymentType: 1, Quantity: 1, RoundOff: 1, Tax: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, SavePrimaryKeyError: 1 } });
     })(Texts = AprajitaRetails.Texts || (AprajitaRetails.Texts = {}));
 })(AprajitaRetails || (AprajitaRetails = {}));
 var AprajitaRetails;
@@ -7783,6 +8112,255 @@ var AprajitaRetails;
         }(Serenity.EntityGrid));
         Process.MonthEndsGrid = MonthEndsGrid;
     })(Process = AprajitaRetails.Process || (AprajitaRetails.Process = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var BrandsDialog = /** @class */ (function (_super) {
+            __extends(BrandsDialog, _super);
+            function BrandsDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Product.BrandsForm(_this.idPrefix);
+                return _this;
+            }
+            BrandsDialog.prototype.getFormKey = function () { return Product.BrandsForm.formKey; };
+            BrandsDialog.prototype.getIdProperty = function () { return Product.BrandsRow.idProperty; };
+            BrandsDialog.prototype.getLocalTextPrefix = function () { return Product.BrandsRow.localTextPrefix; };
+            BrandsDialog.prototype.getNameProperty = function () { return Product.BrandsRow.nameProperty; };
+            BrandsDialog.prototype.getService = function () { return Product.BrandsService.baseUrl; };
+            BrandsDialog.prototype.getDeletePermission = function () { return Product.BrandsRow.deletePermission; };
+            BrandsDialog.prototype.getInsertPermission = function () { return Product.BrandsRow.insertPermission; };
+            BrandsDialog.prototype.getUpdatePermission = function () { return Product.BrandsRow.updatePermission; };
+            BrandsDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], BrandsDialog);
+            return BrandsDialog;
+        }(Serenity.EntityDialog));
+        Product.BrandsDialog = BrandsDialog;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var BrandsGrid = /** @class */ (function (_super) {
+            __extends(BrandsGrid, _super);
+            function BrandsGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            BrandsGrid.prototype.getColumnsKey = function () { return 'Product.Brands'; };
+            BrandsGrid.prototype.getDialogType = function () { return Product.BrandsDialog; };
+            BrandsGrid.prototype.getIdProperty = function () { return Product.BrandsRow.idProperty; };
+            BrandsGrid.prototype.getInsertPermission = function () { return Product.BrandsRow.insertPermission; };
+            BrandsGrid.prototype.getLocalTextPrefix = function () { return Product.BrandsRow.localTextPrefix; };
+            BrandsGrid.prototype.getService = function () { return Product.BrandsService.baseUrl; };
+            BrandsGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], BrandsGrid);
+            return BrandsGrid;
+        }(Serenity.EntityGrid));
+        Product.BrandsGrid = BrandsGrid;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var CategoriesDialog = /** @class */ (function (_super) {
+            __extends(CategoriesDialog, _super);
+            function CategoriesDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Product.CategoriesForm(_this.idPrefix);
+                return _this;
+            }
+            CategoriesDialog.prototype.getFormKey = function () { return Product.CategoriesForm.formKey; };
+            CategoriesDialog.prototype.getIdProperty = function () { return Product.CategoriesRow.idProperty; };
+            CategoriesDialog.prototype.getLocalTextPrefix = function () { return Product.CategoriesRow.localTextPrefix; };
+            CategoriesDialog.prototype.getNameProperty = function () { return Product.CategoriesRow.nameProperty; };
+            CategoriesDialog.prototype.getService = function () { return Product.CategoriesService.baseUrl; };
+            CategoriesDialog.prototype.getDeletePermission = function () { return Product.CategoriesRow.deletePermission; };
+            CategoriesDialog.prototype.getInsertPermission = function () { return Product.CategoriesRow.insertPermission; };
+            CategoriesDialog.prototype.getUpdatePermission = function () { return Product.CategoriesRow.updatePermission; };
+            CategoriesDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CategoriesDialog);
+            return CategoriesDialog;
+        }(Serenity.EntityDialog));
+        Product.CategoriesDialog = CategoriesDialog;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var CategoriesGrid = /** @class */ (function (_super) {
+            __extends(CategoriesGrid, _super);
+            function CategoriesGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CategoriesGrid.prototype.getColumnsKey = function () { return 'Product.Categories'; };
+            CategoriesGrid.prototype.getDialogType = function () { return Product.CategoriesDialog; };
+            CategoriesGrid.prototype.getIdProperty = function () { return Product.CategoriesRow.idProperty; };
+            CategoriesGrid.prototype.getInsertPermission = function () { return Product.CategoriesRow.insertPermission; };
+            CategoriesGrid.prototype.getLocalTextPrefix = function () { return Product.CategoriesRow.localTextPrefix; };
+            CategoriesGrid.prototype.getService = function () { return Product.CategoriesService.baseUrl; };
+            CategoriesGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CategoriesGrid);
+            return CategoriesGrid;
+        }(Serenity.EntityGrid));
+        Product.CategoriesGrid = CategoriesGrid;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var ProductItemsDialog = /** @class */ (function (_super) {
+            __extends(ProductItemsDialog, _super);
+            function ProductItemsDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Product.ProductItemsForm(_this.idPrefix);
+                return _this;
+            }
+            ProductItemsDialog.prototype.getFormKey = function () { return Product.ProductItemsForm.formKey; };
+            ProductItemsDialog.prototype.getIdProperty = function () { return Product.ProductItemsRow.idProperty; };
+            ProductItemsDialog.prototype.getLocalTextPrefix = function () { return Product.ProductItemsRow.localTextPrefix; };
+            ProductItemsDialog.prototype.getNameProperty = function () { return Product.ProductItemsRow.nameProperty; };
+            ProductItemsDialog.prototype.getService = function () { return Product.ProductItemsService.baseUrl; };
+            ProductItemsDialog.prototype.getDeletePermission = function () { return Product.ProductItemsRow.deletePermission; };
+            ProductItemsDialog.prototype.getInsertPermission = function () { return Product.ProductItemsRow.insertPermission; };
+            ProductItemsDialog.prototype.getUpdatePermission = function () { return Product.ProductItemsRow.updatePermission; };
+            ProductItemsDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ProductItemsDialog);
+            return ProductItemsDialog;
+        }(Serenity.EntityDialog));
+        Product.ProductItemsDialog = ProductItemsDialog;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var ProductItemsGrid = /** @class */ (function (_super) {
+            __extends(ProductItemsGrid, _super);
+            function ProductItemsGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ProductItemsGrid.prototype.getColumnsKey = function () { return 'Product.ProductItems'; };
+            ProductItemsGrid.prototype.getDialogType = function () { return Product.ProductItemsDialog; };
+            ProductItemsGrid.prototype.getIdProperty = function () { return Product.ProductItemsRow.idProperty; };
+            ProductItemsGrid.prototype.getInsertPermission = function () { return Product.ProductItemsRow.insertPermission; };
+            ProductItemsGrid.prototype.getLocalTextPrefix = function () { return Product.ProductItemsRow.localTextPrefix; };
+            ProductItemsGrid.prototype.getService = function () { return Product.ProductItemsService.baseUrl; };
+            ProductItemsGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ProductItemsGrid);
+            return ProductItemsGrid;
+        }(Serenity.EntityGrid));
+        Product.ProductItemsGrid = ProductItemsGrid;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var StocksDialog = /** @class */ (function (_super) {
+            __extends(StocksDialog, _super);
+            function StocksDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Product.StocksForm(_this.idPrefix);
+                return _this;
+            }
+            StocksDialog.prototype.getFormKey = function () { return Product.StocksForm.formKey; };
+            StocksDialog.prototype.getIdProperty = function () { return Product.StocksRow.idProperty; };
+            StocksDialog.prototype.getLocalTextPrefix = function () { return Product.StocksRow.localTextPrefix; };
+            StocksDialog.prototype.getService = function () { return Product.StocksService.baseUrl; };
+            StocksDialog.prototype.getDeletePermission = function () { return Product.StocksRow.deletePermission; };
+            StocksDialog.prototype.getInsertPermission = function () { return Product.StocksRow.insertPermission; };
+            StocksDialog.prototype.getUpdatePermission = function () { return Product.StocksRow.updatePermission; };
+            StocksDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], StocksDialog);
+            return StocksDialog;
+        }(Serenity.EntityDialog));
+        Product.StocksDialog = StocksDialog;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var StocksGrid = /** @class */ (function (_super) {
+            __extends(StocksGrid, _super);
+            function StocksGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            StocksGrid.prototype.getColumnsKey = function () { return 'Product.Stocks'; };
+            StocksGrid.prototype.getDialogType = function () { return Product.StocksDialog; };
+            StocksGrid.prototype.getIdProperty = function () { return Product.StocksRow.idProperty; };
+            StocksGrid.prototype.getInsertPermission = function () { return Product.StocksRow.insertPermission; };
+            StocksGrid.prototype.getLocalTextPrefix = function () { return Product.StocksRow.localTextPrefix; };
+            StocksGrid.prototype.getService = function () { return Product.StocksService.baseUrl; };
+            StocksGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], StocksGrid);
+            return StocksGrid;
+        }(Serenity.EntityGrid));
+        Product.StocksGrid = StocksGrid;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var SuppliersDialog = /** @class */ (function (_super) {
+            __extends(SuppliersDialog, _super);
+            function SuppliersDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Product.SuppliersForm(_this.idPrefix);
+                return _this;
+            }
+            SuppliersDialog.prototype.getFormKey = function () { return Product.SuppliersForm.formKey; };
+            SuppliersDialog.prototype.getIdProperty = function () { return Product.SuppliersRow.idProperty; };
+            SuppliersDialog.prototype.getLocalTextPrefix = function () { return Product.SuppliersRow.localTextPrefix; };
+            SuppliersDialog.prototype.getNameProperty = function () { return Product.SuppliersRow.nameProperty; };
+            SuppliersDialog.prototype.getService = function () { return Product.SuppliersService.baseUrl; };
+            SuppliersDialog.prototype.getDeletePermission = function () { return Product.SuppliersRow.deletePermission; };
+            SuppliersDialog.prototype.getInsertPermission = function () { return Product.SuppliersRow.insertPermission; };
+            SuppliersDialog.prototype.getUpdatePermission = function () { return Product.SuppliersRow.updatePermission; };
+            SuppliersDialog = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SuppliersDialog);
+            return SuppliersDialog;
+        }(Serenity.EntityDialog));
+        Product.SuppliersDialog = SuppliersDialog;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
+})(AprajitaRetails || (AprajitaRetails = {}));
+var AprajitaRetails;
+(function (AprajitaRetails) {
+    var Product;
+    (function (Product) {
+        var SuppliersGrid = /** @class */ (function (_super) {
+            __extends(SuppliersGrid, _super);
+            function SuppliersGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SuppliersGrid.prototype.getColumnsKey = function () { return 'Product.Suppliers'; };
+            SuppliersGrid.prototype.getDialogType = function () { return Product.SuppliersDialog; };
+            SuppliersGrid.prototype.getIdProperty = function () { return Product.SuppliersRow.idProperty; };
+            SuppliersGrid.prototype.getInsertPermission = function () { return Product.SuppliersRow.insertPermission; };
+            SuppliersGrid.prototype.getLocalTextPrefix = function () { return Product.SuppliersRow.localTextPrefix; };
+            SuppliersGrid.prototype.getService = function () { return Product.SuppliersService.baseUrl; };
+            SuppliersGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SuppliersGrid);
+            return SuppliersGrid;
+        }(Serenity.EntityGrid));
+        Product.SuppliersGrid = SuppliersGrid;
+    })(Product = AprajitaRetails.Product || (AprajitaRetails.Product = {}));
 })(AprajitaRetails || (AprajitaRetails = {}));
 var AprajitaRetails;
 (function (AprajitaRetails) {

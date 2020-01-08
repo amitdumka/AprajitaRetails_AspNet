@@ -2732,6 +2732,358 @@ declare namespace AprajitaRetails.Process {
         }
     }
 }
+declare namespace AprajitaRetails.Product {
+}
+declare namespace AprajitaRetails.Product {
+    interface BrandsForm {
+        BrandName: Serenity.StringEditor;
+        BCode: Serenity.StringEditor;
+    }
+    class BrandsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    interface BrandsRow {
+        BrandId?: number;
+        BrandName?: string;
+        BCode?: string;
+    }
+    namespace BrandsRow {
+        const idProperty = "BrandId";
+        const nameProperty = "BrandName";
+        const localTextPrefix = "Product.Brands";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            BrandId = "BrandId",
+            BrandName = "BrandName",
+            BCode = "BCode"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+    namespace BrandsService {
+        const baseUrl = "Product/Brands";
+        function Create(request: Serenity.SaveRequest<BrandsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<BrandsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<BrandsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<BrandsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Product/Brands/Create",
+            Update = "Product/Brands/Update",
+            Delete = "Product/Brands/Delete",
+            Retrieve = "Product/Brands/Retrieve",
+            List = "Product/Brands/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+}
+declare namespace AprajitaRetails.Product {
+    interface CategoriesForm {
+        CategoryName: Serenity.StringEditor;
+        IsPrimaryCategory: Serenity.BooleanEditor;
+        IsSecondaryCategory: Serenity.BooleanEditor;
+    }
+    class CategoriesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    interface CategoriesRow {
+        CategoryId?: number;
+        CategoryName?: string;
+        IsPrimaryCategory?: boolean;
+        IsSecondaryCategory?: boolean;
+    }
+    namespace CategoriesRow {
+        const idProperty = "CategoryId";
+        const nameProperty = "CategoryName";
+        const localTextPrefix = "Product.Categories";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            CategoryId = "CategoryId",
+            CategoryName = "CategoryName",
+            IsPrimaryCategory = "IsPrimaryCategory",
+            IsSecondaryCategory = "IsSecondaryCategory"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+    namespace CategoriesService {
+        const baseUrl = "Product/Categories";
+        function Create(request: Serenity.SaveRequest<CategoriesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CategoriesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CategoriesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CategoriesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Product/Categories/Create",
+            Update = "Product/Categories/Update",
+            Delete = "Product/Categories/Delete",
+            Retrieve = "Product/Categories/Retrieve",
+            List = "Product/Categories/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+}
+declare namespace AprajitaRetails.Product {
+    interface ProductItemsForm {
+        Barcode: Serenity.StringEditor;
+        BrandId: Serenity.IntegerEditor;
+        StyleCode: Serenity.StringEditor;
+        ProductName: Serenity.StringEditor;
+        ItemDesc: Serenity.StringEditor;
+        Categorys: Serenity.IntegerEditor;
+        Mrp: Serenity.DecimalEditor;
+        TaxRate: Serenity.DecimalEditor;
+        Cost: Serenity.DecimalEditor;
+        Size: Serenity.IntegerEditor;
+        Units: Serenity.IntegerEditor;
+        MainCategoryCategoryId: Serenity.IntegerEditor;
+        ProductCategoryCategoryId: Serenity.IntegerEditor;
+        ProductTypeCategoryId: Serenity.IntegerEditor;
+    }
+    class ProductItemsForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    interface ProductItemsRow {
+        ProductItemId?: number;
+        Barcode?: string;
+        BrandId?: number;
+        StyleCode?: string;
+        ProductName?: string;
+        ItemDesc?: string;
+        Categorys?: number;
+        Mrp?: number;
+        TaxRate?: number;
+        Cost?: number;
+        Size?: number;
+        Units?: number;
+        MainCategoryCategoryId?: number;
+        ProductCategoryCategoryId?: number;
+        ProductTypeCategoryId?: number;
+        BrandBrandName?: string;
+        BrandBCode?: string;
+        MainCategoryCategoryCategoryName?: string;
+        MainCategoryCategoryIsPrimaryCategory?: boolean;
+        MainCategoryCategoryIsSecondaryCategory?: boolean;
+        ProductCategoryCategoryCategoryName?: string;
+        ProductCategoryCategoryIsPrimaryCategory?: boolean;
+        ProductCategoryCategoryIsSecondaryCategory?: boolean;
+        ProductTypeCategoryCategoryName?: string;
+        ProductTypeCategoryIsPrimaryCategory?: boolean;
+        ProductTypeCategoryIsSecondaryCategory?: boolean;
+    }
+    namespace ProductItemsRow {
+        const idProperty = "ProductItemId";
+        const nameProperty = "Barcode";
+        const localTextPrefix = "Product.ProductItems";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            ProductItemId = "ProductItemId",
+            Barcode = "Barcode",
+            BrandId = "BrandId",
+            StyleCode = "StyleCode",
+            ProductName = "ProductName",
+            ItemDesc = "ItemDesc",
+            Categorys = "Categorys",
+            Mrp = "Mrp",
+            TaxRate = "TaxRate",
+            Cost = "Cost",
+            Size = "Size",
+            Units = "Units",
+            MainCategoryCategoryId = "MainCategoryCategoryId",
+            ProductCategoryCategoryId = "ProductCategoryCategoryId",
+            ProductTypeCategoryId = "ProductTypeCategoryId",
+            BrandBrandName = "BrandBrandName",
+            BrandBCode = "BrandBCode",
+            MainCategoryCategoryCategoryName = "MainCategoryCategoryCategoryName",
+            MainCategoryCategoryIsPrimaryCategory = "MainCategoryCategoryIsPrimaryCategory",
+            MainCategoryCategoryIsSecondaryCategory = "MainCategoryCategoryIsSecondaryCategory",
+            ProductCategoryCategoryCategoryName = "ProductCategoryCategoryCategoryName",
+            ProductCategoryCategoryIsPrimaryCategory = "ProductCategoryCategoryIsPrimaryCategory",
+            ProductCategoryCategoryIsSecondaryCategory = "ProductCategoryCategoryIsSecondaryCategory",
+            ProductTypeCategoryCategoryName = "ProductTypeCategoryCategoryName",
+            ProductTypeCategoryIsPrimaryCategory = "ProductTypeCategoryIsPrimaryCategory",
+            ProductTypeCategoryIsSecondaryCategory = "ProductTypeCategoryIsSecondaryCategory"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+    namespace ProductItemsService {
+        const baseUrl = "Product/ProductItems";
+        function Create(request: Serenity.SaveRequest<ProductItemsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ProductItemsRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ProductItemsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ProductItemsRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Product/ProductItems/Create",
+            Update = "Product/ProductItems/Update",
+            Delete = "Product/ProductItems/Delete",
+            Retrieve = "Product/ProductItems/Retrieve",
+            List = "Product/ProductItems/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+}
+declare namespace AprajitaRetails.Product {
+    interface StocksForm {
+        ProductItemId: Serenity.IntegerEditor;
+        Quantity: Serenity.DecimalEditor;
+        SaleQty: Serenity.DecimalEditor;
+        PurchaseQty: Serenity.DecimalEditor;
+        Units: Serenity.IntegerEditor;
+    }
+    class StocksForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    interface StocksRow {
+        StockId?: number;
+        ProductItemId?: number;
+        Quantity?: number;
+        SaleQty?: number;
+        PurchaseQty?: number;
+        Units?: number;
+        ProductItemBarcode?: string;
+        ProductItemBrandId?: number;
+        ProductItemStyleCode?: string;
+        ProductItemProductName?: string;
+        ProductItemItemDesc?: string;
+        ProductItemCategorys?: number;
+        ProductItemMrp?: number;
+        ProductItemTaxRate?: number;
+        ProductItemCost?: number;
+        ProductItemSize?: number;
+        ProductItemUnits?: number;
+        ProductItemMainCategoryCategoryId?: number;
+        ProductItemProductCategoryCategoryId?: number;
+        ProductItemProductTypeCategoryId?: number;
+    }
+    namespace StocksRow {
+        const idProperty = "StockId";
+        const localTextPrefix = "Product.Stocks";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            StockId = "StockId",
+            ProductItemId = "ProductItemId",
+            Quantity = "Quantity",
+            SaleQty = "SaleQty",
+            PurchaseQty = "PurchaseQty",
+            Units = "Units",
+            ProductItemBarcode = "ProductItemBarcode",
+            ProductItemBrandId = "ProductItemBrandId",
+            ProductItemStyleCode = "ProductItemStyleCode",
+            ProductItemProductName = "ProductItemProductName",
+            ProductItemItemDesc = "ProductItemItemDesc",
+            ProductItemCategorys = "ProductItemCategorys",
+            ProductItemMrp = "ProductItemMrp",
+            ProductItemTaxRate = "ProductItemTaxRate",
+            ProductItemCost = "ProductItemCost",
+            ProductItemSize = "ProductItemSize",
+            ProductItemUnits = "ProductItemUnits",
+            ProductItemMainCategoryCategoryId = "ProductItemMainCategoryCategoryId",
+            ProductItemProductCategoryCategoryId = "ProductItemProductCategoryCategoryId",
+            ProductItemProductTypeCategoryId = "ProductItemProductTypeCategoryId"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+    namespace StocksService {
+        const baseUrl = "Product/Stocks";
+        function Create(request: Serenity.SaveRequest<StocksRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<StocksRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<StocksRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<StocksRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Product/Stocks/Create",
+            Update = "Product/Stocks/Update",
+            Delete = "Product/Stocks/Delete",
+            Retrieve = "Product/Stocks/Retrieve",
+            List = "Product/Stocks/List"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+}
+declare namespace AprajitaRetails.Product {
+    interface SuppliersForm {
+        SuppilerName: Serenity.StringEditor;
+        Warehouse: Serenity.StringEditor;
+    }
+    class SuppliersForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    interface SuppliersRow {
+        SupplierId?: number;
+        SuppilerName?: string;
+        Warehouse?: string;
+    }
+    namespace SuppliersRow {
+        const idProperty = "SupplierId";
+        const nameProperty = "SuppilerName";
+        const localTextPrefix = "Product.Suppliers";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SupplierId = "SupplierId",
+            SuppilerName = "SuppilerName",
+            Warehouse = "Warehouse"
+        }
+    }
+}
+declare namespace AprajitaRetails.Product {
+    namespace SuppliersService {
+        const baseUrl = "Product/Suppliers";
+        function Create(request: Serenity.SaveRequest<SuppliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SuppliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SuppliersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SuppliersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Product/Suppliers/Create",
+            Update = "Product/Suppliers/Update",
+            Delete = "Product/Suppliers/Delete",
+            Retrieve = "Product/Suppliers/Retrieve",
+            List = "Product/Suppliers/List"
+        }
+    }
+}
 declare namespace AprajitaRetails.Purchases {
 }
 declare namespace AprajitaRetails.Purchases {
@@ -5685,6 +6037,125 @@ declare namespace AprajitaRetails.Process {
     class MonthEndsGrid extends Serenity.EntityGrid<MonthEndsRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof MonthEndsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class BrandsDialog extends Serenity.EntityDialog<BrandsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: BrandsForm;
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class BrandsGrid extends Serenity.EntityGrid<BrandsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof BrandsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class CategoriesDialog extends Serenity.EntityDialog<CategoriesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: CategoriesForm;
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class CategoriesGrid extends Serenity.EntityGrid<CategoriesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CategoriesDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class ProductItemsDialog extends Serenity.EntityDialog<ProductItemsRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: ProductItemsForm;
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class ProductItemsGrid extends Serenity.EntityGrid<ProductItemsRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ProductItemsDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class StocksDialog extends Serenity.EntityDialog<StocksRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: StocksForm;
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class StocksGrid extends Serenity.EntityGrid<StocksRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof StocksDialog;
+        protected getIdProperty(): string;
+        protected getInsertPermission(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class SuppliersDialog extends Serenity.EntityDialog<SuppliersRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected getDeletePermission(): string;
+        protected getInsertPermission(): string;
+        protected getUpdatePermission(): string;
+        protected form: SuppliersForm;
+    }
+}
+declare namespace AprajitaRetails.Product {
+    class SuppliersGrid extends Serenity.EntityGrid<SuppliersRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SuppliersDialog;
         protected getIdProperty(): string;
         protected getInsertPermission(): string;
         protected getLocalTextPrefix(): string;
