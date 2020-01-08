@@ -29,21 +29,21 @@ namespace AprajitaRetails.Sales.Entities
             set { Fields.SaleDate[this] = value; }
         }
 
-        [DisplayName("Inv No"), QuickSearch]
+        [DisplayName("Invoice No"), QuickSearch]
         public String InvNo
         {
             get { return Fields.InvNo[this]; }
             set { Fields.InvNo[this] = value; }
         }
 
-        [DisplayName("Amount"), Size(19), Scale(4), NotNull]
+        [DisplayName("Bill Amount"), Size(19), Scale(4), NotNull]
         public Decimal? Amount
         {
             get { return Fields.Amount[this]; }
             set { Fields.Amount[this] = value; }
         }
 
-        [DisplayName("Pay Mode"), NotNull]
+        [DisplayName("Payment Mode"), NotNull]
         public Int32? PayMode
         {
             get { return Fields.PayMode[this]; }
@@ -64,21 +64,21 @@ namespace AprajitaRetails.Sales.Entities
             set { Fields.SalesmanId[this] = value; }
         }
 
-        [DisplayName("Is Due"), NotNull]
+        [DisplayName("Due"), NotNull]
         public Boolean? IsDue
         {
             get { return Fields.IsDue[this]; }
             set { Fields.IsDue[this] = value; }
         }
 
-        [DisplayName("Is Manual Bill"), NotNull]
+        [DisplayName("Manual Bill"), NotNull]
         public Boolean? IsManualBill
         {
             get { return Fields.IsManualBill[this]; }
             set { Fields.IsManualBill[this] = value; }
         }
 
-        [DisplayName("Is Tailoring Bill"), NotNull]
+        [DisplayName("Tailoring Bill"), NotNull]
         public Boolean? IsTailoringBill
         {
             get { return Fields.IsTailoringBill[this]; }
@@ -92,14 +92,14 @@ namespace AprajitaRetails.Sales.Entities
             set { Fields.Remarks[this] = value; }
         }
 
-        [DisplayName("Is Sale Return"), NotNull]
+        [DisplayName("Sale Return"), NotNull]
         public Boolean? IsSaleReturn
         {
             get { return Fields.IsSaleReturn[this]; }
             set { Fields.IsSaleReturn[this] = value; }
         }
 
-        [DisplayName("Salesman Salesman Name"), Expression("jSalesman.[SalesmanName]")]
+        [DisplayName("Salesman"), Expression("jSalesman.[SalesmanName]")]
         public String SalesmanSalesmanName
         {
             get { return Fields.SalesmanSalesmanName[this]; }

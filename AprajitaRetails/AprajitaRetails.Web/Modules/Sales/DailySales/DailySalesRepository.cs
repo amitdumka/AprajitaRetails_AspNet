@@ -1,6 +1,7 @@
 ﻿
 namespace AprajitaRetails.Sales.Repositories
 {
+    using AprajitaRetails.Web.Ops.Trigers;
     using Serenity;
     using Serenity.Data;
     using Serenity.Services;
@@ -14,17 +15,28 @@ namespace AprajitaRetails.Sales.Repositories
 
         public SaveResponse Create(IUnitOfWork uow, SaveRequest<MyRow> request)
         {
-            return new MySaveHandler().Process(uow, request, SaveRequestType.Create);
+            var res= new MySaveHandler().Process(uow, request, SaveRequestType.Create);
+            if (res.Error==null )
+            {
+                new OnInsert().UpdateCashInHand(uow, request.Entity.SaleDate, request.Entity.CashAmount, 0);
+            }
+            return res;
         }
 
         public SaveResponse Update(IUnitOfWork uow, SaveRequest<MyRow> request)
         {
+            
             return new MySaveHandler().Process(uow, request, SaveRequestType.Update);
         }
 
         public DeleteResponse Delete(IUnitOfWork uow, DeleteRequest request)
         {
-            return new MyDeleteHandler().Process(uow, request);
+           var res= new MyDeleteHandler().Process(uow, request);
+            //if (res.Error == null)
+            //{
+            //    new OnInsert().UpdateCashInHand(uow, request.Entity.SaleDate, request.Entity.CashAmount, 0);
+            //}
+            return res;
         }
 
         public RetrieveResponse<MyRow> Retrieve(IDbConnection connection, RetrieveRequest request)

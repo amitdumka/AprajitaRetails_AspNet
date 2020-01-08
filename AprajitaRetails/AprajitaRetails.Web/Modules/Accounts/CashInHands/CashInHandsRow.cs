@@ -22,7 +22,7 @@ namespace AprajitaRetails.Accounts.Entities
             set { Fields.CashInHandId[this] = value; }
         }
 
-        [DisplayName("Cih Date"), Column("CIHDate"), NotNull]
+        [DisplayName("On Date"), Column("CIHDate"), NotNull]
         public DateTime? CihDate
         {
             get { return Fields.CihDate[this]; }
